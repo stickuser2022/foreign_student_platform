@@ -1,0 +1,177 @@
+// Prisma schema v1 — 2026-07-28(Prisma 7 规范)
+// 设计依据:docs/01-竞品调研与业务逻辑洞察.md 第 4.1 节
+// 多语言策略:v1 用显式列(nameZh/nameRu/nameEn),不做 JSON i18n
+// 连接串不在此文件,见 prisma.config.ts(Prisma 7 起 datasource 不再支持 url)
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ---------- Better Auth 标准四表 ----------
+
+model User {
+  id            String    @id
+  name          String
+  email         String    @unique
+  emailVerified Boolean   @default(false)
+  image         String?
+  // 平台角色:student / university_admin / platform_admin(后期 counselor)
+  role          String    @default("student")
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  sessions      Session[]
+  accounts      Account[]
+
+  @@map("users")
+}
+
+model Session {
+  id        String   @id
+  expiresAt DateTime
+  token     String   @unique
+  ipAddress String?
+  userAgent String?
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("sessions")
+}
+
+model Account {
+  id                    String    @id
+  accountId             String
+  providerId            String
+  userId                String
+  user                  User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  accessToken           String?
+  refreshToken          String?
+  idToken               String?
+  accessTokenExpiresAt  DateTime?
+  refreshTokenExpiresAt DateTime?
+  scope                 String?
+  password              String?
+  createdAt             DateTime  @default(now())
+  updatedAt             DateTime  @updatedAt
+
+  @@map("accounts")
+}
+
+model Verification {
+  id         String   @id
+  identifier String
+  value      String
+  expiresAt  DateTime
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@map("verifications")
+}
+
+// ---------- 业务模型 ----------
+
+model University {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  nameZh      String
+  nameRu      String?
+  nameEn      String?
+  city        String
+  province    String
+  website     String?
+  logoUrl     String?
+  descriptionZh String?
+  descriptionRu String?
+  // 排名标签
+  is985            Boolean @default(false)
+  is211            Boolean @default(false)
+  isDoubleFirstClass Boolean @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  programs     Program[]
+  scholarships Scholarship[]
+  posts        Post[]
+
+  @@map("universities")
+}
+
+enum DegreeLevel {
+  LANGUAGE    // 语言班
+  PREP        // 预科
+  BACHELOR
+  MASTER
+  PHD
+  NON_DEGREE  // 短期/交换
+}
+
+model Program {
+  id            String      @id @default(cuid())
+  universityId  String
+  university    University  @relation(fields: [universityId], references: [id], onDelete: Cascade)
+  nameZh        String
+  nameRu        String?
+  nameEn        String?
+  degreeLevel   DegreeLevel
+  // 授课语言:"chinese" / "english" / "russian",可多个
+  teachingLanguages String[]
+  durationYears Float?
+  // 单位:人民币元/年
+  tuitionPerYear  Int?
+  applicationFee  Int?
+  startDate         DateTime?
+  applicationDeadline DateTime?
+  // 入学批次,如 "2026 秋季"
+  intake        String?
+  requirements  String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@map("programs")
+}
+
+enum ScholarshipType {
+  CSC         // 中国政府奖学金
+  PROVINCIAL  // 省级政府奖学金
+  UNIVERSITY  // 校内奖学金
+  OTHER
+}
+
+model Scholarship {
+  id           String          @id @default(cuid())
+  // 为空表示平台级奖学金(如 CSC,不限定某所学校)
+  universityId String?
+  university   University?     @relation(fields: [universityId], references: [id], onDelete: SetNull)
+  name         String
+  type         ScholarshipType
+  // 覆盖范围描述(学费/住宿/生活费等)
+  coverage     String?
+  deadline     DateTime?
+  // 申请通道说明(如 CSC 系统 + Agency Number)
+  applicationChannel String?
+  description  String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@map("scholarships")
+}
+
+model Post {
+  id           String     @id @default(cuid())
+  // 为空表示平台公告
+  universityId String?
+  university   University? @relation(fields: [universityId], references: [id], onDelete: SetNull)
+  title        String
+  content      String
+  publishedAt  DateTime   @default(now())
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+
+  @@map("posts")
+}
