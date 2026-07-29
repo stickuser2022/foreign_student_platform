@@ -14,6 +14,13 @@
 
 ### 环境坑(重要,记入备忘)
 
+- **git 推送需走代理**:本机直连 github.com 不通;用户使用"自由猫" VPN(系统代理 127.0.0.1:7892),已配置 `git config --global http(s).proxy`。若以后 push 失败,先检查 VPN 是否开启
+- **git 代理配置的注意事项**:代理写入全局配置后,VPN 关闭时 push 必然失败(git 会执意走向已关闭的代理)。规则:**push/pull 前先开自由猫**。恢复直连:`git config --global --unset http.proxy && git config --global --unset https.proxy`
+- **VPN 失效备案(用户已确认自由猫不稳定,2026-07-29)**:若自由猫彻底不可用,按以下顺序切换——
+  1. remote 从 HTTPS 换成 SSH(GitHub 支持 SSH over 443,大陆环境下常比 HTTPS 稳)
+  2. 加 Gitee 做备用远程双推(GitHub 仍为主仓库)
+  3. 更换代理服务后重新配置 git proxy
+- **工作原则:git commit 纯本地,不依赖网络;push 只是备份/同步,攒几次一起推也可以**
 - **本机 3000 端口被用户另一个项目长期占用(且从公网转发进来)**,本项目 dev 固定用 3001:package.json dev 脚本已加 `-p 3001`,`.env` 的 BETTER_AUTH_URL 已改为 3001
 - TypeScript 从 5.0.2 升到 5.9(create-next-app 装了过旧版本;`pnpm add -D typescript@^5` 不会升级已满足范围的旧版,需显式指定 `typescript@5.9`)
 
