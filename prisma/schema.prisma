@@ -26,6 +26,9 @@ model User {
   updatedAt     DateTime  @updatedAt
   sessions      Session[]
   accounts      Account[]
+  profile       StudentProfile?
+  favoriteUniversities FavoriteUniversity[]
+  favoritePrograms     FavoriteProgram[]
 
   @@map("users")
 }
@@ -92,12 +95,19 @@ model University {
   is985            Boolean @default(false)
   is211            Boolean @default(false)
   isDoubleFirstClass Boolean @default(false)
+  // 生活费速览(人民币/月,跟城市走)
+  livingCostPerMonth Int?
+  // 数据质量(第 0 问)
+  sourceUrl      String?
+  lastVerifiedAt DateTime?
+  dataStatus     DataStatus @default(DRAFT)
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
   programs     Program[]
   scholarships Scholarship[]
   posts        Post[]
+  favoritedBy  FavoriteUniversity[]
 
   @@map("universities")
 }
@@ -109,6 +119,11 @@ enum DegreeLevel {
   MASTER
   PHD
   NON_DEGREE  // 短期/交换
+}
+
+enum DataStatus {
+  DRAFT       // 待审核(AI 抽取/录入后未确认)
+  PUBLISHED   // 已发布(公开页面可见)
 }
 
 model Program {
@@ -124,14 +139,24 @@ model Program {
   durationYears Float?
   // 单位:人民币元/年
   tuitionPerYear  Int?
+  hostelFeePerYear    Int?
+  insuranceFeePerYear Int?
   applicationFee  Int?
+  // 奖学金说明(纯文本,如"可申请 CSC + 校长奖学金")
+  scholarshipNote   String?
   startDate         DateTime?
   applicationDeadline DateTime?
   // 入学批次,如 "2026 秋季"
   intake        String?
   requirements  String?
+  // 数据质量(第 0 问)
+  sourceUrl      String?
+  lastVerifiedAt DateTime?
+  dataStatus     DataStatus @default(DRAFT)
   createdAt     DateTime @default(now())
   updatedAt     DateTime @updatedAt
+
+  favoritedBy  FavoriteProgram[]
 
   @@map("programs")
 }
@@ -150,12 +175,16 @@ model Scholarship {
   university   University?     @relation(fields: [universityId], references: [id], onDelete: SetNull)
   name         String
   type         ScholarshipType
-  // 覆盖范围描述(学费/住宿/生活费等)
+  // 覆盖范围描述(学费/住宿/生活费等;项目级限制也写在这里)
   coverage     String?
   deadline     DateTime?
   // 申请通道说明(如 CSC 系统 + Agency Number)
   applicationChannel String?
   description  String?
+  // 数据质量(第 0 问)
+  sourceUrl      String?
+  lastVerifiedAt DateTime?
+  dataStatus     DataStatus @default(DRAFT)
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
 
@@ -174,4 +203,49 @@ model Post {
   updatedAt    DateTime   @updatedAt
 
   @@map("posts")
+}
+
+// ---------- 收藏(第 4 问:学校/项目分开两张表,唯一约束防重复收藏) ----------
+
+model FavoriteUniversity {
+  id           String     @id @default(cuid())
+  userId       String
+  user         User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  universityId String
+  university   University @relation(fields: [universityId], references: [id], onDelete: Cascade)
+  createdAt    DateTime   @default(now())
+
+  @@unique([userId, universityId])
+  @@map("favorite_universities")
+}
+
+model FavoriteProgram {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  programId String
+  program   Program  @relation(fields: [programId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@unique([userId, programId])
+  @@map("favorite_programs")
+}
+
+// ---------- 学生档案(第 5 问:注册轻 + 渐进收集,字段全部可空) ----------
+
+model StudentProfile {
+  id     String @id @default(cuid())
+  userId String @unique
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  intendedDegree   DegreeLevel?
+  intendedMajor    String?
+  // 预算(人民币/年)
+  budgetPerYear    Int?
+  cityPreference   String?
+  // 语言基础,如 "HSK3" / "零基础"
+  languageBackground String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("student_profiles")
 }

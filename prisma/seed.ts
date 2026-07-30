@@ -1,4 +1,4 @@
-// 种子数据:3 所学校 + 项目 + CSC 平台级奖学金
+// 种子数据:3 所学校 + 项目 + CSC 平台级奖学金(schema v2)
 // 运行:pnpm prisma db seed 或 pnpm tsx prisma/seed.ts(需数据库已启动且 migrate 完成)
 import "dotenv/config";
 import { PrismaClient } from "../src/generated/prisma/client";
@@ -12,7 +12,7 @@ const prisma = new PrismaClient({ adapter });
 async function main() {
   const hit = await prisma.university.upsert({
     where: { slug: "hit" },
-    update: {},
+    update: { dataStatus: "PUBLISHED" },
     create: {
       slug: "hit",
       nameZh: "哈尔滨工业大学",
@@ -24,6 +24,9 @@ async function main() {
       is985: true,
       is211: true,
       isDoubleFirstClass: true,
+      livingCostPerMonth: 2500,
+      dataStatus: "PUBLISHED",
+      lastVerifiedAt: new Date(),
       programs: {
         create: [
           {
@@ -33,8 +36,12 @@ async function main() {
             teachingLanguages: ["english"],
             durationYears: 4,
             tuitionPerYear: 26000,
+            hostelFeePerYear: 9000,
+            insuranceFeePerYear: 800,
             applicationFee: 400,
+            scholarshipNote: "可申请 CSC 全额奖学金或校长奖学金(学费减免 50%)",
             intake: "2026 秋季",
+            dataStatus: "PUBLISHED",
           },
         ],
       },
@@ -43,7 +50,7 @@ async function main() {
 
   const blcu = await prisma.university.upsert({
     where: { slug: "blcu" },
-    update: {},
+    update: { dataStatus: "PUBLISHED" },
     create: {
       slug: "blcu",
       nameZh: "北京语言大学",
@@ -52,6 +59,9 @@ async function main() {
       city: "北京",
       province: "北京",
       website: "http://www.blcu.edu.cn",
+      livingCostPerMonth: 4000,
+      dataStatus: "PUBLISHED",
+      lastVerifiedAt: new Date(),
       programs: {
         create: [
           {
@@ -61,7 +71,11 @@ async function main() {
             teachingLanguages: ["chinese"],
             durationYears: 1,
             tuitionPerYear: 25000,
+            hostelFeePerYear: 12000,
+            insuranceFeePerYear: 800,
+            scholarshipNote: "完成本课程并通过 HSK4 可申请本校本科项目",
             intake: "2026 秋季",
+            dataStatus: "PUBLISHED",
           },
         ],
       },
@@ -70,7 +84,7 @@ async function main() {
 
   const sjtu = await prisma.university.upsert({
     where: { slug: "sjtu" },
-    update: {},
+    update: { dataStatus: "PUBLISHED" },
     create: {
       slug: "sjtu",
       nameZh: "上海交通大学",
@@ -82,6 +96,9 @@ async function main() {
       is985: true,
       is211: true,
       isDoubleFirstClass: true,
+      livingCostPerMonth: 4500,
+      dataStatus: "PUBLISHED",
+      lastVerifiedAt: new Date(),
       programs: {
         create: [
           {
@@ -91,8 +108,12 @@ async function main() {
             teachingLanguages: ["english"],
             durationYears: 6,
             tuitionPerYear: 48500,
+            hostelFeePerYear: 15000,
+            insuranceFeePerYear: 800,
             applicationFee: 800,
+            scholarshipNote: "可申请 CSC;2026/2027 学年起需提供 CSCA 成绩",
             intake: "2026 秋季",
+            dataStatus: "PUBLISHED",
           },
         ],
       },
@@ -101,7 +122,7 @@ async function main() {
 
   await prisma.scholarship.upsert({
     where: { id: "csc-platform-level" },
-    update: {},
+    update: { dataStatus: "PUBLISHED" },
     create: {
       id: "csc-platform-level",
       name: "中国政府奖学金 (CSC)",
@@ -109,6 +130,9 @@ async function main() {
       coverage: "学费 + 住宿 + 生活费 + 医疗保险",
       applicationChannel: "studyinchina.csc.edu.cn(Type A/B,需 Agency Number)",
       description: "中国政府全额奖学金,面向所有招收国际学生的中国高校。",
+      sourceUrl: "https://www.campuschina.org/",
+      dataStatus: "PUBLISHED",
+      lastVerifiedAt: new Date(),
     },
   });
 

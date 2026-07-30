@@ -4,6 +4,22 @@
 
 ## 2026-07-29 — 最小闭环跑通 ✅
 
+### 数据模型六问讨论(全部拍板,schema v2 依据)
+
+- **第 0 问·数据质量字段**:University/Program/Scholarship 加 sourceUrl、lastVerifiedAt、dataStatus(待审核/已发布)——AI 抽取管道配套 + 页面信任卖点("信息核实于 X 月")
+- **第 1 问·费用**:方案 B——Program 加 hostelFeePerYear、insuranceFeePerYear;University 加 livingCostPerMonth。定位为"费用速览"功能(用户语:让学生快速了解城市+学校费用)。卢布不入库,存人民币,展示时换算。可比字段必须结构化、单位统一(为二期对比功能铺路)
+- **第 2 问·奖学金**:保持两级(学校级/平台级),不建 programId;项目级奖学金额外用 coverage 文本说明;Program 加 scholarshipNote 文本字段。奖学金一处维护,项目页自动带出本校全部奖学金
+- **第 3 问·语言年衔接**:文本说明,不建衔接关系表(真实映射 90% 是"语言班+HSK 达标→本校本科",关系表信息增量极低)。远期项:Program 加 chineseRequirement(HSK 要求)结构化字段 → 支持"按 HSK 等级筛选"
+- **第 4 问·收藏**:学校+项目都能收;收藏是注册钩子(浏览免登录,收藏需登录)
+- **第 5 问·学生档案**:方案一,注册轻(邮箱)+渐进收集;建 StudentProfile 表,字段可空逐步填
+
+### 讨论中产生的蓝图条目(待写入 docs/03)
+
+- 对比工具:二期,并排表格 v1 / AI 解读 v2(远期),付费层候选;无需新表,依赖字段对齐纪律
+- 智能推荐:远期,设计原则"推荐辅助浏览,不替代浏览"(用户对信息茧房的顾虑,以目录驱动规避)
+- CSCA(来华留学本科入学学业水平测试):2026/2027 起 CSC 奖学金院校本科必考,2028 拟全面铺开;俄罗斯暂无考点。远期项:Program 加 requiresCsca 布尔筛选;俄语 CSCA 指南是合伙人内容金矿(空白市场)
+- 网站建构:复刻 CUCAS 骨架(8 页面类型/模块结构),裁剪 iAgent/coupon/tribe,优化俄语+费用换算+奖学金整合;蓝图文档 docs/03 在五问结论后产出
+
 ### 完成
 
 - Docker Desktop 已安装并运行(engine 29.6.2);**注意:用户级安装,docker CLI 不在系统 PATH**,位于
