@@ -1,4 +1,4 @@
-// 种子数据:3 所学校 + 项目 + CSC 平台级奖学金(schema v2)
+// 种子数据:3 所学校 + 项目 + CSC 平台级奖学金(schema v2.1)
 // 运行:pnpm prisma db seed 或 pnpm tsx prisma/seed.ts(需数据库已启动且 migrate 完成)
 import "dotenv/config";
 import { PrismaClient } from "../src/generated/prisma/client";
@@ -12,7 +12,12 @@ const prisma = new PrismaClient({ adapter });
 async function main() {
   const hit = await prisma.university.upsert({
     where: { slug: "hit" },
-    update: { dataStatus: "PUBLISHED" },
+    update: {
+      dataStatus: "PUBLISHED",
+      lastVerifiedAt: new Date(),
+      universityType: "SCIENCE_ENGINEERING",
+      strongDisciplines: ["焊接", "航天", "计算机科学与技术"],
+    },
     create: {
       slug: "hit",
       nameZh: "哈尔滨工业大学",
@@ -24,6 +29,8 @@ async function main() {
       is985: true,
       is211: true,
       isDoubleFirstClass: true,
+      universityType: "SCIENCE_ENGINEERING",
+      strongDisciplines: ["焊接", "航天", "计算机科学与技术"],
       livingCostPerMonth: 2500,
       dataStatus: "PUBLISHED",
       lastVerifiedAt: new Date(),
@@ -50,7 +57,12 @@ async function main() {
 
   const blcu = await prisma.university.upsert({
     where: { slug: "blcu" },
-    update: { dataStatus: "PUBLISHED" },
+    update: {
+      dataStatus: "PUBLISHED",
+      lastVerifiedAt: new Date(),
+      universityType: "LANGUAGE",
+      strongDisciplines: ["汉语国际教育", "语言学"],
+    },
     create: {
       slug: "blcu",
       nameZh: "北京语言大学",
@@ -59,6 +71,8 @@ async function main() {
       city: "北京",
       province: "北京",
       website: "http://www.blcu.edu.cn",
+      universityType: "LANGUAGE",
+      strongDisciplines: ["汉语国际教育", "语言学"],
       livingCostPerMonth: 4000,
       dataStatus: "PUBLISHED",
       lastVerifiedAt: new Date(),
@@ -84,7 +98,12 @@ async function main() {
 
   const sjtu = await prisma.university.upsert({
     where: { slug: "sjtu" },
-    update: { dataStatus: "PUBLISHED" },
+    update: {
+      dataStatus: "PUBLISHED",
+      lastVerifiedAt: new Date(),
+      universityType: "COMPREHENSIVE",
+      strongDisciplines: ["临床医学", "船舶与海洋工程", "电子信息"],
+    },
     create: {
       slug: "sjtu",
       nameZh: "上海交通大学",
@@ -96,6 +115,8 @@ async function main() {
       is985: true,
       is211: true,
       isDoubleFirstClass: true,
+      universityType: "COMPREHENSIVE",
+      strongDisciplines: ["临床医学", "船舶与海洋工程", "电子信息"],
       livingCostPerMonth: 4500,
       dataStatus: "PUBLISHED",
       lastVerifiedAt: new Date(),
@@ -122,7 +143,7 @@ async function main() {
 
   await prisma.scholarship.upsert({
     where: { id: "csc-platform-level" },
-    update: { dataStatus: "PUBLISHED" },
+    update: { dataStatus: "PUBLISHED", lastVerifiedAt: new Date() },
     create: {
       id: "csc-platform-level",
       name: "中国政府奖学金 (CSC)",
@@ -135,6 +156,9 @@ async function main() {
       lastVerifiedAt: new Date(),
     },
   });
+
+  // 存量项目统一置为已发布(老 seed 建的记录默认是 DRAFT)
+  await prisma.program.updateMany({ data: { dataStatus: 'PUBLISHED' } });
 
   console.log("Seed 完成:", { hit: hit.slug, blcu: blcu.slug, sjtu: sjtu.slug });
 }

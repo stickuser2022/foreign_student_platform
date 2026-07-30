@@ -40,13 +40,21 @@
 - **本机 3000 端口被用户另一个项目长期占用(且从公网转发进来)**,本项目 dev 固定用 3001:package.json dev 脚本已加 `-p 3001`,`.env` 的 BETTER_AUTH_URL 已改为 3001
 - TypeScript 从 5.0.2 升到 5.9(create-next-app 装了过旧版本;`pnpm add -D typescript@^5` 不会升级已满足范围的旧版,需显式指定 `typescript@5.9`)
 
+### 完成(2026-07-30 追加)
+
+- schema v2.1:University 加 universityType(枚举 9 类,列表筛选维度)/ strongDisciplines(自由文本数组)/ photos(URL 数组,远期迁自有图床)
+- **P3 学校详情页上线**:头部/费用速览卡(双币种)/简介/优势学科/项目列表/奖学金(本校+平台级)/核实标记;列表页卡片可点击
+- 新增 `src/shared/money.ts`(CNY→RUB 汇率 11,展示用常量)、`src/modules/universities/labels.ts`(枚举俄语标签)
+- **坑:给已有表加带默认值的新字段时,存量数据会吃默认值**——dataStatus 默认 DRAFT 导致老 seed 项目在前台消失。教训:schema 变更后 seed 的 update 分支要同步处理存量数据
+
 ### 下一步
 
-- [ ] git 首次提交并推送远程(待用户确认)
-- [ ] 收藏功能(MVP 收尾)
-- [ ] next-intl 接入(模块 #2)
-- [ ] 学校详情页 + 项目详情页
-- [ ] 管理后台(数据录入 CMS 的起点)
+- [ ] git 提交推送(P3 + schema v2.1)
+- [ ] P4 项目详情页、收藏功能、/admin 审核队列(蓝图第 9 节)
+- [ ] 学校简介 descriptionRu、图片 logoUrl/photos 数据填充
+- [ ] 第一批 50–100 所学校名单来源
+- [ ] next-intl 接入(二期)
+- [ ] 品牌/域名
 
 ## 2026-07-28 — 项目启动
 

@@ -97,6 +97,12 @@ model University {
   isDoubleFirstClass Boolean @default(false)
   // 生活费速览(人民币/月,跟城市走)
   livingCostPerMonth Int?
+  // 学校类型(列表页筛选维度)
+  universityType   UniversityType @default(OTHER)
+  // 优势学科(自由文本标签,如 ["焊接","航天","计算机"])
+  strongDisciplines String[]
+  // 校园/宿舍实拍图(MVP 阶段存第三方 URL,远期迁自有图床)
+  photos           String[]
   // 数据质量(第 0 问)
   sourceUrl      String?
   lastVerifiedAt DateTime?
@@ -124,6 +130,18 @@ enum DegreeLevel {
 enum DataStatus {
   DRAFT       // 待审核(AI 抽取/录入后未确认)
   PUBLISHED   // 已发布(公开页面可见)
+}
+
+enum UniversityType {
+  COMPREHENSIVE       // 综合类
+  SCIENCE_ENGINEERING // 理工类
+  NORMAL              // 师范类
+  MEDICAL             // 医药类
+  FINANCE_ECONOMICS   // 财经类
+  LANGUAGE            // 语言类
+  AGRICULTURE_FORESTRY // 农林类
+  ARTS                // 艺术类
+  OTHER
 }
 
 model Program {

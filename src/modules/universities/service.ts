@@ -8,3 +8,21 @@ export async function listUniversities() {
     include: { _count: { select: { programs: true } } },
   });
 }
+
+export async function getUniversityBySlug(slug: string) {
+  return prisma.university.findFirst({
+    where: { slug, dataStatus: "PUBLISHED" },
+    include: {
+      programs: { where: { dataStatus: "PUBLISHED" } },
+      scholarships: { where: { dataStatus: "PUBLISHED" } },
+    },
+  });
+}
+
+// 平台级奖学金(不绑定学校,如 CSC)
+export async function listPlatformScholarships() {
+  return prisma.scholarship.findMany({
+    where: { universityId: null, dataStatus: "PUBLISHED" },
+    orderBy: { name: "asc" },
+  });
+}

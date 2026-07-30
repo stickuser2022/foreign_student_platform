@@ -12,27 +12,37 @@ export default async function UniversitiesPage() {
       ) : (
         <ul className="grid gap-4 sm:grid-cols-2">
           {universities.map((u) => (
-            <li key={u.id} className="rounded-lg border p-4">
-              <h2 className="text-lg font-semibold">
-                {u.nameRu ?? u.nameEn ?? u.nameZh}
-              </h2>
-              <p className="text-sm text-gray-500">
-                {u.province} · {u.city}
-              </p>
-              <div className="mt-2 flex flex-wrap gap-1">
-                {u.is985 && (
-                  <span className="rounded bg-amber-100 px-2 py-0.5 text-xs">985</span>
-                )}
-                {u.is211 && (
-                  <span className="rounded bg-amber-100 px-2 py-0.5 text-xs">211</span>
-                )}
-                {u.isDoubleFirstClass && (
-                  <span className="rounded bg-amber-100 px-2 py-0.5 text-xs">双一流</span>
-                )}
-                <span className="rounded bg-gray-100 px-2 py-0.5 text-xs">
-                  Программ: {u._count.programs}
-                </span>
-              </div>
+            <li key={u.id}>
+              <Link
+                href={`/universities/${u.slug}`}
+                className="block rounded-lg border p-4 transition hover:border-blue-400 hover:shadow"
+              >
+                <h2 className="text-lg font-semibold">
+                  {u.nameRu ?? u.nameEn ?? u.nameZh}
+                </h2>
+                <p className="text-sm text-gray-500">
+                  {u.province} · {u.city}
+                </p>
+                <div className="mt-2 flex flex-wrap gap-1">
+                  {u.is985 && (
+                    <span className="rounded bg-amber-100 px-2 py-0.5 text-xs">985</span>
+                  )}
+                  {u.is211 && (
+                    <span className="rounded bg-amber-100 px-2 py-0.5 text-xs">211</span>
+                  )}
+                  {u.isDoubleFirstClass && (
+                    <span className="rounded bg-amber-100 px-2 py-0.5 text-xs">双一流</span>
+                  )}
+                  {u.livingCostPerMonth && (
+                    <span className="rounded bg-blue-50 px-2 py-0.5 text-xs">
+                      ¥{u.livingCostPerMonth.toLocaleString("ru-RU")}/мес
+                    </span>
+                  )}
+                  <span className="rounded bg-gray-100 px-2 py-0.5 text-xs">
+                    Программ: {u._count.programs}
+                  </span>
+                </div>
+              </Link>
             </li>
           ))}
         </ul>
