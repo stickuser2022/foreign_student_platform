@@ -2,6 +2,40 @@
 
 > 按时间倒序记录。每次完成一个模块,在这里记一笔:做了什么、为什么这么做、下一步是什么。
 
+## 2026-07-31 — MVP 功能面收齐 + /admin 后台骨架 ✅
+
+### 完成(均已推送 main,最新 `489360f` 之后的 admin 提交见当日 git log)
+
+- **P4 项目详情页**:参数表(层次/授课语言/学制/招生批次)、费用卡(学费+住宿+保险,双币种换算)、所属学校链接、收藏按钮
+- **收藏功能全链路**:详情页收藏/取消按钮(server action)→ 顶部导航"♥ Избранное"→ `/favorites` 页面(分学校/项目两组);未登录点收藏跳登录页(注册钩子)
+- **个人账户页**:登录后可见自己收藏的内容
+- **/admin 后台 MVP(蓝图第 8 节)**:
+  - `src/modules/auth/require-admin.ts` 守卫:未登录 → /sign-in;非 platform_admin → **404**(故意不暴露后台存在)
+  - 看板 `/admin`:三类内容 待审核/已发布 计数
+  - 审核队列 `/admin/review`:DRAFT 一键发布(置 PUBLISHED + lastVerifiedAt)
+  - 学校录入 `/admin/universities/new`:提交进 DRAFT → 队列确认 → 发布。**闭环已验收**(西南交大录入→发布→前台可见)
+  - **后台界面用中文**(蓝图第 0 节已定:管理员是中国人)
+- **测试账号提权**:`UPDATE users SET role='platform_admin' WHERE email='test@example.com'`(docker exec … psql -U fsp -d foreign_student_platform)
+
+### 技术备忘
+
+- **Prisma 7 动态表名不可用**:`prisma[model].count()` 联合类型不可调用,计数要逐表写
+- **Better Auth 附加字段**:session.user.role 需 `as unknown as { role?: string }` 强转
+- **dev 服务器固定 3001**, curl 验证登录态:`POST /api/auth/sign-in/email` 拿 cookie 再请求受保护页
+
+### 后台演进路线(已讨论,用户认可方向)
+
+后台即"编辑部",逐步长出:编辑已有内容(高频)→ 项目/奖学金录入表单(下一轮)→ 图片上传 → 数据质量提醒(lastVerifiedAt 超期标红)→ AI 抽取辅助(草稿进审核队列)→ 用户/订单管理。**不另建编辑系统,后台前台是同一份数据的两个视图。**
+
+### 下一步
+
+- [ ] 项目/奖学金录入表单(/admin 第二轮)
+- [ ] 编辑已有内容(学校/项目/奖学金的 update 表单)
+- [ ] 学校简介 descriptionRu、logoUrl/photos 数据填充
+- [ ] 第一批 50–100 所学校名单来源(录入工作开始)
+- [ ] next-intl 接入(二期)
+- [ ] 品牌/域名
+
 ## 2026-07-29 — 最小闭环跑通 ✅
 
 ### 数据模型六问讨论(全部拍板,schema v2 依据)

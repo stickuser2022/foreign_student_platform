@@ -20,7 +20,8 @@
 ```
 src/
   modules/
-    auth/           # 认证(Better Auth 封装)
+    auth/           # 认证(Better Auth 封装;require-admin.ts 为后台守卫)
+    admin/          # /admin 后台(看板/审核队列/录入表单,界面用中文)
     universities/   # 学校
     programs/       # 招生项目
     scholarships/   # 奖学金
@@ -34,11 +35,17 @@ src/
 ## 常用命令
 
 ```bash
-pnpm dev              # 启动开发服务器
-docker compose up -d  # 启动本地 PostgreSQL(需先装 Docker Desktop)
+pnpm dev              # 启动开发服务器(固定端口 3001,本机 3000 被其他项目占用)
+docker compose up -d  # 启动本地 PostgreSQL(需先开 Docker Desktop)
 pnpm prisma migrate dev   # 建/改表后生成迁移
 pnpm prisma studio    # 浏览器 GUI 看数据
 ```
+
+环境坑(详见 docs/PROGRESS.md):
+- Docker Desktop 是用户级安装,CLI 不在 PATH:`C:\Users\21128\AppData\Local\Programs\DockerDesktop\resources\bin\`
+- git push/pull 需先开"自由猫" VPN(git 全局代理 127.0.0.1:7892)
+- 数据库容器内 psql:`docker exec foreign_student_platform-db-1 psql -U fsp -d foreign_student_platform`(用户是 fsp,不是 postgres)
+- 提权管理员:`UPDATE users SET role='platform_admin' WHERE email='...'`;非管理员访问 /admin 会得到 404(故意设计)
 
 ## 环境变量
 
