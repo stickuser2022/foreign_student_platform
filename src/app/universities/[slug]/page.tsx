@@ -127,28 +127,33 @@ export default async function UniversityDetailPage({
         </h2>
         <ul className="grid gap-4">
           {university.programs.map((p) => (
-            <li key={p.id} className="rounded-lg border p-4">
-              <h3 className="font-semibold">{p.nameRu ?? p.nameZh}</h3>
-              <p className="mt-1 text-sm text-gray-600">
-                {degreeLevelRu[p.degreeLevel] ?? p.degreeLevel}
-                {p.durationYears ? ` · ${p.durationYears} г.` : ""} ·{" "}
-                {p.teachingLanguages
-                  .map((l) => teachingLanguageRu[l] ?? l)
-                  .join(", ")}
-              </p>
-              {p.tuitionPerYear && (
-                <p className="mt-1 text-sm">
-                  Обучение: {formatDual(p.tuitionPerYear)} / год
+            <li key={p.id}>
+              <Link
+                href={`/programs/${p.id}`}
+                className="block rounded-lg border p-4 transition hover:border-blue-400 hover:shadow"
+              >
+                <h3 className="font-semibold">{p.nameRu ?? p.nameZh}</h3>
+                <p className="mt-1 text-sm text-gray-600">
+                  {degreeLevelRu[p.degreeLevel] ?? p.degreeLevel}
+                  {p.durationYears ? ` · ${p.durationYears} г.` : ""} ·{" "}
+                  {p.teachingLanguages
+                    .map((l) => teachingLanguageRu[l] ?? l)
+                    .join(", ")}
                 </p>
-              )}
-              {p.scholarshipNote && (
-                <p className="mt-1 text-sm text-green-700">🎓 {p.scholarshipNote}</p>
-              )}
-              {p.applicationDeadline && (
-                <p className="mt-1 text-sm text-red-600">
-                  Дедлайн: {p.applicationDeadline.toLocaleDateString("ru-RU")}
-                </p>
-              )}
+                {p.tuitionPerYear && (
+                  <p className="mt-1 text-sm">
+                    Обучение: {formatDual(p.tuitionPerYear)} / год
+                  </p>
+                )}
+                {p.scholarshipNote && (
+                  <p className="mt-1 text-sm text-green-700">🎓 {p.scholarshipNote}</p>
+                )}
+                {p.applicationDeadline && (
+                  <p className="mt-1 text-sm text-red-600">
+                    Дедлайн: {p.applicationDeadline.toLocaleDateString("ru-RU")}
+                  </p>
+                )}
+              </Link>
             </li>
           ))}
         </ul>
