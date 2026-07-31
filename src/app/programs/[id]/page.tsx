@@ -1,6 +1,10 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { headers } from "next/headers";
+import { auth } from "@/modules/auth/auth";
 import { getProgramById } from "@/modules/programs/service";
+import { isFavoriteProgram } from "@/modules/users/service";
+import { toggleFavoriteProgram } from "@/modules/users/actions";
 import {
   degreeLevelRu,
   teachingLanguageRu,
@@ -26,6 +30,11 @@ export default async function ProgramDetailPage({
   const program = await getProgramById(id);
   if (!program) notFound();
 
+  const session = await auth.api.getSession({ headers: await headers() });
+  const favorited = session
+    ? await isFavoriteProgram(session.user.id, program.id)
+    : false;
+
   const u = program.university;
 
   return (
@@ -44,6 +53,19 @@ export default async function ProgramDetailPage({
             · {u.province} · {u.city}
           </span>
         </p>
+        {/* 收藏按钮:未登录点击 → 引导注册 */}
+        <form action={toggleFavoriteProgram.bind(null, program.id)} className="mt-4">
+          <button
+            type="submit"
+            className={`rounded border px-4 py-1.5 text-sm ${
+              favorited
+                ? "border-red-300 bg-red-50 text-red-600"
+                : "border-gray-300 text-gray-600 hover:border-red-300"
+            }`}
+          >
+            {favorited ? "♥ В избранном" : "♡ В избранное"}
+          </button>
+        </form>
       </header>
 
       {/* 1. 参数表 */}

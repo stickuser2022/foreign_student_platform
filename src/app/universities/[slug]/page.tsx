@@ -1,9 +1,13 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { headers } from "next/headers";
+import { auth } from "@/modules/auth/auth";
 import {
   getUniversityBySlug,
   listPlatformScholarships,
 } from "@/modules/universities/service";
+import { isFavoriteUniversity } from "@/modules/users/service";
+import { toggleFavoriteUniversity } from "@/modules/users/actions";
 import {
   universityTypeRu,
   degreeLevelRu,
@@ -33,6 +37,11 @@ export default async function UniversityDetailPage({
   const { slug } = await params;
   const university = await getUniversityBySlug(slug);
   if (!university) notFound();
+
+  const session = await auth.api.getSession({ headers: await headers() });
+  const favorited = session
+    ? await isFavoriteUniversity(session.user.id, university.id)
+    : false;
 
   const platformScholarships = await listPlatformScholarships();
   const allScholarships = [...university.scholarships, ...platformScholarships];
@@ -75,6 +84,19 @@ export default async function UniversityDetailPage({
             </a>
           )}
         </div>
+        {/* 收藏按钮:未登录点击 → 引导注册 */}
+        <form action={toggleFavoriteUniversity.bind(null, university.id)} className="mt-4">
+          <button
+            type="submit"
+            className={`rounded border px-4 py-1.5 text-sm ${
+              favorited
+                ? "border-red-300 bg-red-50 text-red-600"
+                : "border-gray-300 text-gray-600 hover:border-red-300"
+            }`}
+          >
+            {favorited ? "♥ В избранном" : "♡ В избранное"}
+          </button>
+        </form>
       </header>
 
       {/* 2. 费用速览卡 */}
