@@ -21,6 +21,12 @@ export default function Home() {
         >
           Регистрация
         </Link>
+        <Link
+          href="/scholarships"
+          className="rounded border border-blue-600 px-5 py-2 text-blue-600"
+        >
+          Стипендии
+        </Link>
       </div>
     </main>
   );
