@@ -28,12 +28,14 @@ function Field({
   required = false,
   type = "text",
   placeholder,
+  min,
 }: {
   label: string;
   name: string;
   required?: boolean;
   type?: string;
   placeholder?: string;
+  min?: number;
 }) {
   return (
     <div style={{ marginBottom: 12 }}>
@@ -46,6 +48,7 @@ function Field({
         type={type}
         required={required}
         placeholder={placeholder}
+        min={min}
         style={input}
       />
     </div>
@@ -101,6 +104,7 @@ export default async function NewUniversityPage() {
           label="每月生活费预估(元/月,城市级经验值)"
           name="livingCostPerMonth"
           type="number"
+          min={0}
         />
         <div style={{ marginBottom: 12 }}>
           <label style={{ display: "block", marginBottom: 4 }}>

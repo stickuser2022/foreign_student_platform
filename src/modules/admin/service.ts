@@ -16,6 +16,24 @@ export async function adminCounts() {
   };
 }
 
+export async function listUniversitiesForSelect() {
+  return prisma.university.findMany({
+    orderBy: { nameZh: "asc" },
+    select: { id: true, nameZh: true, city: true, dataStatus: true },
+  });
+}
+
+export async function listAllPrograms() {
+  return prisma.program.findMany({
+    orderBy: [{ university: { nameZh: "asc" } }, { nameZh: "asc" }],
+    include: { university: { select: { nameZh: true } } },
+  });
+}
+
+export async function getProgram(id: string) {
+  return prisma.program.findUnique({ where: { id } });
+}
+
 export async function listDrafts() {
   const [universities, programs, scholarships] = await Promise.all([
     prisma.university.findMany({

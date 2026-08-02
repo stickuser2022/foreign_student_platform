@@ -41,6 +41,8 @@ export default async function AdminHomePage() {
       <div style={{ marginTop: 24, display: "flex", gap: 12 }}>
         <Link href="/admin/review">审核队列 →</Link>
         <Link href="/admin/universities/new">录入新学校 →</Link>
+        <Link href="/admin/programs/new">录入新项目 →</Link>
+        <Link href="/admin/programs">项目管理 →</Link>
       </div>
     </main>
   );

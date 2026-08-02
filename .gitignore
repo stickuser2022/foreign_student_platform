@@ -33,6 +33,9 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# 本地敏感备忘(测试账号等,绝不提交)
+docs/LOCAL-DEV.md
+
 # vercel
 .vercel
 

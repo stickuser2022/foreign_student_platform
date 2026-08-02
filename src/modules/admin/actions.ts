@@ -4,7 +4,16 @@ import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { prisma } from "@/shared/db";
 import { requireAdmin } from "@/modules/auth/require-admin";
-import type { UniversityType } from "@/generated/prisma/enums";
+import type { UniversityType, DegreeLevel } from "@/generated/prisma/enums";
+
+const DEGREE_LEVELS: DegreeLevel[] = [
+  "LANGUAGE",
+  "PREP",
+  "BACHELOR",
+  "MASTER",
+  "PHD",
+  "NON_DEGREE",
+];
 
 const UNIVERSITY_TYPES: UniversityType[] = [
   "COMPREHENSIVE",
@@ -96,3 +105,121 @@ export async function createUniversity(formData: FormData) {
   revalidatePath("/admin/review");
   redirect("/admin/review");
 }
+
+// ---------- 录入:新项目(建为待审核,走确认队列) ----------
+
+export async function createProgram(formData: FormData) {
+  await requireAdmin();
+
+  const get = (k: string) => (formData.get(k) as string | null)?.trim() || null;
+  const num = (k: string) => {
+    const v = get(k);
+    return v ? Number(v) : null;
+  };
+  const date = (k: string) => {
+    const v = get(k);
+    return v ? new Date(v) : null;
+  };
+
+  const universityId = get("universityId");
+  const nameZh = get("nameZh");
+  if (!universityId || !nameZh) {
+    throw new Error("所属学校 / 中文名 为必填");
+  }
+
+  const degreeRaw = get("degreeLevel");
+  const degreeLevel = DEGREE_LEVELS.includes(degreeRaw as DegreeLevel)
+    ? (degreeRaw as DegreeLevel)
+    : "BACHELOR";
+
+  const teachingLanguages = formData
+    .getAll("teachingLanguages")
+    .map(String)
+    .filter((l) => ["chinese", "english", "russian"].includes(l));
+
+  await prisma.program.create({
+    data: {
+      universityId,
+      nameZh,
+      nameRu: get("nameRu"),
+      nameEn: get("nameEn"),
+      degreeLevel,
+      teachingLanguages,
+      durationYears: num("durationYears"),
+      tuitionPerYear: num("tuitionPerYear"),
+      hostelFeePerYear: num("hostelFeePerYear"),
+      insuranceFeePerYear: num("insuranceFeePerYear"),
+      applicationFee: num("applicationFee"),
+      scholarshipNote: get("scholarshipNote"),
+      startDate: date("startDate"),
+      applicationDeadline: date("applicationDeadline"),
+      intake: get("intake"),
+      requirements: get("requirements"),
+      sourceUrl: get("sourceUrl"),
+      dataStatus: "DRAFT",
+    },
+  });
+
+  revalidatePath("/admin/review");
+  redirect("/admin/review");
+}
+
+// ---------- 编辑:已有项目(不改审核状态,不动 lastVerifiedAt) ----------
+
+export async function updateProgram(id: string, formData: FormData) {
+  await requireAdmin();
+
+  const get = (k: string) => (formData.get(k) as string | null)?.trim() || null;
+  const num = (k: string) => {
+    const v = get(k);
+    return v ? Number(v) : null;
+  };
+  const date = (k: string) => {
+    const v = get(k);
+    return v ? new Date(v) : null;
+  };
+
+  const universityId = get("universityId");
+  const nameZh = get("nameZh");
+  if (!universityId || !nameZh) {
+    throw new Error("所属学校 / 中文名 为必填");
+  }
+
+  const degreeRaw = get("degreeLevel");
+  const degreeLevel = DEGREE_LEVELS.includes(degreeRaw as DegreeLevel)
+    ? (degreeRaw as DegreeLevel)
+    : "BACHELOR";
+
+  const teachingLanguages = formData
+    .getAll("teachingLanguages")
+    .map(String)
+    .filter((l) => ["chinese", "english", "russian"].includes(l));
+
+  await prisma.program.update({
+    where: { id },
+    data: {
+      universityId,
+      nameZh,
+      nameRu: get("nameRu"),
+      nameEn: get("nameEn"),
+      degreeLevel,
+      teachingLanguages,
+      durationYears: num("durationYears"),
+      tuitionPerYear: num("tuitionPerYear"),
+      hostelFeePerYear: num("hostelFeePerYear"),
+      insuranceFeePerYear: num("insuranceFeePerYear"),
+      applicationFee: num("applicationFee"),
+      scholarshipNote: get("scholarshipNote"),
+      startDate: date("startDate"),
+      applicationDeadline: date("applicationDeadline"),
+      intake: get("intake"),
+      requirements: get("requirements"),
+      sourceUrl: get("sourceUrl"),
+    },
+  });
+
+  revalidatePath("/admin/programs");
+  revalidatePath(`/programs/${id}`);
+  redirect("/admin/programs");
+}
+
