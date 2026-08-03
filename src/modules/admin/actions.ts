@@ -4,7 +4,14 @@ import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { prisma } from "@/shared/db";
 import { requireAdmin } from "@/modules/auth/require-admin";
-import type { UniversityType, DegreeLevel } from "@/generated/prisma/enums";
+import type { UniversityType, DegreeLevel, ScholarshipType } from "@/generated/prisma/enums";
+
+const SCHOLARSHIP_TYPES: ScholarshipType[] = [
+  "CSC",
+  "PROVINCIAL",
+  "UNIVERSITY",
+  "OTHER",
+];
 
 const DEGREE_LEVELS: DegreeLevel[] = [
   "LANGUAGE",
@@ -221,5 +228,113 @@ export async function updateProgram(id: string, formData: FormData) {
   revalidatePath("/admin/programs");
   revalidatePath(`/programs/${id}`);
   redirect("/admin/programs");
+}
+
+// ---------- 编辑:已有学校(不改审核状态,不动 lastVerifiedAt) ----------
+
+export async function updateUniversity(id: string, formData: FormData) {
+  await requireAdmin();
+
+  const get = (k: string) => (formData.get(k) as string | null)?.trim() || null;
+  const slug = get("slug");
+  const nameZh = get("nameZh");
+  const city = get("city");
+  const province = get("province");
+  if (!slug || !nameZh || !city || !province) {
+    throw new Error("slug / 中文名 / 省份 / 城市 为必填");
+  }
+
+  const typeRaw = get("universityType");
+  const universityType = UNIVERSITY_TYPES.includes(typeRaw as UniversityType)
+    ? (typeRaw as UniversityType)
+    : "OTHER";
+
+  await prisma.university.update({
+    where: { id },
+    data: {
+      slug,
+      nameZh,
+      nameRu: get("nameRu"),
+      nameEn: get("nameEn"),
+      city,
+      province,
+      website: get("website"),
+      universityType,
+      is985: formData.get("is985") === "on",
+      is211: formData.get("is211") === "on",
+      isDoubleFirstClass: formData.get("isDoubleFirstClass") === "on",
+      livingCostPerMonth: get("livingCostPerMonth")
+        ? Number(get("livingCostPerMonth"))
+        : null,
+      strongDisciplines: (get("strongDisciplines") ?? "")
+        .split(/[,,\n]/)
+        .map((s) => s.trim())
+        .filter(Boolean),
+      descriptionZh: get("descriptionZh"),
+      descriptionRu: get("descriptionRu"),
+      sourceUrl: get("sourceUrl"),
+    },
+  });
+
+  revalidatePath("/admin/universities");
+  revalidatePath(`/universities/${slug}`);
+  redirect("/admin/universities");
+}
+
+// ---------- 录入:新奖学金(建为待审核,走确认队列) ----------
+
+function parseScholarshipForm(formData: FormData) {
+  const get = (k: string) => (formData.get(k) as string | null)?.trim() || null;
+
+  const name = get("name");
+  if (!name) {
+    throw new Error("奖学金名称为必填");
+  }
+
+  const typeRaw = get("type");
+  const type = SCHOLARSHIP_TYPES.includes(typeRaw as ScholarshipType)
+    ? (typeRaw as ScholarshipType)
+    : "OTHER";
+
+  const deadlineRaw = get("deadline");
+
+  return {
+    name,
+    type,
+    universityId: get("universityId"),
+    coverage: get("coverage"),
+    deadline: deadlineRaw ? new Date(deadlineRaw) : null,
+    applicationChannel: get("applicationChannel"),
+    description: get("description"),
+    sourceUrl: get("sourceUrl"),
+  };
+}
+
+export async function createScholarship(formData: FormData) {
+  await requireAdmin();
+  const data = parseScholarshipForm(formData);
+
+  await prisma.scholarship.create({
+    data: { ...data, dataStatus: "DRAFT" },
+  });
+
+  revalidatePath("/admin/review");
+  redirect("/admin/review");
+}
+
+// ---------- 编辑:已有奖学金(不改审核状态,不动 lastVerifiedAt) ----------
+
+export async function updateScholarship(id: string, formData: FormData) {
+  await requireAdmin();
+  const data = parseScholarshipForm(formData);
+
+  await prisma.scholarship.update({
+    where: { id },
+    data,
+  });
+
+  revalidatePath("/admin/scholarships");
+  revalidatePath("/scholarships");
+  redirect("/admin/scholarships");
 }
 

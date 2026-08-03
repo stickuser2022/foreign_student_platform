@@ -34,6 +34,27 @@ export async function getProgram(id: string) {
   return prisma.program.findUnique({ where: { id } });
 }
 
+export async function listAllUniversities() {
+  return prisma.university.findMany({
+    orderBy: { nameZh: "asc" },
+  });
+}
+
+export async function getUniversity(id: string) {
+  return prisma.university.findUnique({ where: { id } });
+}
+
+export async function listAllScholarships() {
+  return prisma.scholarship.findMany({
+    orderBy: { name: "asc" },
+    include: { university: { select: { nameZh: true } } },
+  });
+}
+
+export async function getScholarship(id: string) {
+  return prisma.scholarship.findUnique({ where: { id } });
+}
+
 export async function listDrafts() {
   const [universities, programs, scholarships] = await Promise.all([
     prisma.university.findMany({
