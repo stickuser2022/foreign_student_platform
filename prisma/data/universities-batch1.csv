@@ -1,0 +1,61 @@
+slug,nameZh,nameEn,city,province,universityType,is985,is211,isDoubleFirstClass,website
+tsinghua,清华大学,Tsinghua University,北京,北京,COMPREHENSIVE,true,true,true,https://www.tsinghua.edu.cn
+pku,北京大学,Peking University,北京,北京,COMPREHENSIVE,true,true,true,https://www.pku.edu.cn
+ruc,中国人民大学,Renmin University of China,北京,北京,COMPREHENSIVE,true,true,true,https://www.ruc.edu.cn
+buaa,北京航空航天大学,Beihang University,北京,北京,SCIENCE_ENGINEERING,true,true,true,https://www.buaa.edu.cn
+bit,北京理工大学,Beijing Institute of Technology,北京,北京,SCIENCE_ENGINEERING,true,true,true,https://www.bit.edu.cn
+bnu,北京师范大学,Beijing Normal University,北京,北京,NORMAL,true,true,true,https://www.bnu.edu.cn
+cau,中国农业大学,China Agricultural University,北京,北京,AGRICULTURE_FORESTRY,true,true,true,https://www.cau.edu.cn
+muc,中央民族大学,Minzu University of China,北京,北京,OTHER,true,true,true,https://www.muc.edu.cn
+nankai,南开大学,Nankai University,天津,天津,COMPREHENSIVE,true,true,true,https://www.nankai.edu.cn
+tju,天津大学,Tianjin University,天津,天津,SCIENCE_ENGINEERING,true,true,true,https://www.tju.edu.cn
+dlut,大连理工大学,Dalian University of Technology,大连,辽宁,SCIENCE_ENGINEERING,true,true,true,https://www.dlut.edu.cn
+neu,东北大学,Northeastern University,沈阳,辽宁,SCIENCE_ENGINEERING,true,true,true,https://www.neu.edu.cn
+jlu,吉林大学,Jilin University,长春,吉林,COMPREHENSIVE,true,true,true,https://www.jlu.edu.cn
+fudan,复旦大学,Fudan University,上海,上海,COMPREHENSIVE,true,true,true,https://www.fudan.edu.cn
+tongji,同济大学,Tongji University,上海,上海,SCIENCE_ENGINEERING,true,true,true,https://www.tongji.edu.cn
+ecnu,华东师范大学,East China Normal University,上海,上海,NORMAL,true,true,true,https://www.ecnu.edu.cn
+nju,南京大学,Nanjing University,南京,江苏,COMPREHENSIVE,true,true,true,https://www.nju.edu.cn
+seu,东南大学,Southeast University,南京,江苏,SCIENCE_ENGINEERING,true,true,true,https://www.seu.edu.cn
+zju,浙江大学,Zhejiang University,杭州,浙江,COMPREHENSIVE,true,true,true,https://www.zju.edu.cn
+ustc,中国科学技术大学,University of Science and Technology of China,合肥,安徽,SCIENCE_ENGINEERING,true,true,true,https://www.ustc.edu.cn
+xmu,厦门大学,Xiamen University,厦门,福建,COMPREHENSIVE,true,true,true,https://www.xmu.edu.cn
+sdu,山东大学,Shandong University,济南,山东,COMPREHENSIVE,true,true,true,https://www.sdu.edu.cn
+ouc,中国海洋大学,Ocean University of China,青岛,山东,OTHER,true,true,true,https://www.ouc.edu.cn
+whu,武汉大学,Wuhan University,武汉,湖北,COMPREHENSIVE,true,true,true,https://www.whu.edu.cn
+hust,华中科技大学,Huazhong University of Science and Technology,武汉,湖北,SCIENCE_ENGINEERING,true,true,true,https://www.hust.edu.cn
+hnu,湖南大学,Hunan University,长沙,湖南,COMPREHENSIVE,true,true,true,https://www.hnu.edu.cn
+csu,中南大学,Central South University,长沙,湖南,COMPREHENSIVE,true,true,true,https://www.csu.edu.cn
+sysu,中山大学,Sun Yat-sen University,广州,广东,COMPREHENSIVE,true,true,true,https://www.sysu.edu.cn
+scut,华南理工大学,South China University of Technology,广州,广东,SCIENCE_ENGINEERING,true,true,true,https://www.scut.edu.cn
+scu,四川大学,Sichuan University,成都,四川,COMPREHENSIVE,true,true,true,https://www.scu.edu.cn
+uestc,电子科技大学,University of Electronic Science and Technology of China,成都,四川,SCIENCE_ENGINEERING,true,true,true,https://www.uestc.edu.cn
+cqu,重庆大学,Chongqing University,重庆,重庆,COMPREHENSIVE,true,true,true,https://www.cqu.edu.cn
+xjtu,西安交通大学,Xi'an Jiaotong University,西安,陕西,COMPREHENSIVE,true,true,true,https://www.xjtu.edu.cn
+nwpu,西北工业大学,Northwestern Polytechnical University,西安,陕西,SCIENCE_ENGINEERING,true,true,true,https://www.nwpu.edu.cn
+lzu,兰州大学,Lanzhou University,兰州,甘肃,COMPREHENSIVE,true,true,true,https://www.lzu.edu.cn
+nwafu,西北农林科技大学,Northwest A&F University,咸阳,陕西,AGRICULTURE_FORESTRY,true,true,true,https://www.nwafu.edu.cn
+bfsu,北京外国语大学,Beijing Foreign Studies University,北京,北京,LANGUAGE,false,true,true,https://www.bfsu.edu.cn
+shisu,上海外国语大学,Shanghai International Studies University,上海,上海,LANGUAGE,false,true,true,https://www.shisu.edu.cn
+uibe,对外经济贸易大学,University of International Business and Economics,北京,北京,FINANCE_ECONOMICS,false,true,true,https://www.uibe.edu.cn
+nenu,东北师范大学,Northeast Normal University,长春,吉林,NORMAL,false,true,true,https://www.nenu.edu.cn
+hrbeu,哈尔滨工程大学,Harbin Engineering University,哈尔滨,黑龙江,SCIENCE_ENGINEERING,false,true,true,https://www.hrbeu.edu.cn
+nefu,东北林业大学,Northeast Forestry University,哈尔滨,黑龙江,AGRICULTURE_FORESTRY,false,true,true,https://www.nefu.edu.cn
+neau,东北农业大学,Northeast Agricultural University,哈尔滨,黑龙江,AGRICULTURE_FORESTRY,false,true,true,https://www.neau.edu.cn
+ybu,延边大学,Yanbian University,延吉,吉林,COMPREHENSIVE,false,true,true,https://www.ybu.edu.cn
+lnu,辽宁大学,Liaoning University,沈阳,辽宁,COMPREHENSIVE,false,true,true,https://www.lnu.edu.cn
+xju,新疆大学,Xinjiang University,乌鲁木齐,新疆,COMPREHENSIVE,false,true,true,https://www.xju.edu.cn
+shzu,石河子大学,Shihezi University,石河子,新疆,COMPREHENSIVE,false,true,true,https://www.shzu.edu.cn
+dlmu,大连海事大学,Dalian Maritime University,大连,辽宁,OTHER,false,true,true,https://www.dlmu.edu.cn
+jnu,暨南大学,Jinan University,广州,广东,COMPREHENSIVE,false,true,true,https://www.jnu.edu.cn
+ecust,华东理工大学,East China University of Science and Technology,上海,上海,SCIENCE_ENGINEERING,false,true,true,https://www.ecust.edu.cn
+shu,上海大学,Shanghai University,上海,上海,COMPREHENSIVE,false,true,true,https://www.shu.edu.cn
+suda,苏州大学,Soochow University,苏州,江苏,COMPREHENSIVE,false,true,true,https://www.suda.edu.cn
+hlju,黑龙江大学,Heilongjiang University,哈尔滨,黑龙江,COMPREHENSIVE,false,false,false,https://www.hlju.edu.cn
+dlufl,大连外国语大学,Dalian University of Foreign Languages,大连,辽宁,LANGUAGE,false,false,false,https://www.dlufl.edu.cn
+bisu,北京第二外国语学院,Beijing International Studies University,北京,北京,LANGUAGE,false,false,false,https://www.bisu.edu.cn
+gdufs,广东外语外贸大学,Guangdong University of Foreign Studies,广州,广东,LANGUAGE,false,false,false,https://www.gdufs.edu.cn
+xisu,西安外国语大学,Xi'an International Studies University,西安,陕西,LANGUAGE,false,false,false,https://www.xisu.edu.cn
+sisu,四川外国语大学,Sichuan International Studies University,重庆,重庆,LANGUAGE,false,false,false,https://www.sisu.edu.cn
+tjfsu,天津外国语大学,Tianjin Foreign Studies University,天津,天津,LANGUAGE,false,false,false,https://www.tjfsu.edu.cn
+szu,深圳大学,Shenzhen University,深圳,广东,COMPREHENSIVE,false,false,false,https://www.szu.edu.cn

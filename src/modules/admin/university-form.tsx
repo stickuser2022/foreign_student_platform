@@ -82,13 +82,17 @@ export function UniversityForm({
   action,
   university,
   submitLabel,
+  redirectTo,
 }: {
   action: (formData: FormData) => void | Promise<void>;
   university?: UniversityFormDefaults;
   submitLabel: string;
+  // 保存后跳转目标(默认由各 action 决定;审核页嵌入时传 /admin/review)
+  redirectTo?: string;
 }) {
   return (
     <form action={action}>
+      {redirectTo && <input type="hidden" name="redirectTo" value={redirectTo} />}
       <Field label="slug(网址标识,如 tsinghua)" name="slug" required defaultValue={university?.slug} />
       <Field label="中文名" name="nameZh" required defaultValue={university?.nameZh} />
       <Field label="俄文名" name="nameRu" defaultValue={strVal(university?.nameRu)} />
@@ -110,6 +114,19 @@ export function UniversityForm({
               alt="logo"
               style={{ height: 40, verticalAlign: "middle", marginLeft: 8 }}
             />
+          </p>
+        )}
+        {university && !university.logoUrl && (
+          <p style={{ margin: "0 0 8px", color: "#b45309", fontSize: 13 }}>
+            ⚠ 未抓取到校徽,请自行搜索后上传:
+            <a
+              href={`https://cn.bing.com/images/search?q=${encodeURIComponent(university.nameZh + " 校徽")}`}
+              target="_blank"
+              rel="noreferrer"
+              style={{ color: "#2563eb", marginLeft: 6 }}
+            >
+              搜「{university.nameZh} 校徽」↗
+            </a>
           </p>
         )}
         <div style={{ marginBottom: 8 }}>
@@ -196,12 +213,28 @@ export function UniversityForm({
         <label style={{ display: "block", marginBottom: 4 }}>简介(俄文,LLM 草稿后人工复核)</label>
         <textarea name="descriptionRu" rows={4} style={input} defaultValue={university?.descriptionRu ?? ""} />
       </div>
-      <Field
-        label="信息来源 URL(官网国际招生页,必填字段之外但强烈建议)"
-        name="sourceUrl"
-        placeholder="https://"
-        defaultValue={strVal(university?.sourceUrl)}
-      />
+      <div style={{ marginBottom: 12 }}>
+        <label style={{ display: "block", marginBottom: 4 }}>
+          信息来源 URL
+          {university?.sourceUrl && (
+            <a
+              href={university.sourceUrl}
+              target="_blank"
+              rel="noreferrer"
+              style={{ marginLeft: 12, color: "#2563eb", fontWeight: "normal" }}
+            >
+              访问 ↗
+            </a>
+          )}
+        </label>
+        <input
+          name="sourceUrl"
+          type="text"
+          placeholder="https://"
+          defaultValue={strVal(university?.sourceUrl)}
+          style={input}
+        />
+      </div>
 
       <button
         type="submit"

@@ -23,8 +23,13 @@ const DEGREE_LEVELS: DegreeLevel[] = [
   "NON_DEGREE",
 ];
 
-const UNIVERSITY_TYPES: UniversityType[] = [
-  "COMPREHENSIVE",
+// 表单里的 redirectTo 只允许跳回 /admin 内部,防开放重定向
+function safeAdminRedirect(formData: FormData, fallback: string): string {
+  const to = formData.get("redirectTo");
+  return typeof to === "string" && to.startsWith("/admin") ? to : fallback;
+}
+
+const UNIVERSITY_TYPES: UniversityType[] = [  "COMPREHENSIVE",
   "SCIENCE_ENGINEERING",
   "NORMAL",
   "MEDICAL",
@@ -243,7 +248,7 @@ export async function updateProgram(id: string, formData: FormData) {
 
   revalidatePath("/admin/programs");
   revalidatePath(`/programs/${id}`);
-  redirect("/admin/programs");
+  redirect(safeAdminRedirect(formData, "/admin/programs"));
 }
 
 // ---------- 编辑:已有学校(不改审核状态,不动 lastVerifiedAt) ----------
@@ -317,7 +322,7 @@ export async function updateUniversity(id: string, formData: FormData) {
 
   revalidatePath("/admin/universities");
   revalidatePath(`/universities/${slug}`);
-  redirect("/admin/universities");
+  redirect(safeAdminRedirect(formData, "/admin/universities"));
 }
 
 // ---------- 录入:新奖学金(建为待审核,走确认队列) ----------
@@ -374,6 +379,6 @@ export async function updateScholarship(id: string, formData: FormData) {
 
   revalidatePath("/admin/scholarships");
   revalidatePath("/scholarships");
-  redirect("/admin/scholarships");
+  redirect(safeAdminRedirect(formData, "/admin/scholarships"));
 }
 

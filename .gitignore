@@ -39,6 +39,9 @@ docs/LOCAL-DEV.md
 # 后台上传的图片(本地数据,不入库;远期迁对象存储)
 public/uploads/
 
+# Playwright 无头浏览器本地产物(抓取调试用)
+.playwright-mcp/
+
 # vercel
 .vercel
 

@@ -99,14 +99,17 @@ export function ProgramForm({
   action,
   program,
   submitLabel,
+  redirectTo,
 }: {
   universities: UniversityOption[];
   action: (formData: FormData) => void | Promise<void>;
   program?: ProgramFormDefaults;
   submitLabel: string;
+  redirectTo?: string;
 }) {
   return (
     <form action={action}>
+      {redirectTo && <input type="hidden" name="redirectTo" value={redirectTo} />}
       <div style={{ marginBottom: 12 }}>
         <label style={{ display: "block", marginBottom: 4 }}>
           所属学校<span style={{ color: "red" }}> *</span>

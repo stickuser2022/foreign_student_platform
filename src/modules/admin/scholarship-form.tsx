@@ -69,14 +69,17 @@ export function ScholarshipForm({
   action,
   scholarship,
   submitLabel,
+  redirectTo,
 }: {
   universities: UniversityOption[];
   action: (formData: FormData) => void | Promise<void>;
   scholarship?: ScholarshipFormDefaults;
   submitLabel: string;
+  redirectTo?: string;
 }) {
   return (
     <form action={action}>
+      {redirectTo && <input type="hidden" name="redirectTo" value={redirectTo} />}
       <Field label="奖学金名称" name="name" required defaultValue={scholarship?.name} />
 
       <div style={{ marginBottom: 12 }}>
