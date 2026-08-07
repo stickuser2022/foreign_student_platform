@@ -9,7 +9,7 @@ import {
   degreeLevelRu,
   teachingLanguageRu,
 } from "@/modules/universities/labels";
-import { formatDual } from "@/shared/money";
+import { formatDual, getCnyToRubRate } from "@/shared/money";
 
 function Row({ label, value }: { label: string; value: string | null }) {
   if (!value) return null;
@@ -34,6 +34,9 @@ export default async function ProgramDetailPage({
   const favorited = session
     ? await isFavoriteProgram(session.user.id, program.id)
     : false;
+
+  const fx = await getCnyToRubRate();
+  const rate = fx?.rate ?? null;
 
   const u = program.university;
 
@@ -107,23 +110,27 @@ export default async function ProgramDetailPage({
           <tbody>
             <Row
               label="Обучение"
-              value={program.tuitionPerYear ? `${formatDual(program.tuitionPerYear)} / год` : null}
+              value={program.tuitionPerYear ? `${formatDual(program.tuitionPerYear, rate)} / год` : null}
             />
             <Row
               label="Общежитие"
-              value={program.hostelFeePerYear ? `${formatDual(program.hostelFeePerYear)} / год` : null}
+              value={program.hostelFeePerYear ? `${formatDual(program.hostelFeePerYear, rate)} / год` : null}
             />
             <Row
               label="Страховка"
-              value={program.insuranceFeePerYear ? `${formatDual(program.insuranceFeePerYear)} / год` : null}
+              value={program.insuranceFeePerYear ? `${formatDual(program.insuranceFeePerYear, rate)} / год` : null}
             />
             <Row
               label="Взнос за подачу"
-              value={program.applicationFee ? formatDual(program.applicationFee) : null}
+              value={program.applicationFee ? formatDual(program.applicationFee, rate) : null}
             />
           </tbody>
         </table>
-        <p className="mt-3 text-xs text-gray-500">Курс: 1 ¥ ≈ 11 ₽ (ориентировочно)</p>
+        {fx && (
+          <p className="mt-3 text-xs text-gray-500">
+            Курс {fx.source}: 1 ¥ ≈ {fx.rate.toFixed(2)} ₽
+          </p>
+        )}
       </section>
 
       {/* 3. 奖学金说明 */}

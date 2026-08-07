@@ -4,13 +4,17 @@ import { redirect } from "next/navigation";
 import { auth } from "@/modules/auth/auth";
 import { listFavorites } from "@/modules/users/service";
 import { degreeLevelRu, teachingLanguageRu } from "@/modules/universities/labels";
-import { formatDual } from "@/shared/money";
+import { formatDual, getCnyToRubRate } from "@/shared/money";
 
 export default async function FavoritesPage() {
   const session = await auth.api.getSession({ headers: await headers() });
   if (!session) redirect("/sign-in");
 
-  const { universities, programs } = await listFavorites(session.user.id);
+  const [{ universities, programs }, fx] = await Promise.all([
+    listFavorites(session.user.id),
+    getCnyToRubRate(),
+  ]);
+  const rate = fx?.rate ?? null;
 
   return (
     <main className="mx-auto max-w-4xl px-4 py-10">
@@ -63,7 +67,7 @@ export default async function FavoritesPage() {
                   </p>
                   {p.tuitionPerYear && (
                     <p className="mt-1 text-sm">
-                      Обучение: {formatDual(p.tuitionPerYear)} / год
+                      Обучение: {formatDual(p.tuitionPerYear, rate)} / год
                     </p>
                   )}
                 </Link>

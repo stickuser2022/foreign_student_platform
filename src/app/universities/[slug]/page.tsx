@@ -14,7 +14,7 @@ import {
   teachingLanguageRu,
   scholarshipTypeRu,
 } from "@/modules/universities/labels";
-import { formatDual } from "@/shared/money";
+import { formatDual, getCnyToRubRate } from "@/shared/money";
 
 function range(values: (number | null)[]): [number, number] | null {
   const nums = values.filter((v): v is number => v != null);
@@ -22,11 +22,15 @@ function range(values: (number | null)[]): [number, number] | null {
   return [Math.min(...nums), Math.max(...nums)];
 }
 
-function formatRange(r: [number, number] | null, suffix: string): string | null {
+function formatRange(
+  r: [number, number] | null,
+  suffix: string,
+  rate: number | null
+): string | null {
   if (!r) return null;
   const [min, max] = r;
-  if (min === max) return `${formatDual(min)} ${suffix}`;
-  return `${formatDual(min)} – ¥${max.toLocaleString("ru-RU")} ${suffix}`;
+  if (min === max) return `${formatDual(min, rate)} ${suffix}`;
+  return `${formatDual(min, rate)} – ¥${max.toLocaleString("ru-RU")} ${suffix}`;
 }
 
 export default async function UniversityDetailPage({
@@ -46,6 +50,8 @@ export default async function UniversityDetailPage({
   const platformScholarships = await listPlatformScholarships();
   const allScholarships = [...university.scholarships, ...platformScholarships];
 
+  const fx = await getCnyToRubRate();
+  const rate = fx?.rate ?? null;
   const tuition = range(university.programs.map((p) => p.tuitionPerYear));
   const hostel = range(university.programs.map((p) => p.hostelFeePerYear));
   const insurance = range(university.programs.map((p) => p.insuranceFeePerYear));
@@ -103,18 +109,20 @@ export default async function UniversityDetailPage({
       <section className="mb-8 rounded-lg border border-blue-200 bg-blue-50 p-5">
         <h2 className="mb-3 text-xl font-semibold">💰 Стоимость (кратко)</h2>
         <ul className="space-y-1 text-gray-800">
-          {tuition && <li>Обучение: {formatRange(tuition, "/ год")}</li>}
-          {hostel && <li>Общежитие: {formatRange(hostel, "/ год")}</li>}
-          {insurance && <li>Страховка: {formatRange(insurance, "/ год")}</li>}
+          {tuition && <li>Обучение: {formatRange(tuition, "/ год", rate)}</li>}
+          {hostel && <li>Общежитие: {formatRange(hostel, "/ год", rate)}</li>}
+          {insurance && <li>Страховка: {formatRange(insurance, "/ год", rate)}</li>}
           {university.livingCostPerMonth && (
             <li>
-              Прожиточные расходы: {formatDual(university.livingCostPerMonth)} / месяц
+              Прожиточные расходы: {formatDual(university.livingCostPerMonth, rate)} / месяц
             </li>
           )}
         </ul>
-        <p className="mt-3 text-xs text-gray-500">
-          Курс: 1 ¥ ≈ 11 ₽ (ориентировочно)
-        </p>
+        {fx && (
+          <p className="mt-3 text-xs text-gray-500">
+            Курс {fx.source}: 1 ¥ ≈ {fx.rate.toFixed(2)} ₽
+          </p>
+        )}
       </section>
 
       {/* 3. 简介 + 优势学科 */}
@@ -164,7 +172,7 @@ export default async function UniversityDetailPage({
                 </p>
                 {p.tuitionPerYear && (
                   <p className="mt-1 text-sm">
-                    Обучение: {formatDual(p.tuitionPerYear)} / год
+                    Обучение: {formatDual(p.tuitionPerYear, rate)} / год
                   </p>
                 )}
                 {p.scholarshipNote && (
