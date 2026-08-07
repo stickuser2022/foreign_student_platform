@@ -3,6 +3,7 @@
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { prisma } from "@/shared/db";
+import { saveUpload } from "@/shared/upload";
 import { requireAdmin } from "@/modules/auth/require-admin";
 import type { UniversityType, DegreeLevel, ScholarshipType } from "@/generated/prisma/enums";
 
@@ -82,6 +83,19 @@ export async function createUniversity(formData: FormData) {
     ? (typeRaw as UniversityType)
     : "OTHER";
 
+  // 图片:上传文件优先于外链 URL
+  const logoUrl =
+    (await saveUpload(formData.get("logoFile"))) ?? get("logoUrl");
+  const photoPaths = (
+    await Promise.all(
+      formData.getAll("photoFiles").map((f) => saveUpload(f))
+    )
+  ).filter((p): p is string => p != null);
+  const photoUrls = (get("photos") ?? "")
+    .split("\n")
+    .map((s) => s.trim())
+    .filter(Boolean);
+
   await prisma.university.create({
     data: {
       slug,
@@ -91,6 +105,8 @@ export async function createUniversity(formData: FormData) {
       city,
       province,
       website: get("website"),
+      logoUrl,
+      photos: [...photoUrls, ...photoPaths],
       universityType,
       is985: formData.get("is985") === "on",
       is211: formData.get("is211") === "on",
@@ -249,6 +265,27 @@ export async function updateUniversity(id: string, formData: FormData) {
     ? (typeRaw as UniversityType)
     : "OTHER";
 
+  // 图片:上传文件优先于外链 URL;都没给则保持原值(编辑页 URL 框已预填,
+  // 用户清空 URL 框视为不变更 logo,避免误丢图)
+  const existing = await prisma.university.findUnique({
+    where: { id },
+    select: { logoUrl: true },
+  });
+  const logoUrl =
+    (await saveUpload(formData.get("logoFile"))) ??
+    get("logoUrl") ??
+    existing?.logoUrl ??
+    null;
+  const photoPaths = (
+    await Promise.all(
+      formData.getAll("photoFiles").map((f) => saveUpload(f))
+    )
+  ).filter((p): p is string => p != null);
+  const photoUrls = (get("photos") ?? "")
+    .split("\n")
+    .map((s) => s.trim())
+    .filter(Boolean);
+
   await prisma.university.update({
     where: { id },
     data: {
@@ -259,6 +296,8 @@ export async function updateUniversity(id: string, formData: FormData) {
       city,
       province,
       website: get("website"),
+      logoUrl,
+      photos: [...photoUrls, ...photoPaths],
       universityType,
       is985: formData.get("is985") === "on",
       is211: formData.get("is211") === "on",

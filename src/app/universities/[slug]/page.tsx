@@ -15,6 +15,7 @@ import {
   scholarshipTypeRu,
 } from "@/modules/universities/labels";
 import { formatDual, getCnyToRubRate } from "@/shared/money";
+import { UniversityLogo } from "@/modules/universities/logo";
 
 function range(values: (number | null)[]): [number, number] | null {
   const nums = values.filter((v): v is number => v != null);
@@ -65,14 +66,23 @@ export default async function UniversityDetailPage({
     <main className="mx-auto max-w-4xl px-4 py-10">
       {/* 1. 头部 */}
       <header className="mb-8">
-        <h1 className="text-3xl font-bold">
-          {university.nameRu ?? university.nameEn ?? university.nameZh}
-        </h1>
-        <p className="mt-1 text-lg text-gray-500">{university.nameZh}</p>
-        <p className="mt-2 text-gray-600">
-          {university.province} · {university.city} ·{" "}
-          {universityTypeRu[university.universityType] ?? university.universityType}
-        </p>
+        <div className="flex items-start gap-4">
+          <UniversityLogo
+            logoUrl={university.logoUrl}
+            name={university.nameRu ?? university.nameEn ?? university.nameZh}
+            size={72}
+          />
+          <div className="min-w-0">
+            <h1 className="text-3xl font-bold">
+              {university.nameRu ?? university.nameEn ?? university.nameZh}
+            </h1>
+            <p className="mt-1 text-lg text-gray-500">{university.nameZh}</p>
+            <p className="mt-2 text-gray-600">
+              {university.province} · {university.city} ·{" "}
+              {universityTypeRu[university.universityType] ?? university.universityType}
+            </p>
+          </div>
+        </div>
         <div className="mt-3 flex flex-wrap gap-2">
           {badges.map((b) => (
             <span key={b} className="rounded bg-amber-100 px-2 py-0.5 text-sm">

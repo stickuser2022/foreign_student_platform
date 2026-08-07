@@ -36,6 +36,9 @@ yarn-error.log*
 # 本地敏感备忘(测试账号等,绝不提交)
 docs/LOCAL-DEV.md
 
+# 后台上传的图片(本地数据,不入库;远期迁对象存储)
+public/uploads/
+
 # vercel
 .vercel
 

@@ -63,6 +63,8 @@ export type UniversityFormDefaults = {
   city: string;
   province: string;
   website: string | null;
+  logoUrl: string | null;
+  photos: string[];
   universityType: string;
   is985: boolean;
   is211: boolean;
@@ -94,6 +96,52 @@ export function UniversityForm({
       <Field label="省份(中文)" name="province" required defaultValue={university?.province} />
       <Field label="城市(中文)" name="city" required defaultValue={university?.city} />
       <Field label="官网" name="website" placeholder="https://" defaultValue={strVal(university?.website)} />
+
+      <fieldset style={{ border: "1px solid #ddd", borderRadius: 6, marginBottom: 12 }}>
+        <legend style={{ padding: "0 6px", color: "#666" }}>
+          校徽 Logo(上传文件 或 粘贴外链,二选一;上传优先)
+        </legend>
+        {university?.logoUrl && (
+          <p style={{ margin: "0 0 8px" }}>
+            当前:
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={university.logoUrl}
+              alt="logo"
+              style={{ height: 40, verticalAlign: "middle", marginLeft: 8 }}
+            />
+          </p>
+        )}
+        <div style={{ marginBottom: 8 }}>
+          <input type="file" name="logoFile" accept="image/*" />
+        </div>
+        <Field
+          label="或图片外链 URL(清空并保存 = 不换图时保持原值)"
+          name="logoUrl"
+          placeholder="https:// 或 /uploads/..."
+          defaultValue={strVal(university?.logoUrl)}
+        />
+      </fieldset>
+
+      <fieldset style={{ border: "1px solid #ddd", borderRadius: 6, marginBottom: 12 }}>
+        <legend style={{ padding: "0 6px", color: "#666" }}>
+          校园/宿舍实拍图(可多选上传,和/或每行一个外链)
+        </legend>
+        <div style={{ marginBottom: 8 }}>
+          <input type="file" name="photoFiles" accept="image/*" multiple />
+        </div>
+        <div style={{ marginBottom: 12 }}>
+          <label style={{ display: "block", marginBottom: 4 }}>
+            图片 URL 列表(每行一个;新上传的文件会追加到列表末尾)
+          </label>
+          <textarea
+            name="photos"
+            rows={3}
+            style={input}
+            defaultValue={university?.photos.join("\n") ?? ""}
+          />
+        </div>
+      </fieldset>
 
       <div style={{ marginBottom: 12 }}>
         <label style={{ display: "block", marginBottom: 4 }}>学校类型</label>

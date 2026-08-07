@@ -5,6 +5,7 @@ import {
   type UniversityFilter,
 } from "@/modules/universities/service";
 import { universityTypeRu } from "@/modules/universities/labels";
+import { UniversityLogo } from "@/modules/universities/logo";
 
 const selectClass =
   "rounded-md border border-gray-300 px-2 py-1.5 text-sm dark:border-gray-600 dark:bg-gray-900";
@@ -108,32 +109,38 @@ export default async function UniversitiesPage({
             <li key={u.id}>
               <Link
                 href={`/universities/${u.slug}`}
-                className="block rounded-lg border p-4 transition hover:border-blue-400 hover:shadow"
+                className="flex items-start gap-3 rounded-lg border p-4 transition hover:border-blue-400 hover:shadow"
               >
-                <h2 className="text-lg font-semibold">
-                  {u.nameRu ?? u.nameEn ?? u.nameZh}
-                </h2>
-                <p className="text-sm text-gray-500">
-                  {u.province} · {u.city}
-                </p>
-                <div className="mt-2 flex flex-wrap gap-1">
-                  {u.is985 && (
-                    <span className="rounded bg-amber-100 px-2 py-0.5 text-xs">985</span>
-                  )}
-                  {u.is211 && (
-                    <span className="rounded bg-amber-100 px-2 py-0.5 text-xs">211</span>
-                  )}
-                  {u.isDoubleFirstClass && (
-                    <span className="rounded bg-amber-100 px-2 py-0.5 text-xs">双一流</span>
-                  )}
-                  {u.livingCostPerMonth && (
-                    <span className="rounded bg-blue-50 px-2 py-0.5 text-xs">
-                      ¥{u.livingCostPerMonth.toLocaleString("ru-RU")}/мес
+                <UniversityLogo
+                  logoUrl={u.logoUrl}
+                  name={u.nameRu ?? u.nameEn ?? u.nameZh}
+                />
+                <div className="min-w-0">
+                  <h2 className="text-lg font-semibold">
+                    {u.nameRu ?? u.nameEn ?? u.nameZh}
+                  </h2>
+                  <p className="text-sm text-gray-500">
+                    {u.province} · {u.city}
+                  </p>
+                  <div className="mt-2 flex flex-wrap gap-1">
+                    {u.is985 && (
+                      <span className="rounded bg-amber-100 px-2 py-0.5 text-xs">985</span>
+                    )}
+                    {u.is211 && (
+                      <span className="rounded bg-amber-100 px-2 py-0.5 text-xs">211</span>
+                    )}
+                    {u.isDoubleFirstClass && (
+                      <span className="rounded bg-amber-100 px-2 py-0.5 text-xs">双一流</span>
+                    )}
+                    {u.livingCostPerMonth && (
+                      <span className="rounded bg-blue-50 px-2 py-0.5 text-xs">
+                        ¥{u.livingCostPerMonth.toLocaleString("ru-RU")}/мес
+                      </span>
+                    )}
+                    <span className="rounded bg-gray-100 px-2 py-0.5 text-xs">
+                      Программ: {u._count.programs}
                     </span>
-                  )}
-                  <span className="rounded bg-gray-100 px-2 py-0.5 text-xs">
-                    Программ: {u._count.programs}
-                  </span>
+                  </div>
                 </div>
               </Link>
             </li>
