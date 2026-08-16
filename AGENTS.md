@@ -39,6 +39,7 @@ pnpm dev              # 启动开发服务器(固定端口 3001,本机 3000 被�
 docker compose up -d  # 启动本地 PostgreSQL(需先开 Docker Desktop)
 pnpm prisma migrate dev   # 建/改表后生成迁移
 pnpm prisma studio    # 浏览器 GUI 看数据
+pnpm backup           # 备份数据库到 backups/(每周或大批量录数据后跑一次)
 ```
 
 环境坑(详见 docs/PROGRESS.md):

@@ -42,6 +42,9 @@ public/uploads/
 # Playwright 无头浏览器本地产物(抓取调试用)
 .playwright-mcp/
 
+# 数据库备份(本地保险,绝不提交)
+backups/
+
 # vercel
 .vercel
 
