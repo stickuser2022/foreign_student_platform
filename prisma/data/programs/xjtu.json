@@ -1,0 +1,34 @@
+{
+  "universitySlug": "xjtu",
+  "common": {
+    "degreeLevel": "BACHELOR",
+    "applicationFee": 500,
+    "applicationDeadline": "2026-06-30",
+    "intake": "2026 秋季",
+    "requirements": "中文授课:HSK4 级及以上;英文授课:雅思 6.0 / 托福 80 / 多邻国 110。所有本科申请者须参加 CSCA 测试(各专业科目见学校招生页)。年龄不超过 25 岁。中文不达标者可先读预科。",
+    "scholarshipNote": "可申请:中国政府奖学金(CSC)、西安交大本科国际学生新生奖学金(特等免 100% 学费~优秀奖免 10%)、西安市一带一路奖学金、陕西省三秦奖学金。",
+    "sourceUrl": "https://sie.xjtu.edu.cn/info/1223/4960.htm"
+  },
+  "programs": [
+    { "nameZh": "计算机科学与技术", "teachingLanguages": ["chinese"], "durationYears": 4, "tuitionPerYear": 22000 },
+    { "nameZh": "软件工程", "teachingLanguages": ["chinese"], "durationYears": 4, "tuitionPerYear": 22000 },
+    { "nameZh": "电子科学与技术", "teachingLanguages": ["chinese"], "durationYears": 4, "tuitionPerYear": 22000 },
+    { "nameZh": "机械工程", "teachingLanguages": ["chinese"], "durationYears": 4, "tuitionPerYear": 22000 },
+    { "nameZh": "电气工程及其自动化", "teachingLanguages": ["chinese"], "durationYears": 4, "tuitionPerYear": 22000 },
+    { "nameZh": "能源与动力工程", "teachingLanguages": ["chinese"], "durationYears": 4, "tuitionPerYear": 22000 },
+    { "nameZh": "新能源科学与工程", "teachingLanguages": ["chinese"], "durationYears": 4, "tuitionPerYear": 22000 },
+    { "nameZh": "材料科学与工程", "teachingLanguages": ["chinese"], "durationYears": 4, "tuitionPerYear": 22000 },
+    { "nameZh": "生物医学工程", "teachingLanguages": ["chinese"], "durationYears": 4, "tuitionPerYear": 22000 },
+    { "nameZh": "大数据管理与应用", "teachingLanguages": ["chinese"], "durationYears": 4, "tuitionPerYear": 20000 },
+    { "nameZh": "工商管理", "teachingLanguages": ["chinese"], "durationYears": 4, "tuitionPerYear": 20000 },
+    { "nameZh": "金融学", "teachingLanguages": ["chinese"], "durationYears": 4, "tuitionPerYear": 20000 },
+    { "nameZh": "国际经济与贸易(国际班)", "teachingLanguages": ["chinese"], "durationYears": 4, "tuitionPerYear": 20000 },
+    { "nameZh": "汉语言(商务汉语)", "teachingLanguages": ["chinese"], "durationYears": 4, "tuitionPerYear": 20000 },
+    { "nameZh": "汉语言文学", "teachingLanguages": ["chinese"], "durationYears": 4, "tuitionPerYear": 20000 },
+    { "nameZh": "网络与新媒体", "teachingLanguages": ["chinese"], "durationYears": 4, "tuitionPerYear": 20000 },
+    { "nameZh": "电气工程及其自动化(英文授课)", "nameEn": "Electrical Engineering and Automation (English-taught)", "teachingLanguages": ["english"], "durationYears": 4, "tuitionPerYear": 40000 },
+    { "nameZh": "智能制造工程(英文授课)", "nameEn": "Intelligent Manufacturing Engineering (English-taught)", "teachingLanguages": ["english"], "durationYears": 4, "tuitionPerYear": 40000 },
+    { "nameZh": "能源与动力工程(英文授课)", "nameEn": "Energy and Power Engineering (English-taught)", "teachingLanguages": ["english"], "durationYears": 4, "tuitionPerYear": 40000 },
+    { "nameZh": "临床医学 MBBS(英文授课)", "nameEn": "Clinical Medicine MBBS (English-taught)", "teachingLanguages": ["english"], "durationYears": 6, "tuitionPerYear": 180000 }
+  ]
+}

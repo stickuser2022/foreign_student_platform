@@ -5,6 +5,7 @@ import { revalidatePath } from "next/cache";
 import { prisma } from "@/shared/db";
 import { saveUpload } from "@/shared/upload";
 import { requireAdmin } from "@/modules/auth/require-admin";
+import { runVerifyDrafts } from "@/modules/admin/verify";
 import type { UniversityType, DegreeLevel, ScholarshipType } from "@/generated/prisma/enums";
 
 const SCHOLARSHIP_TYPES: ScholarshipType[] = [
@@ -40,7 +41,43 @@ const UNIVERSITY_TYPES: UniversityType[] = [  "COMPREHENSIVE",
   "OTHER",
 ];
 
+// 表单 date 输入的值是 "YYYY-MM-DD",按 UTC 中午 12 点存,
+// 全球任何时区(±12h)读出/显示都是同一天(否则负时区会差一天)
+function parseDateOnly(s: string): Date {
+  const [y, m, d] = s.split("-").map(Number);
+  return new Date(Date.UTC(y, m - 1, d, 12));
+}
+
 // ---------- 审核队列:发布 ----------
+
+// 整组发布:学校(若是草稿)+ 该校全部待审核项目/奖学金,一键搞定
+export async function publishUniversityGroup(universityId: string) {
+  await requireAdmin();
+  const now = new Date();
+  await prisma.$transaction([
+    prisma.university.updateMany({
+      where: { id: universityId, dataStatus: "DRAFT" },
+      data: { dataStatus: "PUBLISHED", lastVerifiedAt: now },
+    }),
+    prisma.program.updateMany({
+      where: { universityId, dataStatus: "DRAFT" },
+      data: { dataStatus: "PUBLISHED", lastVerifiedAt: now },
+    }),
+    prisma.scholarship.updateMany({
+      where: { universityId, dataStatus: "DRAFT" },
+      data: { dataStatus: "PUBLISHED", lastVerifiedAt: now },
+    }),
+  ]);
+  revalidatePath("/admin/review");
+}
+
+// ---------- 审核队列:脚本审核(重新跑对齐校验,可能要十几秒) ----------
+
+export async function runVerify() {
+  await requireAdmin();
+  await runVerifyDrafts();
+  revalidatePath("/admin/review");
+}
 
 export async function publishUniversity(id: string) {
   await requireAdmin();
@@ -146,7 +183,7 @@ export async function createProgram(formData: FormData) {
   };
   const date = (k: string) => {
     const v = get(k);
-    return v ? new Date(v) : null;
+    return v ? parseDateOnly(v) : null;
   };
 
   const universityId = get("universityId");
@@ -204,7 +241,7 @@ export async function updateProgram(id: string, formData: FormData) {
   };
   const date = (k: string) => {
     const v = get(k);
-    return v ? new Date(v) : null;
+    return v ? parseDateOnly(v) : null;
   };
 
   const universityId = get("universityId");
@@ -347,7 +384,7 @@ function parseScholarshipForm(formData: FormData) {
     type,
     universityId: get("universityId"),
     coverage: get("coverage"),
-    deadline: deadlineRaw ? new Date(deadlineRaw) : null,
+    deadline: deadlineRaw ? parseDateOnly(deadlineRaw) : null,
     applicationChannel: get("applicationChannel"),
     description: get("description"),
     sourceUrl: get("sourceUrl"),

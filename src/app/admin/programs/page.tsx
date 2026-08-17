@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { requireAdmin } from "@/modules/auth/require-admin";
-import { listAllPrograms } from "@/modules/admin/service";
+import { listAllPrograms, listUniversitiesForSelect } from "@/modules/admin/service";
+import { updateProgram } from "@/modules/admin/actions";
+import { ProgramForm } from "@/modules/admin/program-form";
 
 const DEGREE_LABELS: Record<string, string> = {
   LANGUAGE: "语言班",
@@ -11,52 +13,64 @@ const DEGREE_LABELS: Record<string, string> = {
   NON_DEGREE: "短期/交换",
 };
 
+const LANG_LABELS: Record<string, string> = {
+  chinese: "中文授课",
+  english: "英文授课",
+  russian: "俄文授课",
+};
+
 export default async function AdminProgramsPage() {
   await requireAdmin();
-  const programs = await listAllPrograms();
+  const [programs, universities] = await Promise.all([
+    listAllPrograms(),
+    listUniversitiesForSelect(),
+  ]);
 
   return (
-    <main style={{ maxWidth: 960, margin: "40px auto", padding: "0 16px" }}>
+    <main style={{ maxWidth: 800, margin: "40px auto", padding: "0 16px" }}>
       <p>
         <Link href="/admin">← 返回看板</Link>
       </p>
-      <h1>项目管理</h1>
+      <h1>项目管理({programs.length})</h1>
       <p>
         <Link href="/admin/programs/new">＋ 录入新项目</Link>
       </p>
+      <p style={{ color: "#666" }}>
+        点开卡片即可就地编辑,保存后留在本页。待审核项目请优先在审核队列处理。
+      </p>
 
-      <table style={{ width: "100%", borderCollapse: "collapse", marginTop: 16 }}>
-        <thead>
-          <tr style={{ textAlign: "left", borderBottom: "2px solid #ddd" }}>
-            <th style={{ padding: 8 }}>项目</th>
-            <th style={{ padding: 8 }}>所属学校</th>
-            <th style={{ padding: 8 }}>层次</th>
-            <th style={{ padding: 8 }}>状态</th>
-            <th style={{ padding: 8 }}>最近核实</th>
-            <th style={{ padding: 8 }}></th>
-          </tr>
-        </thead>
-        <tbody>
-          {programs.map((p) => (
-            <tr key={p.id} style={{ borderBottom: "1px solid #eee" }}>
-              <td style={{ padding: 8 }}>{p.nameZh}</td>
-              <td style={{ padding: 8 }}>{p.university.nameZh}</td>
-              <td style={{ padding: 8 }}>{DEGREE_LABELS[p.degreeLevel] ?? p.degreeLevel}</td>
-              <td style={{ padding: 8 }}>
-                {p.dataStatus === "PUBLISHED" ? "已发布" : "待审核"}
-              </td>
-              <td style={{ padding: 8 }}>
-                {p.lastVerifiedAt
-                  ? p.lastVerifiedAt.toLocaleDateString("zh-CN")
-                  : "—"}
-              </td>
-              <td style={{ padding: 8 }}>
-                <Link href={`/admin/programs/${p.id}/edit`}>编辑</Link>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      {programs.map((p) => (
+        <details
+          key={p.id}
+          style={{
+            border: "1px solid #ddd",
+            borderRadius: 8,
+            marginBottom: 8,
+            padding: "0 12px",
+          }}
+        >
+          <summary style={{ cursor: "pointer", padding: "10px 0", listStyle: "none" }}>
+            <strong>{p.nameZh}</strong>{" "}
+            <small style={{ color: "#888" }}>
+              {p.university.nameZh} · {DEGREE_LABELS[p.degreeLevel] ?? p.degreeLevel}
+              {p.teachingLanguages.length > 0 &&
+                ` · ${p.teachingLanguages.map((l) => LANG_LABELS[l] ?? l).join("/")}`}{" "}
+              · {p.dataStatus === "PUBLISHED" ? "已发布" : "待审核"}
+              {p.lastVerifiedAt &&
+                ` · 核实于 ${p.lastVerifiedAt.toLocaleDateString("zh-CN")}`}
+            </small>
+          </summary>
+          <div style={{ borderTop: "1px solid #eee", paddingTop: 12, paddingBottom: 12 }}>
+            <ProgramForm
+              universities={universities}
+              action={updateProgram.bind(null, p.id)}
+              program={p}
+              submitLabel="保存修改"
+              redirectTo="/admin/programs"
+            />
+          </div>
+        </details>
+      ))}
     </main>
   );
 }

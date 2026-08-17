@@ -40,6 +40,7 @@ docker compose up -d  # 启动本地 PostgreSQL(需先开 Docker Desktop)
 pnpm prisma migrate dev   # 建/改表后生成迁移
 pnpm prisma studio    # 浏览器 GUI 看数据
 pnpm backup           # 备份数据库到 backups/(每周或大批量录数据后跑一次)
+pnpm verify           # 对齐校验:草稿关键字段 vs 来源原文,刷新审核页徽章(批量导入后必跑)
 ```
 
 环境坑(详见 docs/PROGRESS.md):

@@ -64,7 +64,9 @@ export async function listDrafts() {
     prisma.program.findMany({
       where: { dataStatus: "DRAFT" },
       orderBy: { updatedAt: "desc" },
-      include: { university: { select: { nameZh: true } } },
+      include: {
+        university: { select: { nameZh: true, dataStatus: true } },
+      },
     }),
     prisma.scholarship.findMany({
       where: { dataStatus: "DRAFT" },

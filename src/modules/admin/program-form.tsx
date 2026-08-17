@@ -200,12 +200,28 @@ export function ProgramForm({
         </label>
         <textarea name="requirements" rows={4} style={input} defaultValue={program?.requirements ?? ""} />
       </div>
-      <Field
-        label="信息来源 URL(官网项目页,强烈建议填)"
-        name="sourceUrl"
-        placeholder="https://"
-        defaultValue={strVal(program?.sourceUrl)}
-      />
+      <div style={{ marginBottom: 12 }}>
+        <label style={{ display: "block", marginBottom: 4 }}>
+          信息来源 URL(官网项目页,强烈建议填)
+          {program?.sourceUrl && (
+            <a
+              href={program.sourceUrl}
+              target="_blank"
+              rel="noreferrer"
+              style={{ marginLeft: 12, color: "#2563eb", fontWeight: "normal" }}
+            >
+              访问 ↗
+            </a>
+          )}
+        </label>
+        <input
+          name="sourceUrl"
+          type="text"
+          placeholder="https://"
+          defaultValue={strVal(program?.sourceUrl)}
+          style={input}
+        />
+      </div>
 
       <button
         type="submit"

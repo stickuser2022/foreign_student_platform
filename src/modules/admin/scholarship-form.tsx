@@ -129,12 +129,28 @@ export function ScholarshipForm({
         <label style={{ display: "block", marginBottom: 4 }}>说明</label>
         <textarea name="description" rows={4} style={input} defaultValue={scholarship?.description ?? ""} />
       </div>
-      <Field
-        label="信息来源 URL(官方奖学金页,强烈建议填)"
-        name="sourceUrl"
-        placeholder="https://"
-        defaultValue={strVal(scholarship?.sourceUrl)}
-      />
+      <div style={{ marginBottom: 12 }}>
+        <label style={{ display: "block", marginBottom: 4 }}>
+          信息来源 URL(官方奖学金页,强烈建议填)
+          {scholarship?.sourceUrl && (
+            <a
+              href={scholarship.sourceUrl}
+              target="_blank"
+              rel="noreferrer"
+              style={{ marginLeft: 12, color: "#2563eb", fontWeight: "normal" }}
+            >
+              访问 ↗
+            </a>
+          )}
+        </label>
+        <input
+          name="sourceUrl"
+          type="text"
+          placeholder="https://"
+          defaultValue={strVal(scholarship?.sourceUrl)}
+          style={input}
+        />
+      </div>
 
       <button
         type="submit"
