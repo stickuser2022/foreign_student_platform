@@ -9,6 +9,6 @@ export async function listScholarships(type?: ScholarshipType) {
       ...(type ? { type } : {}),
     },
     orderBy: [{ deadline: "asc" }, { name: "asc" }],
-    include: { university: { select: { slug: true, nameZh: true, nameRu: true } } },
+    include: { university: { select: { slug: true, nameZh: true, nameRu: true, nameEn: true } } },
   });
 }

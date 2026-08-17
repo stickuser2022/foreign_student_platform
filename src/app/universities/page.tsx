@@ -5,6 +5,7 @@ import {
   type UniversityFilter,
 } from "@/modules/universities/service";
 import { universityTypeRu } from "@/modules/universities/labels";
+import { geoToRu } from "@/modules/universities/geo";
 import { UniversityLogo } from "@/modules/universities/logo";
 
 const selectClass =
@@ -113,14 +114,14 @@ export default async function UniversitiesPage({
               >
                 <UniversityLogo
                   logoUrl={u.logoUrl}
-                  name={u.nameRu ?? u.nameEn ?? u.nameZh}
+                  name={u.nameRu ?? u.nameEn ?? ""}
                 />
                 <div className="min-w-0">
                   <h2 className="text-lg font-semibold">
-                    {u.nameRu ?? u.nameEn ?? u.nameZh}
+                    {u.nameRu ?? u.nameEn ?? ""}
                   </h2>
                   <p className="text-sm text-gray-500">
-                    {u.province} · {u.city}
+                    {geoToRu(u.province, u.city)}
                   </p>
                   <div className="mt-2 flex flex-wrap gap-1">
                     {u.is985 && (

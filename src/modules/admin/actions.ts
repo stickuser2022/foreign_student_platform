@@ -160,6 +160,10 @@ export async function createUniversity(formData: FormData) {
         .split(/[,,\n]/)
         .map((s) => s.trim())
         .filter(Boolean),
+      strongDisciplinesRu: (get("strongDisciplinesRu") ?? "")
+        .split(/[,,\n]/)
+        .map((s) => s.trim())
+        .filter(Boolean),
       descriptionZh: get("descriptionZh"),
       descriptionRu: get("descriptionRu"),
       sourceUrl: get("sourceUrl"),
@@ -216,10 +220,12 @@ export async function createProgram(formData: FormData) {
       insuranceFeePerYear: num("insuranceFeePerYear"),
       applicationFee: num("applicationFee"),
       scholarshipNote: get("scholarshipNote"),
+      scholarshipNoteRu: get("scholarshipNoteRu"),
       startDate: date("startDate"),
       applicationDeadline: date("applicationDeadline"),
       intake: get("intake"),
       requirements: get("requirements"),
+      requirementsRu: get("requirementsRu"),
       sourceUrl: get("sourceUrl"),
       dataStatus: "DRAFT",
     },
@@ -275,10 +281,12 @@ export async function updateProgram(id: string, formData: FormData) {
       insuranceFeePerYear: num("insuranceFeePerYear"),
       applicationFee: num("applicationFee"),
       scholarshipNote: get("scholarshipNote"),
+      scholarshipNoteRu: get("scholarshipNoteRu"),
       startDate: date("startDate"),
       applicationDeadline: date("applicationDeadline"),
       intake: get("intake"),
       requirements: get("requirements"),
+      requirementsRu: get("requirementsRu"),
       sourceUrl: get("sourceUrl"),
     },
   });
@@ -351,6 +359,10 @@ export async function updateUniversity(id: string, formData: FormData) {
         .split(/[,,\n]/)
         .map((s) => s.trim())
         .filter(Boolean),
+      strongDisciplinesRu: (get("strongDisciplinesRu") ?? "")
+        .split(/[,,\n]/)
+        .map((s) => s.trim())
+        .filter(Boolean),
       descriptionZh: get("descriptionZh"),
       descriptionRu: get("descriptionRu"),
       sourceUrl: get("sourceUrl"),
@@ -381,12 +393,15 @@ function parseScholarshipForm(formData: FormData) {
 
   return {
     name,
+    nameRu: get("nameRu"),
     type,
     universityId: get("universityId"),
     coverage: get("coverage"),
+    coverageRu: get("coverageRu"),
     deadline: deadlineRaw ? parseDateOnly(deadlineRaw) : null,
     applicationChannel: get("applicationChannel"),
     description: get("description"),
+    descriptionRu: get("descriptionRu"),
     sourceUrl: get("sourceUrl"),
   };
 }

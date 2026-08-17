@@ -81,7 +81,8 @@ function AlignBadge({ checks }: { checks: Checks }) {
   if (passed === entries.length) {
     return (
       <span style={{ color: "#16a34a", fontSize: 13, marginLeft: 12 }}>
-        对齐 ✓ {passed}/{entries.length}
+        对齐 ✓ {passed}/{entries.length}(
+        {entries.map(([f]) => f).join("·")})
       </span>
     );
   }

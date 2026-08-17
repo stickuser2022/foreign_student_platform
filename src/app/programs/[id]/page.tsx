@@ -10,6 +10,7 @@ import {
   teachingLanguageRu,
 } from "@/modules/universities/labels";
 import { formatDual, getCnyToRubRate } from "@/shared/money";
+import { geoToRu } from "@/modules/universities/geo";
 
 function Row({ label, value }: { label: string; value: string | null }) {
   if (!value) return null;
@@ -43,17 +44,17 @@ export default async function ProgramDetailPage({
   return (
     <main className="mx-auto max-w-3xl px-4 py-10">
       <header className="mb-8">
-        <h1 className="text-3xl font-bold">{program.nameRu ?? program.nameZh}</h1>
+        <h1 className="text-3xl font-bold">{program.nameRu ?? program.nameEn ?? ""}</h1>
         <p className="mt-2">
           <Link
             href={`/universities/${u.slug}`}
             className="text-blue-600 underline"
           >
-            {u.nameRu ?? u.nameZh}
+            {u.nameRu ?? u.nameEn ?? ""}
           </Link>
           <span className="text-gray-500">
             {" "}
-            · {u.province} · {u.city}
+            · {geoToRu(u.province, u.city)}
           </span>
         </p>
         {/* 收藏按钮:未登录点击 → 引导注册 */}
@@ -133,11 +134,11 @@ export default async function ProgramDetailPage({
         )}
       </section>
 
-      {/* 3. 奖学金说明 */}
-      {program.scholarshipNote && (
+      {/* 3. 奖学金说明(仅俄文) */}
+      {program.scholarshipNoteRu && (
         <section className="mb-8 rounded-lg border border-green-200 bg-green-50 p-5">
           <h2 className="mb-2 text-xl font-semibold">🎓 Стипендии</h2>
-          <p className="text-gray-800">{program.scholarshipNote}</p>
+          <p className="text-gray-800">{program.scholarshipNoteRu}</p>
           <Link
             href={`/universities/${u.slug}`}
             className="mt-2 inline-block text-sm text-blue-600 underline"
@@ -147,11 +148,11 @@ export default async function ProgramDetailPage({
         </section>
       )}
 
-      {/* 4. 申请要求 */}
-      {program.requirements && (
+      {/* 4. 申请要求(仅俄文) */}
+      {program.requirementsRu && (
         <section className="mb-8">
           <h2 className="mb-2 text-xl font-semibold">Требования</h2>
-          <p className="whitespace-pre-line text-gray-700">{program.requirements}</p>
+          <p className="whitespace-pre-line text-gray-700">{program.requirementsRu}</p>
         </section>
       )}
 
@@ -177,7 +178,7 @@ export default async function ProgramDetailPage({
       )}
 
       <Link href={`/universities/${u.slug}`} className="text-blue-600 underline">
-        ← {u.nameRu ?? u.nameZh}
+        ← {u.nameRu ?? u.nameEn ?? ""}
       </Link>
     </main>
   );

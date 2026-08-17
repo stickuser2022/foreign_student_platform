@@ -30,10 +30,6 @@ export async function listAllPrograms() {
   });
 }
 
-export async function getProgram(id: string) {
-  return prisma.program.findUnique({ where: { id } });
-}
-
 export async function listAllUniversities() {
   return prisma.university.findMany({
     orderBy: { nameZh: "asc" },

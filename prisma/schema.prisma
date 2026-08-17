@@ -101,6 +101,8 @@ model University {
   universityType   UniversityType @default(OTHER)
   // 优势学科(自由文本标签,如 ["焊接","航天","计算机"])
   strongDisciplines String[]
+  // 俄文版(翻译脚本生成;前台只显示俄文,admin 表单双语都可编辑)
+  strongDisciplinesRu String[]
   // 校园/宿舍实拍图(MVP 阶段存第三方 URL,远期迁自有图床)
   photos           String[]
   // 数据质量(第 0 问)
@@ -162,6 +164,9 @@ model Program {
   applicationFee  Int?
   // 奖学金说明(纯文本,如"可申请 CSC + 校长奖学金")
   scholarshipNote   String?
+  // 俄文版(LLM/DeepSeek 批量翻译,人工复核后上前台;为空则前台回退中文)
+  requirementsRu    String?
+  scholarshipNoteRu String?
   startDate         DateTime?
   applicationDeadline DateTime?
   // 入学批次,如 "2026 秋季"
@@ -192,13 +197,17 @@ model Scholarship {
   universityId String?
   university   University?     @relation(fields: [universityId], references: [id], onDelete: SetNull)
   name         String
+  // 俄文版(LLM/DeepSeek 批量翻译,人工复核;为空则前台回退中文 name)
+  nameRu       String?
   type         ScholarshipType
   // 覆盖范围描述(学费/住宿/生活费等;项目级限制也写在这里)
   coverage     String?
+  coverageRu   String?
   deadline     DateTime?
   // 申请通道说明(如 CSC 系统 + Agency Number)
   applicationChannel String?
   description  String?
+  descriptionRu String?
   // 数据质量(第 0 问)
   sourceUrl      String?
   lastVerifiedAt DateTime?

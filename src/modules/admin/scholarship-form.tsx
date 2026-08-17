@@ -52,11 +52,14 @@ function Field({
 export type ScholarshipFormDefaults = {
   universityId: string | null;
   name: string;
+  nameRu: string | null;
   type: string;
   coverage: string | null;
+  coverageRu: string | null;
   deadline: Date | null;
   applicationChannel: string | null;
   description: string | null;
+  descriptionRu: string | null;
   sourceUrl: string | null;
 };
 
@@ -81,6 +84,7 @@ export function ScholarshipForm({
     <form action={action}>
       {redirectTo && <input type="hidden" name="redirectTo" value={redirectTo} />}
       <Field label="奖学金名称" name="name" required defaultValue={scholarship?.name} />
+      <Field label="奖学金俄文名(翻译脚本生成后复核)" name="nameRu" defaultValue={strVal(scholarship?.nameRu)} />
 
       <div style={{ marginBottom: 12 }}>
         <label style={{ display: "block", marginBottom: 4 }}>类型</label>
@@ -117,6 +121,11 @@ export function ScholarshipForm({
         name="coverage"
         defaultValue={strVal(scholarship?.coverage)}
       />
+      <Field
+        label="覆盖范围(俄文)"
+        name="coverageRu"
+        defaultValue={strVal(scholarship?.coverageRu)}
+      />
       <Field label="申请截止日期" name="deadline" type="date" defaultValue={dateVal(scholarship?.deadline)} />
 
       <div style={{ marginBottom: 12 }}>
@@ -128,6 +137,10 @@ export function ScholarshipForm({
       <div style={{ marginBottom: 12 }}>
         <label style={{ display: "block", marginBottom: 4 }}>说明</label>
         <textarea name="description" rows={4} style={input} defaultValue={scholarship?.description ?? ""} />
+      </div>
+      <div style={{ marginBottom: 12 }}>
+        <label style={{ display: "block", marginBottom: 4 }}>说明(俄文)</label>
+        <textarea name="descriptionRu" rows={4} style={input} defaultValue={scholarship?.descriptionRu ?? ""} />
       </div>
       <div style={{ marginBottom: 12 }}>
         <label style={{ display: "block", marginBottom: 4 }}>

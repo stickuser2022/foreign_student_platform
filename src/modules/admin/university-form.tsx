@@ -71,6 +71,7 @@ export type UniversityFormDefaults = {
   isDoubleFirstClass: boolean;
   livingCostPerMonth: number | null;
   strongDisciplines: string[];
+  strongDisciplinesRu: string[];
   descriptionZh: string | null;
   descriptionRu: string | null;
   sourceUrl: string | null;
@@ -203,6 +204,17 @@ export function UniversityForm({
           rows={3}
           style={input}
           defaultValue={university?.strongDisciplines.join(",") ?? ""}
+        />
+      </div>
+      <div style={{ marginBottom: 12 }}>
+        <label style={{ display: "block", marginBottom: 4 }}>
+          优势学科(俄文,翻译脚本生成;前台只显示俄文)
+        </label>
+        <textarea
+          name="strongDisciplinesRu"
+          rows={3}
+          style={input}
+          defaultValue={university?.strongDisciplinesRu.join(",") ?? ""}
         />
       </div>
       <div style={{ marginBottom: 12 }}>

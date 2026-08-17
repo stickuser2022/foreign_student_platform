@@ -49,7 +49,7 @@ export default async function ScholarshipsPage({
         <ul className="grid gap-4">
           {scholarships.map((s) => (
             <li key={s.id} className="rounded-lg border p-4">
-              <h2 className="text-lg font-semibold">{s.name}</h2>
+              <h2 className="text-lg font-semibold">{s.nameRu ?? s.name}</h2>
               <p className="mt-1 text-sm text-gray-600">
                 {scholarshipTypeRu[s.type] ?? s.type}
                 {s.university && (
@@ -59,13 +59,13 @@ export default async function ScholarshipsPage({
                       href={`/universities/${s.university.slug}`}
                       className="text-blue-600 underline"
                     >
-                      {s.university.nameRu ?? s.university.nameZh}
+                      {s.university.nameRu ?? s.university.nameEn ?? ""}
                     </Link>
                   </>
                 )}
               </p>
-              {s.coverage && (
-                <p className="mt-2 text-sm">Покрывает: {s.coverage}</p>
+              {s.coverageRu && (
+                <p className="mt-2 text-sm">Покрывает: {s.coverageRu}</p>
               )}
               {s.deadline && (
                 <p className="mt-1 text-sm text-red-600">

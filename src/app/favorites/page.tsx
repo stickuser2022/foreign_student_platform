@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import { auth } from "@/modules/auth/auth";
 import { listFavorites } from "@/modules/users/service";
 import { degreeLevelRu, teachingLanguageRu } from "@/modules/universities/labels";
+import { geoToRu } from "@/modules/universities/geo";
 import { formatDual, getCnyToRubRate } from "@/shared/money";
 
 export default async function FavoritesPage() {
@@ -34,9 +35,9 @@ export default async function FavoritesPage() {
                   href={`/universities/${u.slug}`}
                   className="block rounded-lg border p-4 transition hover:border-blue-400 hover:shadow"
                 >
-                  <h3 className="font-semibold">{u.nameRu ?? u.nameZh}</h3>
+                  <h3 className="font-semibold">{u.nameRu ?? u.nameEn ?? ""}</h3>
                   <p className="text-sm text-gray-500">
-                    {u.province} · {u.city} · Программ: {u._count.programs}
+                    {geoToRu(u.province, u.city)} · Программ: {u._count.programs}
                   </p>
                 </Link>
               </li>
@@ -57,9 +58,9 @@ export default async function FavoritesPage() {
                   href={`/programs/${p.id}`}
                   className="block rounded-lg border p-4 transition hover:border-blue-400 hover:shadow"
                 >
-                  <h3 className="font-semibold">{p.nameRu ?? p.nameZh}</h3>
+                  <h3 className="font-semibold">{p.nameRu ?? p.nameEn ?? ""}</h3>
                   <p className="mt-1 text-sm text-gray-600">
-                    {p.university.nameRu ?? p.university.nameZh} ·{" "}
+                    {p.university.nameRu ?? p.university.nameEn ?? ""} ·{" "}
                     {degreeLevelRu[p.degreeLevel] ?? p.degreeLevel} ·{" "}
                     {p.teachingLanguages
                       .map((l) => teachingLanguageRu[l] ?? l)

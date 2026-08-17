@@ -15,6 +15,7 @@ import {
   scholarshipTypeRu,
 } from "@/modules/universities/labels";
 import { formatDual, getCnyToRubRate } from "@/shared/money";
+import { geoToRu } from "@/modules/universities/geo";
 import { UniversityLogo } from "@/modules/universities/logo";
 
 function range(values: (number | null)[]): [number, number] | null {
@@ -60,7 +61,7 @@ export default async function UniversityDetailPage({
   const badges: string[] = [];
   if (university.is985) badges.push("985");
   if (university.is211) badges.push("211");
-  if (university.isDoubleFirstClass) badges.push("双一流");
+  if (university.isDoubleFirstClass) badges.push("Двойной первоклассный");
 
   return (
     <main className="mx-auto max-w-4xl px-4 py-10">
@@ -69,16 +70,18 @@ export default async function UniversityDetailPage({
         <div className="flex items-start gap-4">
           <UniversityLogo
             logoUrl={university.logoUrl}
-            name={university.nameRu ?? university.nameEn ?? university.nameZh}
+            name={university.nameRu ?? university.nameEn ?? ""}
             size={72}
           />
           <div className="min-w-0">
             <h1 className="text-3xl font-bold">
-              {university.nameRu ?? university.nameEn ?? university.nameZh}
+              {university.nameRu ?? university.nameEn ?? ""}
             </h1>
-            <p className="mt-1 text-lg text-gray-500">{university.nameZh}</p>
+            {university.nameRu && university.nameEn && (
+              <p className="mt-1 text-lg text-gray-500">{university.nameEn}</p>
+            )}
             <p className="mt-2 text-gray-600">
-              {university.province} · {university.city} ·{" "}
+              {geoToRu(university.province, university.city)} ·{" "}
               {universityTypeRu[university.universityType] ?? university.universityType}
             </p>
           </div>
@@ -135,20 +138,19 @@ export default async function UniversityDetailPage({
         )}
       </section>
 
-      {/* 3. 简介 + 优势学科 */}
-      {university.descriptionRu || university.descriptionZh ? (
+      {/* 3. 简介(仅俄文版,无俄文不显示) */}
+      {university.descriptionRu && (
         <section className="mb-8">
           <h2 className="mb-2 text-xl font-semibold">Об университете</h2>
-          <p className="text-gray-700">
-            {university.descriptionRu ?? university.descriptionZh}
-          </p>
+          <p className="text-gray-700">{university.descriptionRu}</p>
         </section>
-      ) : null}
-      {university.strongDisciplines.length > 0 && (
+      )}
+      {/* 优势学科(仅俄文版) */}
+      {university.strongDisciplinesRu.length > 0 && (
         <section className="mb-8">
           <h2 className="mb-2 text-xl font-semibold">Сильные направления</h2>
           <div className="flex flex-wrap gap-2">
-            {university.strongDisciplines.map((d) => (
+            {university.strongDisciplinesRu.map((d) => (
               <span
                 key={d}
                 className="rounded-full bg-green-100 px-3 py-1 text-sm"
@@ -172,7 +174,7 @@ export default async function UniversityDetailPage({
                 href={`/programs/${p.id}`}
                 className="block rounded-lg border p-4 transition hover:border-blue-400 hover:shadow"
               >
-                <h3 className="font-semibold">{p.nameRu ?? p.nameZh}</h3>
+                <h3 className="font-semibold">{p.nameRu ?? p.nameEn ?? ""}</h3>
                 <p className="mt-1 text-sm text-gray-600">
                   {degreeLevelRu[p.degreeLevel] ?? p.degreeLevel}
                   {p.durationYears ? ` · ${p.durationYears} г.` : ""} ·{" "}
@@ -185,8 +187,8 @@ export default async function UniversityDetailPage({
                     Обучение: {formatDual(p.tuitionPerYear, rate)} / год
                   </p>
                 )}
-                {p.scholarshipNote && (
-                  <p className="mt-1 text-sm text-green-700">🎓 {p.scholarshipNote}</p>
+                {p.scholarshipNoteRu && (
+                  <p className="mt-1 text-sm text-green-700">🎓 {p.scholarshipNoteRu}</p>
                 )}
                 {p.applicationDeadline && (
                   <p className="mt-1 text-sm text-red-600">
@@ -206,11 +208,11 @@ export default async function UniversityDetailPage({
           <ul className="space-y-3">
             {allScholarships.map((s) => (
               <li key={s.id} className="rounded-lg border p-4">
-                <h3 className="font-semibold">{s.name}</h3>
+                <h3 className="font-semibold">{s.nameRu ?? s.name}</h3>
                 <p className="text-sm text-gray-600">
                   {scholarshipTypeRu[s.type] ?? s.type}
                 </p>
-                {s.coverage && <p className="mt-1 text-sm">Покрывает: {s.coverage}</p>}
+                {s.coverageRu && <p className="mt-1 text-sm">Покрывает: {s.coverageRu}</p>}
                 {s.deadline && (
                   <p className="mt-1 text-sm text-red-600">
                     Дедлайн: {s.deadline.toLocaleDateString("ru-RU")}

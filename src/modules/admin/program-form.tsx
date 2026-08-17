@@ -81,10 +81,12 @@ export type ProgramFormDefaults = {
   insuranceFeePerYear: number | null;
   applicationFee: number | null;
   scholarshipNote: string | null;
+  scholarshipNoteRu: string | null;
   startDate: Date | null;
   applicationDeadline: Date | null;
   intake: string | null;
   requirements: string | null;
+  requirementsRu: string | null;
   sourceUrl: string | null;
 };
 
@@ -196,9 +198,21 @@ export function ProgramForm({
       </div>
       <div style={{ marginBottom: 12 }}>
         <label style={{ display: "block", marginBottom: 4 }}>
+          奖学金说明(俄文,翻译脚本批量生成后人工复核)
+        </label>
+        <textarea name="scholarshipNoteRu" rows={2} style={input} defaultValue={program?.scholarshipNoteRu ?? ""} />
+      </div>
+      <div style={{ marginBottom: 12 }}>
+        <label style={{ display: "block", marginBottom: 4 }}>
           申请要求(语言/学历/HSK 等)
         </label>
         <textarea name="requirements" rows={4} style={input} defaultValue={program?.requirements ?? ""} />
+      </div>
+      <div style={{ marginBottom: 12 }}>
+        <label style={{ display: "block", marginBottom: 4 }}>
+          申请要求(俄文,翻译脚本批量生成后人工复核)
+        </label>
+        <textarea name="requirementsRu" rows={4} style={input} defaultValue={program?.requirementsRu ?? ""} />
       </div>
       <div style={{ marginBottom: 12 }}>
         <label style={{ display: "block", marginBottom: 4 }}>
