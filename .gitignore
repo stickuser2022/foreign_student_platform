@@ -42,6 +42,9 @@ public/uploads/
 # Playwright 无头浏览器本地产物(抓取调试用)
 .playwright-mcp/
 
+# 设计参考站截图(第三方网站内容,不入库)
+design-refs/
+
 # 数据库备份(本地保险,绝不提交)
 backups/
 
