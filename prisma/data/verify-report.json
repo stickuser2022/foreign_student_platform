@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-19T05:44:51.125Z",
+  "generatedAt": "2026-08-19T05:59:33.735Z",
   "programs": [
     {
       "id": "cmsvb06d5001erkyxomxgg4l2",
@@ -43,6 +43,25 @@
       "id": "cmsznk5l4000gpcyxb9h4pmzy",
       "universitySlug": "xjtu",
       "nameZh": "人居环境科学与技术专业（建筑环境与节能方向）",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmszoh1jt00035oyxbl0l7r2z",
+      "universitySlug": "hit",
+      "nameZh": "产品设计(英文授课)",
       "checks": {
         "专业名": {
           "ok": true
@@ -157,6 +176,25 @@
       "id": "cmsvb06b4000xrkyxdngpept5",
       "universitySlug": "xjtu",
       "nameZh": "计算机科学与技术",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmszoh1p100045oyxth0rt1nq",
+      "universitySlug": "nenu",
+      "nameZh": "音乐学",
       "checks": {
         "专业名": {
           "ok": true
@@ -648,6 +686,25 @@
       }
     },
     {
+      "id": "cmszoh1p700055oyxo4kwhege",
+      "universitySlug": "nenu",
+      "nameZh": "舞蹈编导",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
       "id": "cmsvb06ct001brkyxgfom07ok",
       "universitySlug": "xjtu",
       "nameZh": "汉语言文学",
@@ -914,6 +971,25 @@
       }
     },
     {
+      "id": "cmszoh1pc00065oyxejs4oz06",
+      "universitySlug": "nenu",
+      "nameZh": "雕塑",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
       "id": "cmsznk5k30008pcyx2ru1ne6l",
       "universitySlug": "xjtu",
       "nameZh": "电子商务",
@@ -936,6 +1012,44 @@
       "id": "cmsznk5k80009pcyxen0d660t",
       "universitySlug": "xjtu",
       "nameZh": "经济学",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmszoh1i800005oyxmuvjo081",
+      "universitySlug": "hit",
+      "nameZh": "数字媒体艺术",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmszoh1pr00095oyxaok2f26e",
+      "universitySlug": "nenu",
+      "nameZh": "视觉传达设计",
       "checks": {
         "专业名": {
           "ok": true
@@ -1012,6 +1126,158 @@
       "id": "cmsznk5kw000epcyxbdhbvoim",
       "universitySlug": "xjtu",
       "nameZh": "人居环境科学与技术专业（大数据与智慧城市方向）",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmszoh1jh00015oyxsfsfdw3b",
+      "universitySlug": "hit",
+      "nameZh": "产品设计",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmszoh1jn00025oyx3d870ka2",
+      "universitySlug": "hit",
+      "nameZh": "数字媒体艺术(英文授课)",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmszoh1ph00075oyxlxm0qett",
+      "universitySlug": "nenu",
+      "nameZh": "美术学",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmszoh1pn00085oyxijl2soql",
+      "universitySlug": "nenu",
+      "nameZh": "环境设计",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmszoh1pw000a5oyxbf4s0naq",
+      "universitySlug": "nenu",
+      "nameZh": "服装与服饰设计",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmszoh1q2000b5oyx95mlxy3y",
+      "universitySlug": "nenu",
+      "nameZh": "广播电视编导",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmszoh1ri000c5oyxexijo90g",
+      "universitySlug": "xjtu",
+      "nameZh": "环境设计",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmszoh1rn000d5oyxheh5ta7d",
+      "universitySlug": "xjtu",
+      "nameZh": "书法学",
       "checks": {
         "专业名": {
           "ok": true

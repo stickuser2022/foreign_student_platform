@@ -27,6 +27,8 @@ type ProgramEntry = {
   teachingLanguages: string[];
   durationYears?: number;
   tuitionPerYear?: number;
+  // 单条目覆盖校级公共申请要求(如艺考类需附作品集说明)
+  requirements?: string;
 };
 
 type SchoolFile = {
@@ -91,7 +93,7 @@ async function main() {
             ? parseDateOnly(data.common.applicationDeadline)
             : null,
           intake: data.common.intake ?? null,
-          requirements: data.common.requirements ?? null,
+          requirements: p.requirements ?? data.common.requirements ?? null,
           scholarshipNote: data.common.scholarshipNote ?? null,
           sourceUrl: data.common.sourceUrl ?? null,
           dataStatus: "DRAFT",

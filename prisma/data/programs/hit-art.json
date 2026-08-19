@@ -1,0 +1,52 @@
+{
+ "universitySlug": "hit",
+ "common": {
+  "degreeLevel": "BACHELOR",
+  "applicationFee": 400,
+  "insuranceFeePerYear": 800,
+  "hostelFeePerYear": 9600,
+  "applicationDeadline": "2026-07-15",
+  "intake": "2026 秋季",
+  "requirements": "中文授课项目要求 HSK4 级 210 分及以上；英文授课项目要求雅思 6.0 或托福 80。所有申请人须参加 CSCA 测试(测试科目按专业不同,详见招生专业目录)。申请人须身心健康、非中国籍公民、具有高中及以上学历,年龄不超过 30 周岁(申请哈尔滨工业大学国际学生奖学金者不超过 25 周岁)。英文授课项目满 20 人开班。",
+  "scholarshipNote": "可申请哈尔滨工业大学国际学生奖学金:特等免全额学费,一等减免 50% 学费,二等减免 30% 学费,三等减免 20% 学费;也可申请中国政府奖学金(CSC)。奖学金申请报名费 600 元(自费申请报名费 400 元)。",
+  "sourceUrl": "https://cie.hit.edu.cn/18285/list.htm"
+ },
+ "programs": [
+  {
+   "nameZh": "数字媒体艺术",
+   "nameEn": "Digital Media Art",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4,
+   "tuitionPerYear": 20000
+  },
+  {
+   "nameZh": "产品设计",
+   "nameEn": "Product Design",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4,
+   "tuitionPerYear": 20000
+  },
+  {
+   "nameZh": "数字媒体艺术(英文授课)",
+   "nameEn": "Digital Media Art",
+   "teachingLanguages": [
+    "english"
+   ],
+   "durationYears": 4,
+   "tuitionPerYear": 26000
+  },
+  {
+   "nameZh": "产品设计(英文授课)",
+   "nameEn": "Product Design",
+   "teachingLanguages": [
+    "english"
+   ],
+   "durationYears": 4,
+   "tuitionPerYear": 26000
+  }
+ ]
+}

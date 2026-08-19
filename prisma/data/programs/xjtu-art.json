@@ -1,0 +1,31 @@
+{
+ "universitySlug": "xjtu",
+ "common": {
+  "degreeLevel": "BACHELOR",
+  "applicationFee": 500,
+  "applicationDeadline": "2026-06-30",
+  "intake": "2026 秋季",
+  "requirements": "中文授课:HSK4 级及以上;英文授课:雅思 6.0 / 托福 80 / 多邻国 110。所有本科申请者须参加 CSCA 测试(各专业科目见学校招生页)。年龄不超过 25 岁。中文不达标者可先读预科。",
+  "scholarshipNote": "可申请:中国政府奖学金(CSC)、西安交大本科国际学生新生奖学金(特等免 100% 学费~优秀奖免 10%)、西安市一带一路奖学金、陕西省三秦奖学金。",
+  "sourceUrl": "https://sie.xjtu.edu.cn/info/1223/4960.htm"
+ },
+ "programs": [
+  {
+   "nameZh": "环境设计",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4,
+   "tuitionPerYear": 40000,
+   "requirements": "中文授课:HSK4 级及以上;英文授课:雅思 6.0 / 托福 80 / 多邻国 110。所有本科申请者须参加 CSCA 测试(各专业科目见学校招生页)。年龄不超过 25 岁。中文不达标者可先读预科。 注意:申请环境设计专业须具有较强的美术绘画基础,面试时需提供个人独立完成的作品集(内容须包含素描或色彩作品)。"
+  },
+  {
+   "nameZh": "书法学",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4,
+   "tuitionPerYear": 40000
+  }
+ ]
+}
