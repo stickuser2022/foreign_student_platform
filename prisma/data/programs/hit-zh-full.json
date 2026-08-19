@@ -1,0 +1,466 @@
+{
+ "universitySlug": "hit",
+ "common": {
+  "degreeLevel": "BACHELOR",
+  "applicationFee": 400,
+  "insuranceFeePerYear": 800,
+  "hostelFeePerYear": 9600,
+  "applicationDeadline": "2026-07-15",
+  "intake": "2026 秋季",
+  "requirements": "中文授课项目要求 HSK4 级 210 分及以上；英文授课项目要求雅思 6.0 或托福 80。所有申请人须参加 CSCA 测试(测试科目按专业不同,详见招生专业目录)。申请人须身心健康、非中国籍公民、具有高中及以上学历,年龄不超过 30 周岁(申请哈尔滨工业大学国际学生奖学金者不超过 25 周岁)。英文授课项目满 20 人开班。",
+  "scholarshipNote": "可申请哈尔滨工业大学国际学生奖学金:特等免全额学费,一等减免 50% 学费,二等减免 30% 学费,三等减免 20% 学费;也可申请中国政府奖学金(CSC)。奖学金申请报名费 600 元(自费申请报名费 400 元)。",
+  "sourceUrl": "https://cie.hit.edu.cn/18285/list.htm"
+ },
+ "programs": [
+  {
+   "nameZh": "智能装备与系统",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Intelligent Equipment and System"
+  },
+  {
+   "nameZh": "探测制导与控制技术",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Detection Guidance and Control Technology"
+  },
+  {
+   "nameZh": "集成电路设计与集成系统",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Integrated Circuit Design and Integrated System"
+  },
+  {
+   "nameZh": "微电子科学与工程",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Microelectronics Science and Engineering"
+  },
+  {
+   "nameZh": "智能视觉工程",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Intelligent Vision Engineering"
+  },
+  {
+   "nameZh": "信息对抗技术",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Information Countermeasure Technology"
+  },
+  {
+   "nameZh": "智能科学与技术",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Intelligence Science and Technology"
+  },
+  {
+   "nameZh": "能源互联网工程",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Energy Internet Engineering"
+  },
+  {
+   "nameZh": "统计学",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Statistics"
+  },
+  {
+   "nameZh": "信息安全",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Information Security"
+  },
+  {
+   "nameZh": "飞行器制造工程",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Flight Vehicle Manufacturing Engineering"
+  },
+  {
+   "nameZh": "智能制造工程",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Intelligent Manufacturing Engineering"
+  },
+  {
+   "nameZh": "仿生科学与工程",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Bionic Science and Engineering"
+  },
+  {
+   "nameZh": "材料成型及控制工程",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Material Forming and Controlling Engineering"
+  },
+  {
+   "nameZh": "光电信息材料与器件",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Photoelectric Information Materials and Devices"
+  },
+  {
+   "nameZh": "电子封装技术",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Electrical Encapsulation Technology"
+  },
+  {
+   "nameZh": "飞行器动力工程",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Aircraft Power Engineering"
+  },
+  {
+   "nameZh": "核工程与核技术",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Nuclear Engineering and Technology"
+  },
+  {
+   "nameZh": "储能科学与工程",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Energy Storage Science and Engineering"
+  },
+  {
+   "nameZh": "精密仪器",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Precise Instrument"
+  },
+  {
+   "nameZh": "智能感知工程",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Intelligent Perception Engineering"
+  },
+  {
+   "nameZh": "测控技术与仪器",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Measurement and Testing Technology and Instrument"
+  },
+  {
+   "nameZh": "城市地下空间工程",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "City Underground Space Engineering"
+  },
+  {
+   "nameZh": "智能建造",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Intelligent Construction"
+  },
+  {
+   "nameZh": "道路桥梁与渡河工程",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Road Bridge and River Crossing Engineering"
+  },
+  {
+   "nameZh": "交通工程",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Traffic Engineering"
+  },
+  {
+   "nameZh": "智慧交通",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Intelligent Transportation"
+  },
+  {
+   "nameZh": "化学工程与工艺",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Chemical Engineering and Technology"
+  },
+  {
+   "nameZh": "高分子材料与工程",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Polymer Materials and Engineering"
+  },
+  {
+   "nameZh": "应用化学",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Applied Chemistry"
+  },
+  {
+   "nameZh": "环境工程",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Environmental Engineering"
+  },
+  {
+   "nameZh": "环境科学",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Environmental Science"
+  },
+  {
+   "nameZh": "给排水科学与工程",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Water Supply and Sewerage Engineering"
+  },
+  {
+   "nameZh": "城市水系统工程",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "City Water System Engineering"
+  },
+  {
+   "nameZh": "生物技术",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Biological Technology"
+  },
+  {
+   "nameZh": "生物工程",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Biological Engineering"
+  },
+  {
+   "nameZh": "生物信息学",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Bioinformatics"
+  },
+  {
+   "nameZh": "智能医学工程",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Intelligent Medical Engineering"
+  },
+  {
+   "nameZh": "社会学",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Sociology"
+  },
+  {
+   "nameZh": "俄语",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Russian"
+  },
+  {
+   "nameZh": "法学",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Law"
+  },
+  {
+   "nameZh": "国际组织与全球治理",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "International Organizations and Global Governance"
+  },
+  {
+   "nameZh": "建筑环境与能源应用工程",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Building Environment and Energy Application Engineering"
+  },
+  {
+   "nameZh": "建筑学",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Architecture"
+  },
+  {
+   "nameZh": "城乡规划",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Urban and Rural Planning"
+  },
+  {
+   "nameZh": "信息管理与信息系统",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Information Management and Information System"
+  },
+  {
+   "nameZh": "大数据管理与应用",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Big Data Management and Application"
+  },
+  {
+   "nameZh": "计算金融",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Computational Finance"
+  },
+  {
+   "nameZh": "数字经济",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Digital Economy"
+  },
+  {
+   "nameZh": "会计学",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000,
+   "nameEn": "Accounting"
+  }
+ ]
+}

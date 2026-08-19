@@ -1,0 +1,55 @@
+{
+ "universitySlug": "nenu",
+ "common": {
+  "degreeLevel": "BACHELOR",
+  "applicationFee": 400,
+  "insuranceFeePerYear": 800,
+  "applicationDeadline": "2026-06-22",
+  "intake": "2026 秋季",
+  "requirements": "本科全部专业为中文授课。语言要求:大部分专业要求 HSK5;汉语国际教育要求 HSK4;汉语言专业无语言要求(以专业目录原文为准)。本科申请者须参加 CSCA 测试,文科类考中文、数学,理科类考中文、数学,计算机科学与技术、教育技术学、智能科学与技术等专业加考物理;汉语言本科凭 HSK4≥180 可免考文科中文科目。另需缴纳保险费 800 元/年。住宿费 40 元/天(单人间,区间价)。",
+  "scholarshipNote": "据专业目录标注,部分专业可申请 CSC Type A(中国政府奖学金)和 NENU Presidential Scholarship(东北师范大学校长奖学金);汉语国际教育专业另可申请国际中文教师奖学金。具体名额与申请条件以学校当年通知为准。",
+  "sourceUrl": "https://iso.nenu.edu.cn/chinese/info/1031/2942.htm"
+ },
+ "programs": [
+  {
+   "nameZh": "行政管理",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4,
+   "tuitionPerYear": 16000
+  },
+  {
+   "nameZh": "图书馆学",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4,
+   "tuitionPerYear": 16000
+  },
+  {
+   "nameZh": "地理信息科学",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4,
+   "tuitionPerYear": 16000
+  },
+  {
+   "nameZh": "人文地理与城乡规划",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4,
+   "tuitionPerYear": 16000
+  },
+  {
+   "nameZh": "广告学",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4,
+   "tuitionPerYear": 16000
+  }
+ ]
+}

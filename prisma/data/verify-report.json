@@ -1,124 +1,10 @@
 {
-  "generatedAt": "2026-08-16T06:21:18.171Z",
+  "generatedAt": "2026-08-19T05:44:51.125Z",
   "programs": [
     {
-      "id": "cmsvb066r0004rkyx04atnebo",
-      "universitySlug": "hit",
-      "nameZh": "计算机科学与技术",
-      "checks": {
-        "专业名": {
-          "ok": true
-        },
-        "学费": {
-          "ok": true
-        },
-        "截止日": {
-          "ok": true
-        },
-        "授课语言": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsvb066w0005rkyxysoiy2gr",
-      "universitySlug": "hit",
-      "nameZh": "人工智能",
-      "checks": {
-        "专业名": {
-          "ok": true
-        },
-        "学费": {
-          "ok": true
-        },
-        "截止日": {
-          "ok": true
-        },
-        "授课语言": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsvb06710006rkyxoo015283",
-      "universitySlug": "hit",
-      "nameZh": "软件工程",
-      "checks": {
-        "专业名": {
-          "ok": true
-        },
-        "学费": {
-          "ok": true
-        },
-        "截止日": {
-          "ok": true
-        },
-        "授课语言": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsvb065t0000rkyx5ceiztsn",
-      "universitySlug": "hit",
-      "nameZh": "自动化",
-      "checks": {
-        "专业名": {
-          "ok": true
-        },
-        "学费": {
-          "ok": true
-        },
-        "截止日": {
-          "ok": true
-        },
-        "授课语言": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsvb06680001rkyxe56195sh",
-      "universitySlug": "hit",
-      "nameZh": "通信工程",
-      "checks": {
-        "专业名": {
-          "ok": true
-        },
-        "学费": {
-          "ok": true
-        },
-        "截止日": {
-          "ok": true
-        },
-        "授课语言": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsvb066e0002rkyxz4x33vi1",
-      "universitySlug": "hit",
-      "nameZh": "电子信息工程",
-      "checks": {
-        "专业名": {
-          "ok": true
-        },
-        "学费": {
-          "ok": true
-        },
-        "截止日": {
-          "ok": true
-        },
-        "授课语言": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsvb06bk0010rkyxyjjgeppn",
+      "id": "cmsvb06d5001erkyxomxgg4l2",
       "universitySlug": "xjtu",
-      "nameZh": "机械工程",
+      "nameZh": "智能制造工程(英文授课)",
       "checks": {
         "专业名": {
           "ok": true
@@ -135,294 +21,9 @@
       }
     },
     {
-      "id": "cmsvb066k0003rkyxz2fjhdsr",
-      "universitySlug": "hit",
-      "nameZh": "电气工程及其自动化",
-      "checks": {
-        "专业名": {
-          "ok": true
-        },
-        "学费": {
-          "ok": true
-        },
-        "截止日": {
-          "ok": true
-        },
-        "授课语言": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsvb06760007rkyxrd7urakr",
-      "universitySlug": "hit",
-      "nameZh": "机械设计制造及其自动化",
-      "checks": {
-        "专业名": {
-          "ok": true
-        },
-        "学费": {
-          "ok": true
-        },
-        "截止日": {
-          "ok": true
-        },
-        "授课语言": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsvb067c0008rkyxmeyvmgfz",
-      "universitySlug": "hit",
-      "nameZh": "机器人工程",
-      "checks": {
-        "专业名": {
-          "ok": true
-        },
-        "学费": {
-          "ok": true
-        },
-        "截止日": {
-          "ok": true
-        },
-        "授课语言": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsvb067h0009rkyxbnc2s0ii",
-      "universitySlug": "hit",
-      "nameZh": "材料科学与工程",
-      "checks": {
-        "专业名": {
-          "ok": true
-        },
-        "学费": {
-          "ok": true
-        },
-        "截止日": {
-          "ok": true
-        },
-        "授课语言": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsvb067n000arkyxss57utgf",
-      "universitySlug": "hit",
-      "nameZh": "焊接技术与工程",
-      "checks": {
-        "专业名": {
-          "ok": true
-        },
-        "学费": {
-          "ok": true
-        },
-        "截止日": {
-          "ok": true
-        },
-        "授课语言": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsvb067s000brkyx70filil1",
-      "universitySlug": "hit",
-      "nameZh": "能源与动力工程",
-      "checks": {
-        "专业名": {
-          "ok": true
-        },
-        "学费": {
-          "ok": true
-        },
-        "截止日": {
-          "ok": true
-        },
-        "授课语言": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsvb067y000crkyxeaxb6muu",
-      "universitySlug": "hit",
-      "nameZh": "土木工程",
-      "checks": {
-        "专业名": {
-          "ok": true
-        },
-        "学费": {
-          "ok": true
-        },
-        "截止日": {
-          "ok": true
-        },
-        "授课语言": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsvb0683000drkyxpmxxuxvq",
-      "universitySlug": "hit",
-      "nameZh": "汉语言文学",
-      "checks": {
-        "专业名": {
-          "ok": true
-        },
-        "学费": {
-          "ok": true
-        },
-        "截止日": {
-          "ok": true
-        },
-        "授课语言": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsvb0689000erkyxiwhy990f",
-      "universitySlug": "hit",
-      "nameZh": "工商管理",
-      "checks": {
-        "专业名": {
-          "ok": true
-        },
-        "学费": {
-          "ok": true
-        },
-        "截止日": {
-          "ok": true
-        },
-        "授课语言": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsvb068q000frkyxto5fgg6z",
-      "universitySlug": "nenu",
-      "nameZh": "教育学",
-      "checks": {
-        "专业名": {
-          "ok": true
-        },
-        "学费": {
-          "ok": true
-        },
-        "截止日": {
-          "ok": true
-        },
-        "授课语言": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsvb068v000grkyxv5l4ju5d",
-      "universitySlug": "nenu",
-      "nameZh": "小学教育",
-      "checks": {
-        "专业名": {
-          "ok": true
-        },
-        "学费": {
-          "ok": true
-        },
-        "截止日": {
-          "ok": true
-        },
-        "授课语言": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsvb0690000hrkyxbpcw6rda",
-      "universitySlug": "nenu",
-      "nameZh": "学前教育",
-      "checks": {
-        "专业名": {
-          "ok": true
-        },
-        "学费": {
-          "ok": true
-        },
-        "截止日": {
-          "ok": true
-        },
-        "授课语言": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsvb0695000irkyx4f1y9qxr",
-      "universitySlug": "nenu",
-      "nameZh": "政治学与行政学",
-      "checks": {
-        "专业名": {
-          "ok": true
-        },
-        "学费": {
-          "ok": true
-        },
-        "截止日": {
-          "ok": true
-        },
-        "授课语言": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsvb0699000jrkyxdfwh8w9d",
-      "universitySlug": "nenu",
-      "nameZh": "国际政治",
-      "checks": {
-        "专业名": {
-          "ok": true
-        },
-        "学费": {
-          "ok": true
-        },
-        "截止日": {
-          "ok": true
-        },
-        "授课语言": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsvb069f000krkyxxxyri60m",
-      "universitySlug": "nenu",
-      "nameZh": "法学",
-      "checks": {
-        "专业名": {
-          "ok": true
-        },
-        "学费": {
-          "ok": true
-        },
-        "截止日": {
-          "ok": true
-        },
-        "授课语言": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsvb06bo0011rkyxsqqdkc7k",
+      "id": "cmsvb06d8001frkyxw4u32xwo",
       "universitySlug": "xjtu",
-      "nameZh": "电气工程及其自动化",
+      "nameZh": "能源与动力工程(英文授课)",
       "checks": {
         "专业名": {
           "ok": true
@@ -439,161 +40,9 @@
       }
     },
     {
-      "id": "cmsvb069j000lrkyxjcnuryg2",
-      "universitySlug": "nenu",
-      "nameZh": "人力资源管理",
-      "checks": {
-        "专业名": {
-          "ok": true
-        },
-        "学费": {
-          "ok": true
-        },
-        "截止日": {
-          "ok": true
-        },
-        "授课语言": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsvb06bs0012rkyxfa7h84hp",
+      "id": "cmsznk5l4000gpcyxb9h4pmzy",
       "universitySlug": "xjtu",
-      "nameZh": "能源与动力工程",
-      "checks": {
-        "专业名": {
-          "ok": true
-        },
-        "学费": {
-          "ok": true
-        },
-        "截止日": {
-          "ok": true
-        },
-        "授课语言": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsvb069n000mrkyx96pfrkwm",
-      "universitySlug": "nenu",
-      "nameZh": "市场营销",
-      "checks": {
-        "专业名": {
-          "ok": true
-        },
-        "学费": {
-          "ok": true
-        },
-        "截止日": {
-          "ok": true
-        },
-        "授课语言": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsvb069s000nrkyxgomwkmhf",
-      "universitySlug": "nenu",
-      "nameZh": "金融学",
-      "checks": {
-        "专业名": {
-          "ok": true
-        },
-        "学费": {
-          "ok": true
-        },
-        "截止日": {
-          "ok": true
-        },
-        "授课语言": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsvb069x000orkyxpvw7ey4a",
-      "universitySlug": "nenu",
-      "nameZh": "汉语国际教育",
-      "checks": {
-        "专业名": {
-          "ok": true
-        },
-        "学费": {
-          "ok": true
-        },
-        "截止日": {
-          "ok": true
-        },
-        "授课语言": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsvb06a2000prkyxfkt40m39",
-      "universitySlug": "nenu",
-      "nameZh": "汉语言文学",
-      "checks": {
-        "专业名": {
-          "ok": true
-        },
-        "学费": {
-          "ok": true
-        },
-        "截止日": {
-          "ok": true
-        },
-        "授课语言": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsvb06a5000qrkyxky9eyfok",
-      "universitySlug": "nenu",
-      "nameZh": "计算机科学与技术",
-      "checks": {
-        "专业名": {
-          "ok": true
-        },
-        "学费": {
-          "ok": true
-        },
-        "截止日": {
-          "ok": true
-        },
-        "授课语言": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsvb06a9000rrkyx2k8kbjt6",
-      "universitySlug": "nenu",
-      "nameZh": "智能科学与技术",
-      "checks": {
-        "专业名": {
-          "ok": true
-        },
-        "学费": {
-          "ok": true
-        },
-        "截止日": {
-          "ok": true
-        },
-        "授课语言": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsvb06ad000srkyx2gjkj1z9",
-      "universitySlug": "nenu",
-      "nameZh": "教育技术学",
+      "nameZh": "人居环境科学与技术专业（建筑环境与节能方向）",
       "checks": {
         "专业名": {
           "ok": true
@@ -629,9 +78,9 @@
       }
     },
     {
-      "id": "cmsvb06ai000trkyxp3yayuh7",
-      "universitySlug": "nenu",
-      "nameZh": "地理科学",
+      "id": "cmsznk5l9000hpcyx7vy5l143",
+      "universitySlug": "xjtu",
+      "nameZh": "人居环境科学与技术专业（地球环境科学方向）",
       "checks": {
         "专业名": {
           "ok": true
@@ -648,9 +97,9 @@
       }
     },
     {
-      "id": "cmsvb06an000urkyxwf3b2ckq",
-      "universitySlug": "nenu",
-      "nameZh": "新闻学",
+      "id": "cmsznk5le000ipcyx4lus471f",
+      "universitySlug": "xjtu",
+      "nameZh": "哲学",
       "checks": {
         "专业名": {
           "ok": true
@@ -667,9 +116,9 @@
       }
     },
     {
-      "id": "cmsvb06at000vrkyx5rf33xwk",
-      "universitySlug": "nenu",
-      "nameZh": "数字媒体技术",
+      "id": "cmsznk5m6000opcyx1axezmzw",
+      "universitySlug": "xjtu",
+      "nameZh": "化学工程与工艺",
       "checks": {
         "专业名": {
           "ok": true
@@ -686,9 +135,9 @@
       }
     },
     {
-      "id": "cmsvb06ax000wrkyx82spwizb",
-      "universitySlug": "nenu",
-      "nameZh": "汉语言",
+      "id": "cmsznk5jb0002pcyx02xpws5y",
+      "universitySlug": "xjtu",
+      "nameZh": "法学",
       "checks": {
         "专业名": {
           "ok": true
@@ -724,6 +173,25 @@
       }
     },
     {
+      "id": "cmsvb06bk0010rkyxyjjgeppn",
+      "universitySlug": "xjtu",
+      "nameZh": "机械工程",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
       "id": "cmsvb06b9000yrkyxb5fqyyi9",
       "universitySlug": "xjtu",
       "nameZh": "软件工程",
@@ -743,9 +211,66 @@
       }
     },
     {
-      "id": "cmsvb06bd000zrkyxp7awed5f",
+      "id": "cmsznk5ma000ppcyxruvp4c7a",
       "universitySlug": "xjtu",
-      "nameZh": "电子科学与技术",
+      "nameZh": "过程装备与控制工程",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmsznk5li000jpcyxtk8321eq",
+      "universitySlug": "xjtu",
+      "nameZh": "社会学",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmsvb06bo0011rkyxsqqdkc7k",
+      "universitySlug": "xjtu",
+      "nameZh": "电气工程及其自动化",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmsznk5ln000kpcyx3a3w6na2",
+      "universitySlug": "xjtu",
+      "nameZh": "生物技术",
       "checks": {
         "专业名": {
           "ok": true
@@ -781,9 +306,199 @@
       }
     },
     {
+      "id": "cmsznk5me000qpcyxz2xezdxz",
+      "universitySlug": "xjtu",
+      "nameZh": "测控技术与仪器",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmsvb06bd000zrkyxp7awed5f",
+      "universitySlug": "xjtu",
+      "nameZh": "电子科学与技术",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmsznk5mi000rpcyx8uzqn87s",
+      "universitySlug": "xjtu",
+      "nameZh": "测控技术与仪器（智能感知工程方向）",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmsvb06d1001drkyxpdt1sg2y",
+      "universitySlug": "xjtu",
+      "nameZh": "电气工程及其自动化(英文授课)",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmsvb06cp001arkyxr25uz7yn",
+      "universitySlug": "xjtu",
+      "nameZh": "汉语言(商务汉语)",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmsvb06cw001crkyxshl5epv0",
+      "universitySlug": "xjtu",
+      "nameZh": "网络与新媒体",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmsznk5lr000lpcyxv53084gf",
+      "universitySlug": "xjtu",
+      "nameZh": "英语",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmsvb06dc001grkyxf976a4xj",
+      "universitySlug": "xjtu",
+      "nameZh": "临床医学 MBBS(英文授课)",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmsznk5lv000mpcyx02rgtzfl",
+      "universitySlug": "xjtu",
+      "nameZh": "日语",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
       "id": "cmsvb06c50015rkyx7ceqfc4h",
       "universitySlug": "xjtu",
       "nameZh": "生物医学工程",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmsznk5m0000npcyx628eghat",
+      "universitySlug": "xjtu",
+      "nameZh": "法语",
       "checks": {
         "专业名": {
           "ok": true
@@ -838,9 +553,66 @@
       }
     },
     {
+      "id": "cmszo1grh0003asyxvqfl5wm3",
+      "universitySlug": "nenu",
+      "nameZh": "人文地理与城乡规划",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
       "id": "cmsvb06ch0018rkyxz6l59032",
       "universitySlug": "xjtu",
       "nameZh": "金融学",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmsznk5mo000spcyxzij57a1w",
+      "universitySlug": "xjtu",
+      "nameZh": "材料科学与工程(英文授课)",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmsvb06bs0012rkyxfa7h84hp",
+      "universitySlug": "xjtu",
+      "nameZh": "能源与动力工程",
       "checks": {
         "专业名": {
           "ok": true
@@ -876,25 +648,6 @@
       }
     },
     {
-      "id": "cmsvb06cp001arkyxr25uz7yn",
-      "universitySlug": "xjtu",
-      "nameZh": "汉语言(商务汉语)",
-      "checks": {
-        "专业名": {
-          "ok": true
-        },
-        "学费": {
-          "ok": true
-        },
-        "截止日": {
-          "ok": true
-        },
-        "授课语言": {
-          "ok": true
-        }
-      }
-    },
-    {
       "id": "cmsvb06ct001brkyxgfom07ok",
       "universitySlug": "xjtu",
       "nameZh": "汉语言文学",
@@ -914,9 +667,9 @@
       }
     },
     {
-      "id": "cmsvb06cw001crkyxshl5epv0",
+      "id": "cmsznk5hy0000pcyx3rr771d5",
       "universitySlug": "xjtu",
-      "nameZh": "网络与新媒体",
+      "nameZh": "汉语言（商务汉语）",
       "checks": {
         "专业名": {
           "ok": true
@@ -933,9 +686,9 @@
       }
     },
     {
-      "id": "cmsvb06d1001drkyxpdt1sg2y",
+      "id": "cmsznk5jl0004pcyx6lcftm3x",
       "universitySlug": "xjtu",
-      "nameZh": "电气工程及其自动化(英文授课)",
+      "nameZh": "化学",
       "checks": {
         "专业名": {
           "ok": true
@@ -952,9 +705,9 @@
       }
     },
     {
-      "id": "cmsvb06d5001erkyxomxgg4l2",
+      "id": "cmsznk5jz0007pcyxtabo8nqk",
       "universitySlug": "xjtu",
-      "nameZh": "智能制造工程(英文授课)",
+      "nameZh": "贸易经济",
       "checks": {
         "专业名": {
           "ok": true
@@ -971,9 +724,9 @@
       }
     },
     {
-      "id": "cmsvb06d8001frkyxw4u32xwo",
+      "id": "cmsznk5kc000apcyxg6op6qrz",
       "universitySlug": "xjtu",
-      "nameZh": "能源与动力工程(英文授课)",
+      "nameZh": "财政学",
       "checks": {
         "专业名": {
           "ok": true
@@ -990,9 +743,275 @@
       }
     },
     {
-      "id": "cmsvb06dc001grkyxf976a4xj",
+      "id": "cmsznk5j60001pcyx7kiqs018",
       "universitySlug": "xjtu",
-      "nameZh": "临床医学 MBBS(英文授课)",
+      "nameZh": "能源互联网工程",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmsznk5jp0005pcyxvkyn7zun",
+      "universitySlug": "xjtu",
+      "nameZh": "应用化学",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmszo1gpq0000asyxna92ixib",
+      "universitySlug": "nenu",
+      "nameZh": "行政管理",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmszo1gr50001asyxe5vqd3hl",
+      "universitySlug": "nenu",
+      "nameZh": "图书馆学",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmszo1grb0002asyxedfd7rl2",
+      "universitySlug": "nenu",
+      "nameZh": "地理信息科学",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmszo1grn0004asyxzxbzqi5d",
+      "universitySlug": "nenu",
+      "nameZh": "广告学",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmsznk5jg0003pcyx5sbbngrl",
+      "universitySlug": "xjtu",
+      "nameZh": "行政管理",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmsznk5ju0006pcyxywyd1w5t",
+      "universitySlug": "xjtu",
+      "nameZh": "国际经济与贸易（国际班）",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmsznk5kz000fpcyxo9xrvygy",
+      "universitySlug": "xjtu",
+      "nameZh": "人居环境科学与技术专业（结构与岩土工程方向）",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmsznk5k30008pcyx2ru1ne6l",
+      "universitySlug": "xjtu",
+      "nameZh": "电子商务",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmsznk5k80009pcyxen0d660t",
+      "universitySlug": "xjtu",
+      "nameZh": "经济学",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmsznk5ki000bpcyxyfbgq0l7",
+      "universitySlug": "xjtu",
+      "nameZh": "环境工程",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmsznk5km000cpcyxp0j1h6q7",
+      "universitySlug": "xjtu",
+      "nameZh": "核工程与核技术",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmsznk5kr000dpcyxeugnh30h",
+      "universitySlug": "xjtu",
+      "nameZh": "储能科学与工程",
+      "checks": {
+        "专业名": {
+          "ok": true
+        },
+        "学费": {
+          "ok": true
+        },
+        "截止日": {
+          "ok": true
+        },
+        "授课语言": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmsznk5kw000epcyxbdhbvoim",
+      "universitySlug": "xjtu",
+      "nameZh": "人居环境科学与技术专业（大数据与智慧城市方向）",
       "checks": {
         "专业名": {
           "ok": true
@@ -1011,158 +1030,8 @@
   ],
   "universities": [
     {
-      "id": "cmsin4nn1001j0cyxbmi9r0ez",
-      "nameZh": "广东外语外贸大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4ngl000c0cyx7ly64eys",
-      "nameZh": "吉林大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4nio000p0cyx3lqrt1z4",
-      "nameZh": "湖南大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4nmh001f0cyx0l0e7sle",
-      "nameZh": "苏州大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4nnb001l0cyxu0bcqbtb",
-      "nameZh": "四川外国语大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4nep00010cyxycbtr0w0",
-      "nameZh": "北京大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4nko00130cyx460t46ps",
-      "nameZh": "东北师范大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4nhp000j0cyxdlkkdu1r",
-      "nameZh": "中国科学技术大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4nf200030cyxz2wvbfq2",
-      "nameZh": "北京航空航天大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
       "id": "cmsin4nft00070cyx11klxdfp",
       "nameZh": "中央民族大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4nfh00050cyx1ejno330",
-      "nameZh": "北京师范大学",
       "checks": {
         "官网可达": {
           "ok": true
@@ -1191,219 +1060,6 @@
       }
     },
     {
-      "id": "cmsin4nfz00080cyxe4h5m096",
-      "nameZh": "南开大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4ngf000b0cyx4cwqyt3p",
-      "nameZh": "东北大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4nga000a0cyxiv4hki4q",
-      "nameZh": "大连理工大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4nh3000f0cyx2xc7e6fw",
-      "nameZh": "华东师范大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4ngr000d0cyx3y43jhcj",
-      "nameZh": "复旦大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4ngx000e0cyxp01jf8ns",
-      "nameZh": "同济大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4njd000u0cyxe3x3j4mc",
-      "nameZh": "电子科技大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4nj8000t0cyxvaq0i503",
-      "nameZh": "四川大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": false,
-          "note": "官网首页未见校名"
-        },
-        "城市": {
-          "ok": false,
-          "note": "官网首页未见城市名(弱校验,可忽略)"
-        }
-      }
-    },
-    {
-      "id": "cmsin4nhe000h0cyxdw4tkoev",
-      "nameZh": "东南大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4nh9000g0cyxh5kqqto1",
-      "nameZh": "南京大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4ni0000l0cyxs52mxyji",
-      "nameZh": "山东大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4nj3000s0cyxr836uq0m",
-      "nameZh": "华南理工大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": false,
-          "note": "官网首页未见城市名(弱校验,可忽略)"
-        }
-      }
-    },
-    {
-      "id": "cmsin4nii000o0cyxuobltls7",
-      "nameZh": "华中科技大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4njh000v0cyxksjm1bgn",
-      "nameZh": "重庆大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
       "id": "cmsin4niy000r0cyxyfbc8wzw",
       "nameZh": "中山大学",
       "checks": {
@@ -1415,39 +1071,6 @@
         },
         "城市": {
           "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4nit000q0cyxgvjpb3xu",
-      "nameZh": "中南大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4njw000y0cyxbvun7975",
-      "nameZh": "兰州大学",
-      "checks": {
-        "官网可达": {
-          "ok": false,
-          "note": "官网打不开(可能反爬,人工确认)"
-        },
-        "校名": {
-          "ok": false,
-          "note": "官网首页未见校名"
-        },
-        "城市": {
-          "ok": false,
-          "note": "官网首页未见城市名(弱校验,可忽略)"
         }
       }
     },
@@ -1468,296 +1091,8 @@
       }
     },
     {
-      "id": "cmsin4nk800100cyxr5nzs03o",
-      "nameZh": "北京外国语大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
       "id": "cmsin4njr000x0cyxkfkvm1yo",
       "nameZh": "西北工业大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4njm000w0cyxyf0x6jex",
-      "nameZh": "西安交通大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4nkj00120cyx21i6cp40",
-      "nameZh": "对外经济贸易大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4nla00170cyxw2psjff7",
-      "nameZh": "延边大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4nkv00140cyxgzgwr4a9",
-      "nameZh": "哈尔滨工程大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4nl500160cyxr73xaotj",
-      "nameZh": "东北农业大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4nl000150cyxjiach8pc",
-      "nameZh": "东北林业大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4nlq001a0cyx5ypeg1gg",
-      "nameZh": "石河子大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4nmr001h0cyx5hn934mr",
-      "nameZh": "大连外国语大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4nm3001c0cyxy8nnw4yc",
-      "nameZh": "暨南大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4nmd001e0cyxn2y38jin",
-      "nameZh": "上海大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4nm8001d0cyxhgfrkz3d",
-      "nameZh": "华东理工大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4nmm001g0cyxxjqlpcdp",
-      "nameZh": "黑龙江大学",
-      "checks": {
-        "官网可达": {
-          "ok": false,
-          "note": "官网打不开(可能反爬,人工确认)"
-        },
-        "校名": {
-          "ok": false,
-          "note": "官网首页未见校名"
-        },
-        "城市": {
-          "ok": false,
-          "note": "官网首页未见城市名(弱校验,可忽略)"
-        }
-      }
-    },
-    {
-      "id": "cmsin4nea00000cyx2incaa3b",
-      "nameZh": "清华大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4nn6001k0cyxd9c4g15d",
-      "nameZh": "西安外国语大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4nnk001n0cyx1enpi4gn",
-      "nameZh": "深圳大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4nnf001m0cyxus2u3l7i",
-      "nameZh": "天津外国语大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4nmw001i0cyx6tk9sm4b",
-      "nameZh": "北京第二外国语学院",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4nfa00040cyxxtk4oist",
-      "nameZh": "北京理工大学",
       "checks": {
         "官网可达": {
           "ok": true
@@ -1786,21 +1121,6 @@
       }
     },
     {
-      "id": "cmsin4ng400090cyxphbwhbhe",
-      "nameZh": "天津大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
       "id": "cmsin4ni6000m0cyxpu8k01oz",
       "nameZh": "中国海洋大学",
       "checks": {
@@ -1816,69 +1136,8 @@
       }
     },
     {
-      "id": "cmsin4nhu000k0cyxge55la9n",
-      "nameZh": "厦门大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4nic000n0cyxsr4fqf79",
-      "nameZh": "武汉大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4nk2000z0cyxgnm1ck3m",
-      "nameZh": "西北农林科技大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": false,
-          "note": "官网首页未见城市名(弱校验,可忽略)"
-        }
-      }
-    },
-    {
-      "id": "cmsin4nkd00110cyxtfbetr43",
-      "nameZh": "上海外国语大学",
-      "checks": {
-        "官网可达": {
-          "ok": true
-        },
-        "校名": {
-          "ok": true
-        },
-        "城市": {
-          "ok": true
-        }
-      }
-    },
-    {
-      "id": "cmsin4nlf00180cyxpyli1vno",
-      "nameZh": "辽宁大学",
+      "id": "cmsin4nhp000j0cyxdlkkdu1r",
+      "nameZh": "中国科学技术大学",
       "checks": {
         "官网可达": {
           "ok": true
@@ -1907,8 +1166,8 @@
       }
     },
     {
-      "id": "cmsin4nlw001b0cyx6fnem2s8",
-      "nameZh": "大连海事大学",
+      "id": "cmsin4nit000q0cyxgvjpb3xu",
+      "nameZh": "中南大学",
       "checks": {
         "官网可达": {
           "ok": true
@@ -1918,6 +1177,67 @@
         },
         "城市": {
           "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmsin4njm000w0cyxyf0x6jex",
+      "nameZh": "西安交通大学",
+      "checks": {
+        "官网可达": {
+          "ok": true
+        },
+        "校名": {
+          "ok": true
+        },
+        "城市": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmsin4nla00170cyxw2psjff7",
+      "nameZh": "延边大学",
+      "checks": {
+        "官网可达": {
+          "ok": true
+        },
+        "校名": {
+          "ok": true
+        },
+        "城市": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmsin4nn6001k0cyxd9c4g15d",
+      "nameZh": "西安外国语大学",
+      "checks": {
+        "官网可达": {
+          "ok": true
+        },
+        "校名": {
+          "ok": true
+        },
+        "城市": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "cmsin4nk2000z0cyxgnm1ck3m",
+      "nameZh": "西北农林科技大学",
+      "checks": {
+        "官网可达": {
+          "ok": true
+        },
+        "校名": {
+          "ok": true
+        },
+        "城市": {
+          "ok": false,
+          "note": "官网首页未见城市名(弱校验,可忽略)"
         }
       }
     }

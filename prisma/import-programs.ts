@@ -34,6 +34,9 @@ type SchoolFile = {
   common: {
     degreeLevel?: DegreeLevel;
     applicationFee?: number;
+    insuranceFeePerYear?: number;
+    // 区间价取最低值转年价(用户 2026-08-19 拍板),如 800-1000 元/月 → 9600
+    hostelFeePerYear?: number;
     applicationDeadline?: string;
     intake?: string;
     requirements?: string;
@@ -82,6 +85,8 @@ async function main() {
           durationYears: p.durationYears ?? null,
           tuitionPerYear: p.tuitionPerYear ?? null,
           applicationFee: data.common.applicationFee ?? null,
+          insuranceFeePerYear: data.common.insuranceFeePerYear ?? null,
+          hostelFeePerYear: data.common.hostelFeePerYear ?? null,
           applicationDeadline: data.common.applicationDeadline
             ? parseDateOnly(data.common.applicationDeadline)
             : null,

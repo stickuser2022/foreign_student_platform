@@ -1,0 +1,246 @@
+{
+ "universitySlug": "xjtu",
+ "common": {
+  "degreeLevel": "BACHELOR",
+  "applicationFee": 500,
+  "applicationDeadline": "2026-06-30",
+  "intake": "2026 秋季",
+  "requirements": "中文授课:HSK4 级及以上;英文授课:雅思 6.0 / 托福 80 / 多邻国 110。所有本科申请者须参加 CSCA 测试(各专业科目见学校招生页)。年龄不超过 25 岁。中文不达标者可先读预科。",
+  "scholarshipNote": "可申请:中国政府奖学金(CSC)、西安交大本科国际学生新生奖学金(特等免 100% 学费~优秀奖免 10%)、西安市一带一路奖学金、陕西省三秦奖学金。",
+  "sourceUrl": "https://sie.xjtu.edu.cn/info/1223/4960.htm"
+ },
+ "programs": [
+  {
+   "nameZh": "汉语言（商务汉语）",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000
+  },
+  {
+   "nameZh": "能源互联网工程",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 22000
+  },
+  {
+   "nameZh": "法学",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000
+  },
+  {
+   "nameZh": "行政管理",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000
+  },
+  {
+   "nameZh": "化学",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 22000
+  },
+  {
+   "nameZh": "应用化学",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 22000
+  },
+  {
+   "nameZh": "国际经济与贸易（国际班）",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000
+  },
+  {
+   "nameZh": "贸易经济",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000
+  },
+  {
+   "nameZh": "电子商务",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000
+  },
+  {
+   "nameZh": "经济学",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000
+  },
+  {
+   "nameZh": "财政学",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000
+  },
+  {
+   "nameZh": "环境工程",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 22000
+  },
+  {
+   "nameZh": "核工程与核技术",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 22000
+  },
+  {
+   "nameZh": "储能科学与工程",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 22000
+  },
+  {
+   "nameZh": "人居环境科学与技术专业（大数据与智慧城市方向）",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 22000
+  },
+  {
+   "nameZh": "人居环境科学与技术专业（结构与岩土工程方向）",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 22000
+  },
+  {
+   "nameZh": "人居环境科学与技术专业（建筑环境与节能方向）",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 22000
+  },
+  {
+   "nameZh": "人居环境科学与技术专业（地球环境科学方向）",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 22000
+  },
+  {
+   "nameZh": "哲学",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000
+  },
+  {
+   "nameZh": "社会学",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000
+  },
+  {
+   "nameZh": "生物技术",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 22000
+  },
+  {
+   "nameZh": "英语",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000
+  },
+  {
+   "nameZh": "日语",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000
+  },
+  {
+   "nameZh": "法语",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 20000
+  },
+  {
+   "nameZh": "化学工程与工艺",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 22000
+  },
+  {
+   "nameZh": "过程装备与控制工程",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 22000
+  },
+  {
+   "nameZh": "测控技术与仪器",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 22000
+  },
+  {
+   "nameZh": "测控技术与仪器（智能感知工程方向）",
+   "teachingLanguages": [
+    "chinese"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 22000
+  },
+  {
+   "nameZh": "材料科学与工程(英文授课)",
+   "teachingLanguages": [
+    "english"
+   ],
+   "durationYears": 4.0,
+   "tuitionPerYear": 40000
+  }
+ ]
+}
