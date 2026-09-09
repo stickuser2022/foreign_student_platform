@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArrowRight, ChevronDown, SearchX } from "lucide-react";
 import {
   listUniversities,
   listPublishedProvinces,
@@ -8,8 +9,33 @@ import { universityTypeRu } from "@/modules/universities/labels";
 import { geoToRu } from "@/modules/universities/geo";
 import { UniversityLogo } from "@/modules/universities/logo";
 
+// 筛选下拉:下划线极简风(docs/04)
 const selectClass =
-  "rounded-md border border-gray-300 px-2 py-1.5 text-sm dark:border-gray-600 dark:bg-gray-900";
+  "appearance-none bg-transparent border-b border-hairline py-2 pr-7 text-sm outline-none transition-colors focus:border-ink cursor-pointer";
+
+function FilterSelect({
+  label,
+  name,
+  value,
+  children,
+}: {
+  label: string;
+  name: string;
+  value?: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <label className="flex flex-col gap-1">
+      <span className="text-xs tracking-wide text-muted uppercase">{label}</span>
+      <span className="relative inline-block">
+        <select name={name} defaultValue={value ?? ""} className={selectClass}>
+          {children}
+        </select>
+        <ChevronDown className="pointer-events-none absolute top-1/2 right-0 size-4 -translate-y-1/2 text-muted" />
+      </span>
+    </label>
+  );
+}
 
 export default async function UniversitiesPage({
   searchParams,
@@ -27,6 +53,7 @@ export default async function UniversitiesPage({
     level: pick("level"),
     cost: pick("cost"),
   };
+  const hasFilter = Object.values(filter).some(Boolean);
 
   const [universities, provinces] = await Promise.all([
     listUniversities(filter),
@@ -34,125 +61,141 @@ export default async function UniversitiesPage({
   ]);
 
   return (
-    <main className="mx-auto max-w-4xl px-4 py-10">
-      <h1 className="mb-6 text-3xl font-bold">Университеты Китая</h1>
+    <main className="mx-auto max-w-5xl px-6 pt-16 pb-24">
+      {/* 头部:衬线大标题 + 实时计数 */}
+      <header className="mb-12">
+        <h1 className="font-serif text-5xl font-light tracking-tight sm:text-6xl">
+          Университеты
+        </h1>
+        <p className="mt-3 text-muted">
+          Каталог университетов Китая для российских студентов
+        </p>
+      </header>
 
+      {/* 筛选器 */}
       <form
         method="get"
-        className="mb-8 flex flex-wrap items-end gap-3 rounded-lg border p-4"
+        className="mb-4 flex flex-wrap items-end gap-x-8 gap-y-4"
       >
-        <label className="flex flex-col gap-1 text-sm">
-          Провинция
-          <select name="province" defaultValue={filter.province ?? ""} className={selectClass}>
-            <option value="">Все</option>
-            {provinces.map((p) => (
-              <option key={p} value={p}>
-                {p}
-              </option>
-            ))}
-          </select>
-        </label>
+        <FilterSelect label="Провинция" name="province" value={filter.province}>
+          <option value="">Все</option>
+          {provinces.map((p) => (
+            <option key={p} value={p}>
+              {geoToRu(p, p)}
+            </option>
+          ))}
+        </FilterSelect>
 
-        <label className="flex flex-col gap-1 text-sm">
-          Тип
-          <select name="type" defaultValue={filter.universityType ?? ""} className={selectClass}>
-            <option value="">Все</option>
-            {Object.entries(universityTypeRu).map(([value, label]) => (
-              <option key={value} value={value}>
-                {label}
-              </option>
-            ))}
-          </select>
-        </label>
+        <FilterSelect label="Тип" name="type" value={filter.universityType}>
+          <option value="">Все</option>
+          {Object.entries(universityTypeRu).map(([value, label]) => (
+            <option key={value} value={value}>
+              {label}
+            </option>
+          ))}
+        </FilterSelect>
 
-        <label className="flex flex-col gap-1 text-sm">
-          Уровень
-          <select name="level" defaultValue={filter.level ?? ""} className={selectClass}>
-            <option value="">Все</option>
-            <option value="985">985</option>
-            <option value="211">211</option>
-            <option value="dfc">双一流</option>
-          </select>
-        </label>
+        <FilterSelect label="Уровень" name="level" value={filter.level}>
+          <option value="">Все</option>
+          <option value="985">985</option>
+          <option value="211">211</option>
+          <option value="dfc">Двойной первоклассный</option>
+        </FilterSelect>
 
-        <label className="flex flex-col gap-1 text-sm">
-          Расходы на жизнь, ¥/мес
-          <select name="cost" defaultValue={filter.cost ?? ""} className={selectClass}>
-            <option value="">Любые</option>
-            <option value="lt2000">до 2 000</option>
-            <option value="mid">2 000 – 3 500</option>
-            <option value="gt3500">более 3 500</option>
-          </select>
-        </label>
+        <FilterSelect label="Прожиточные расходы" name="cost" value={filter.cost}>
+          <option value="">Любые</option>
+          <option value="lt2000">до 2 000 ¥/мес</option>
+          <option value="mid">2 000 – 3 500 ¥/мес</option>
+          <option value="gt3500">более 3 500 ¥/мес</option>
+        </FilterSelect>
 
         <button
           type="submit"
-          className="rounded-md bg-blue-600 px-4 py-1.5 text-sm text-white hover:bg-blue-700"
+          className="rounded-full bg-ink px-6 py-2 text-sm text-cream transition-colors hover:bg-accent"
         >
           Показать
         </button>
-        <Link href="/universities" className="px-2 py-1.5 text-sm text-blue-600 underline">
-          Сбросить
-        </Link>
+        {hasFilter && (
+          <Link
+            href="/universities"
+            className="py-2 text-sm text-muted underline-offset-4 transition-colors hover:text-ink hover:underline"
+          >
+            Сбросить
+          </Link>
+        )}
       </form>
 
-      <p className="mb-4 text-sm text-gray-500">
-        Найдено университетов: {universities.length}
+      {/* 计数 */}
+      <p className="mb-2 text-sm text-muted">
+        {hasFilter
+          ? `Найдено: ${universities.length}`
+          : `Всего: ${universities.length}`}
       </p>
 
+      {/* 目录索引式列表:编号 + 发丝线 */}
       {universities.length === 0 ? (
-        <p className="text-gray-500">
-          По выбранным фильтрам ничего не найдено. Попробуйте смягчить условия.
-        </p>
+        <div className="flex flex-col items-center gap-4 border-t border-hairline py-20 text-center">
+          <SearchX className="size-8 text-muted" />
+          <p className="text-muted">
+            По выбранным фильтрам ничего не найдено.
+            <br />
+            Попробуйте смягчить условия.
+          </p>
+          <Link
+            href="/universities"
+            className="rounded-full border border-ink px-6 py-2 text-sm transition-colors hover:border-accent hover:text-accent"
+          >
+            Показать все
+          </Link>
+        </div>
       ) : (
-        <ul className="grid gap-4 sm:grid-cols-2">
-          {universities.map((u) => (
-            <li key={u.id}>
+        <ul className="border-t border-hairline">
+          {universities.map((u, i) => (
+            <li
+              key={u.id}
+              className="rise-in border-b border-hairline"
+              style={{ animationDelay: `${Math.min(i * 40, 800)}ms` }}
+            >
               <Link
                 href={`/universities/${u.slug}`}
-                className="flex items-start gap-3 rounded-lg border p-4 transition hover:border-blue-400 hover:shadow"
+                className="group flex items-center gap-5 px-2 py-5 transition-colors hover:bg-white"
               >
+                <span className="w-8 text-sm text-muted tabular-nums">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
                 <UniversityLogo
                   logoUrl={u.logoUrl}
                   name={u.nameRu ?? u.nameEn ?? ""}
+                  size={44}
                 />
-                <div className="min-w-0">
-                  <h2 className="text-lg font-semibold">
-                    {u.nameRu ?? u.nameEn ?? ""}
+                <div className="min-w-0 flex-1">
+                  <h2 className="truncate text-lg font-medium transition-colors group-hover:text-accent">
+                    {u.nameRu ?? u.nameEn}
                   </h2>
-                  <p className="text-sm text-gray-500">
-                    {geoToRu(u.province, u.city)}
+                  <p className="mt-0.5 text-sm text-muted">
+                    {geoToRu(u.province, u.city)} · Программ: {u._count.programs}
+                    {u.livingCostPerMonth != null &&
+                      ` · ~¥${u.livingCostPerMonth.toLocaleString("ru-RU")}/мес`}
                   </p>
-                  <div className="mt-2 flex flex-wrap gap-1">
-                    {u.is985 && (
-                      <span className="rounded bg-amber-100 px-2 py-0.5 text-xs">985</span>
-                    )}
-                    {u.is211 && (
-                      <span className="rounded bg-amber-100 px-2 py-0.5 text-xs">211</span>
-                    )}
-                    {u.isDoubleFirstClass && (
-                      <span className="rounded bg-amber-100 px-2 py-0.5 text-xs">双一流</span>
-                    )}
-                    {u.livingCostPerMonth && (
-                      <span className="rounded bg-blue-50 px-2 py-0.5 text-xs">
-                        ¥{u.livingCostPerMonth.toLocaleString("ru-RU")}/мес
-                      </span>
-                    )}
-                    <span className="rounded bg-gray-100 px-2 py-0.5 text-xs">
-                      Программ: {u._count.programs}
-                    </span>
-                  </div>
                 </div>
+                <div className="hidden items-center gap-2 sm:flex">
+                  {u.is985 && (
+                    <span className="rounded-full border border-hairline px-2.5 py-0.5 text-xs">
+                      985
+                    </span>
+                  )}
+                  {u.is211 && (
+                    <span className="rounded-full border border-hairline px-2.5 py-0.5 text-xs">
+                      211
+                    </span>
+                  )}
+                </div>
+                <ArrowRight className="size-5 -translate-x-2 text-muted opacity-0 transition-all group-hover:translate-x-0 group-hover:text-accent group-hover:opacity-100" />
               </Link>
             </li>
           ))}
         </ul>
       )}
-      <p className="mt-8 text-sm">
-        <Link href="/" className="text-blue-600 underline">
-          ← На главную
-        </Link>
-      </p>
     </main>
   );
 }

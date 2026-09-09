@@ -53,6 +53,26 @@ export async function getUniversityBySlug(slug: string) {
   });
 }
 
+// 首页数据区:已发布内容的实时统计
+export async function publicStats() {
+  const [universities, programs, scholarships] = await Promise.all([
+    prisma.university.count({ where: { dataStatus: "PUBLISHED" } }),
+    prisma.program.count({ where: { dataStatus: "PUBLISHED" } }),
+    prisma.scholarship.count({ where: { dataStatus: "PUBLISHED" } }),
+  ]);
+  return { universities, programs, scholarships };
+}
+
+// 首页精选学校(有校徽的已发布学校优先)
+export async function listFeaturedUniversities(limit = 6) {
+  return prisma.university.findMany({
+    where: { dataStatus: "PUBLISHED" },
+    orderBy: [{ logoUrl: "desc" }, { nameZh: "asc" }],
+    take: limit,
+    include: { _count: { select: { programs: true } } },
+  });
+}
+
 // 平台级奖学金(不绑定学校,如 CSC)
 export async function listPlatformScholarships() {
   return prisma.scholarship.findMany({
