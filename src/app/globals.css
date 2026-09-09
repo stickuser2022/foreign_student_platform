@@ -71,6 +71,11 @@
   --color-hairline: rgba(0, 0, 0, 0.1); /* 发丝线 */
 }
 
+html,
+body {
+  overflow-x: clip; /* 防御:任何子元素微溢出都不许出横向滚动条 */
+}
+
 body {
   background: var(--color-cream);
   color: var(--color-ink);

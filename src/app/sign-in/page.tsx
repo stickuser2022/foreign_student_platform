@@ -5,6 +5,11 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { authClient } from "@/modules/auth/client";
 
+// 输入框:下划线极简风(与全站筛选器一致)
+const inputCls =
+  "w-full border-b border-hairline bg-transparent py-2.5 outline-none transition-colors focus:border-ink placeholder:text-muted";
+const labelCls = "text-xs tracking-wide text-muted uppercase";
+
 export default function SignInPage() {
   const router = useRouter();
   const [email, setEmail] = useState("");
@@ -26,37 +31,47 @@ export default function SignInPage() {
   }
 
   return (
-    <main className="mx-auto flex min-h-screen max-w-sm flex-col justify-center px-4">
-      <h1 className="mb-6 text-2xl font-bold">Вход</h1>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-        <input
-          className="rounded border px-3 py-2"
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <input
-          className="rounded border px-3 py-2"
-          type="password"
-          placeholder="Пароль"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        {error && <p className="text-sm text-red-600">{error}</p>}
+    <main className="mx-auto flex min-h-[70vh] max-w-sm flex-col justify-center px-6">
+      <h1 className="font-serif text-4xl font-light tracking-tight">Вход</h1>
+      <p className="mt-2 text-sm text-muted">С возвращением.</p>
+      <form onSubmit={handleSubmit} className="mt-10 flex flex-col gap-6">
+        <label className="flex flex-col gap-1">
+          <span className={labelCls}>Email</span>
+          <input
+            className={inputCls}
+            type="email"
+            placeholder="you@example.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </label>
+        <label className="flex flex-col gap-1">
+          <span className={labelCls}>Пароль</span>
+          <input
+            className={inputCls}
+            type="password"
+            placeholder="········"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </label>
+        {error && <p className="text-sm text-accent">{error}</p>}
         <button
           type="submit"
           disabled={loading}
-          className="rounded bg-blue-600 py-2 text-white disabled:opacity-50"
+          className="mt-2 rounded-full bg-ink py-3 text-cream transition-colors hover:bg-accent disabled:opacity-50"
         >
           {loading ? "Загрузка…" : "Войти"}
         </button>
       </form>
-      <p className="mt-4 text-sm">
+      <p className="mt-6 text-sm text-muted">
         Нет аккаунта?{" "}
-        <Link href="/sign-up" className="text-blue-600 underline">
+        <Link
+          href="/sign-up"
+          className="text-ink underline-offset-4 transition-colors hover:text-accent hover:underline"
+        >
           Зарегистрироваться
         </Link>
       </p>

@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
+import { ArrowRight, Heart } from "lucide-react";
 import { auth } from "@/modules/auth/auth";
 import { listFavorites } from "@/modules/users/service";
 import { degreeLevelRu, teachingLanguageRu } from "@/modules/universities/labels";
 import { geoToRu } from "@/modules/universities/geo";
+import { UniversityLogo } from "@/modules/universities/logo";
 import { formatDual, getCnyToRubRate } from "@/shared/money";
 
 export default async function FavoritesPage() {
@@ -17,72 +19,105 @@ export default async function FavoritesPage() {
   ]);
   const rate = fx?.rate ?? null;
 
+  const empty = universities.length === 0 && programs.length === 0;
+
   return (
-    <main className="mx-auto max-w-4xl px-4 py-10">
-      <h1 className="mb-8 text-3xl font-bold">Избранное</h1>
+    <main className="mx-auto max-w-5xl px-6 pt-16 pb-24">
+      <header className="mb-10">
+        <h1 className="font-serif text-5xl font-light tracking-tight sm:text-6xl">
+          Избранное
+        </h1>
+        <p className="mt-3 text-muted">Ваши сохранённые университеты и программы</p>
+      </header>
 
-      <section className="mb-10">
-        <h2 className="mb-3 text-xl font-semibold">
-          Университеты ({universities.length})
-        </h2>
-        {universities.length === 0 ? (
-          <p className="text-gray-500">Пока пусто.</p>
-        ) : (
-          <ul className="grid gap-4 sm:grid-cols-2">
-            {universities.map(({ university: u }) => (
-              <li key={u.id}>
-                <Link
-                  href={`/universities/${u.slug}`}
-                  className="block rounded-lg border p-4 transition hover:border-blue-400 hover:shadow"
-                >
-                  <h3 className="font-semibold">{u.nameRu ?? u.nameEn ?? ""}</h3>
-                  <p className="text-sm text-gray-500">
-                    {geoToRu(u.province, u.city)} · Программ: {u._count.programs}
-                  </p>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        )}
-      </section>
+      {empty ? (
+        <div className="flex flex-col items-center gap-4 border-t border-hairline py-20 text-center">
+          <Heart className="size-8 text-muted" />
+          <p className="text-muted">
+            Пока пусто. Отмечайте сердечком университеты и программы — они появятся здесь.
+          </p>
+          <Link
+            href="/universities"
+            className="group inline-flex items-center gap-2 rounded-full bg-ink px-6 py-2.5 text-sm text-cream transition-colors hover:bg-accent"
+          >
+            Каталог университетов
+            <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+          </Link>
+        </div>
+      ) : (
+        <>
+          {/* 学校:目录行 */}
+          <section className="mb-12">
+            <h2 className="mb-4 text-sm tracking-wide text-muted uppercase">
+              Университеты ({universities.length})
+            </h2>
+            {universities.length > 0 && (
+              <ul className="border-t border-hairline">
+                {universities.map(({ university: u }) => (
+                  <li key={u.id} className="border-b border-hairline">
+                    <Link
+                      href={`/universities/${u.slug}`}
+                      className="group flex items-center gap-4 px-2 py-4 transition-colors hover:bg-white"
+                    >
+                      <UniversityLogo
+                        logoUrl={u.logoUrl}
+                        name={u.nameRu ?? u.nameEn ?? ""}
+                        size={40}
+                      />
+                      <div className="min-w-0 flex-1">
+                        <h3 className="truncate font-medium transition-colors group-hover:text-accent">
+                          {u.nameRu ?? u.nameEn}
+                        </h3>
+                        <p className="mt-0.5 text-sm text-muted">
+                          {geoToRu(u.province, u.city)} · Программ: {u._count.programs}
+                        </p>
+                      </div>
+                      <ArrowRight className="size-4 -translate-x-1 text-muted opacity-0 transition-all group-hover:translate-x-0 group-hover:text-accent group-hover:opacity-100" />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </section>
 
-      <section className="mb-10">
-        <h2 className="mb-3 text-xl font-semibold">Программы ({programs.length})</h2>
-        {programs.length === 0 ? (
-          <p className="text-gray-500">Пока пусто.</p>
-        ) : (
-          <ul className="grid gap-4">
-            {programs.map(({ program: p }) => (
-              <li key={p.id}>
-                <Link
-                  href={`/programs/${p.id}`}
-                  className="block rounded-lg border p-4 transition hover:border-blue-400 hover:shadow"
-                >
-                  <h3 className="font-semibold">{p.nameRu ?? p.nameEn ?? ""}</h3>
-                  <p className="mt-1 text-sm text-gray-600">
-                    {p.university.nameRu ?? p.university.nameEn ?? ""} ·{" "}
-                    {degreeLevelRu[p.degreeLevel] ?? p.degreeLevel} ·{" "}
-                    {p.teachingLanguages
-                      .map((l) => teachingLanguageRu[l] ?? l)
-                      .join(", ")}
-                  </p>
-                  {p.tuitionPerYear && (
-                    <p className="mt-1 text-sm">
-                      Обучение: {formatDual(p.tuitionPerYear, rate)} / год
-                    </p>
-                  )}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        )}
-      </section>
-
-      <p className="text-sm">
-        <Link href="/" className="text-blue-600 underline">
-          ← На главную
-        </Link>
-      </p>
+          {/* 项目:目录行 */}
+          <section>
+            <h2 className="mb-4 text-sm tracking-wide text-muted uppercase">
+              Программы ({programs.length})
+            </h2>
+            {programs.length > 0 && (
+              <ul className="border-t border-hairline">
+                {programs.map(({ program: p }) => (
+                  <li key={p.id} className="border-b border-hairline">
+                    <Link
+                      href={`/programs/${p.id}`}
+                      className="group flex items-center justify-between gap-4 px-2 py-4 transition-colors hover:bg-white"
+                    >
+                      <div className="min-w-0">
+                        <h3 className="truncate font-medium transition-colors group-hover:text-accent">
+                          {p.nameRu ?? p.nameEn}
+                        </h3>
+                        <p className="mt-0.5 text-sm text-muted">
+                          {p.university.nameRu ?? p.university.nameEn ?? ""} ·{" "}
+                          {degreeLevelRu[p.degreeLevel] ?? p.degreeLevel} ·{" "}
+                          {p.teachingLanguages
+                            .map((l) => teachingLanguageRu[l] ?? l)
+                            .join(", ")}
+                        </p>
+                      </div>
+                      {p.tuitionPerYear != null && (
+                        <span className="hidden shrink-0 text-sm sm:inline">
+                          {formatDual(p.tuitionPerYear, rate)} / год
+                        </span>
+                      )}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </section>
+        </>
+      )}
     </main>
   );
 }

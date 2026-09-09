@@ -10,18 +10,24 @@ export async function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-hairline bg-cream/80 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-4 sm:px-6">
         <Link
           href="/"
-          className="font-serif text-xl tracking-tight"
+          className="shrink-0 font-serif text-lg tracking-tight whitespace-nowrap sm:text-xl"
         >
           Учёба в Китае
         </Link>
-        <nav className="flex items-center gap-6 text-sm">
-          <Link href="/universities" className="transition-colors hover:text-accent">
+        <nav className="flex items-center gap-3 text-sm sm:gap-6">
+          <Link
+            href="/universities"
+            className="hidden transition-colors hover:text-accent sm:inline"
+          >
             Университеты
           </Link>
-          <Link href="/scholarships" className="transition-colors hover:text-accent">
+          <Link
+            href="/scholarships"
+            className="hidden transition-colors hover:text-accent sm:inline"
+          >
             Стипендии
           </Link>
           {session ? (
@@ -55,7 +61,7 @@ export async function SiteHeader() {
               </Link>
               <Link
                 href="/sign-up"
-                className="rounded-full bg-ink px-5 py-2 text-cream transition-colors hover:bg-accent"
+                className="rounded-full bg-ink px-4 py-2 text-sm whitespace-nowrap text-cream transition-colors hover:bg-accent sm:px-5"
               >
                 Регистрация
               </Link>
