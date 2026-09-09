@@ -400,6 +400,7 @@ function parseScholarshipForm(formData: FormData) {
     coverageRu: get("coverageRu"),
     deadline: deadlineRaw ? parseDateOnly(deadlineRaw) : null,
     applicationChannel: get("applicationChannel"),
+    applicationChannelRu: get("applicationChannelRu"),
     description: get("description"),
     descriptionRu: get("descriptionRu"),
     sourceUrl: get("sourceUrl"),

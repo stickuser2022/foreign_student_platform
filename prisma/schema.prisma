@@ -206,6 +206,7 @@ model Scholarship {
   deadline     DateTime?
   // 申请通道说明(如 CSC 系统 + Agency Number)
   applicationChannel String?
+  applicationChannelRu String?
   description  String?
   descriptionRu String?
   // 数据质量(第 0 问)

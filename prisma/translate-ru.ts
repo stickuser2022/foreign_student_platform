@@ -99,6 +99,13 @@ async function collectJobs(): Promise<Job[]> {
     if (!s.nameRu) jobs.push({ table: "scholarship", id: s.id, field: "nameRu", from: s.name });
     if (s.coverage && !s.coverageRu)
       jobs.push({ table: "scholarship", id: s.id, field: "coverageRu", from: s.coverage });
+    if (s.applicationChannel && !s.applicationChannelRu)
+      jobs.push({
+        table: "scholarship",
+        id: s.id,
+        field: "applicationChannelRu",
+        from: s.applicationChannel,
+      });
     if (s.description && !s.descriptionRu)
       jobs.push({ table: "scholarship", id: s.id, field: "descriptionRu", from: s.description });
   }
@@ -158,6 +165,8 @@ async function main() {
   for (const s of pubS) {
     if (!s.nameRu) gaps.push(`奖学金 ${s.name}: 缺俄文名`);
     if (s.coverage && !s.coverageRu) gaps.push(`奖学金 ${s.name}: 缺覆盖范围俄文`);
+    if (s.applicationChannel && !s.applicationChannelRu)
+      gaps.push(`奖学金 ${s.name}: 缺申请通道俄文`);
   }
   if (gaps.length === 0) {
     console.log("✓ 已发布内容俄文覆盖 100%,无遗漏");

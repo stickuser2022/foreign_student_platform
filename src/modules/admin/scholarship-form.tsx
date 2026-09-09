@@ -58,6 +58,7 @@ export type ScholarshipFormDefaults = {
   coverageRu: string | null;
   deadline: Date | null;
   applicationChannel: string | null;
+  applicationChannelRu: string | null;
   description: string | null;
   descriptionRu: string | null;
   sourceUrl: string | null;
@@ -133,6 +134,12 @@ export function ScholarshipForm({
           申请通道(如 CSC 系统 + Agency Number 说明)
         </label>
         <textarea name="applicationChannel" rows={2} style={input} defaultValue={scholarship?.applicationChannel ?? ""} />
+      </div>
+      <div style={{ marginBottom: 12 }}>
+        <label style={{ display: "block", marginBottom: 4 }}>
+          申请通道(俄文)
+        </label>
+        <textarea name="applicationChannelRu" rows={2} style={input} defaultValue={scholarship?.applicationChannelRu ?? ""} />
       </div>
       <div style={{ marginBottom: 12 }}>
         <label style={{ display: "block", marginBottom: 4 }}>说明</label>

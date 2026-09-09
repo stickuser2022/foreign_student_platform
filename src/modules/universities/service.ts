@@ -73,6 +73,16 @@ export async function listFeaturedUniversities(limit = 6) {
   });
 }
 
+// 首页互动地图数据:按省份分组的已发布学校
+export async function listForMap() {
+  const unis = await prisma.university.findMany({
+    where: { dataStatus: "PUBLISHED" },
+    orderBy: { nameZh: "asc" },
+    include: { _count: { select: { programs: true } } },
+  });
+  return unis;
+}
+
 // 平台级奖学金(不绑定学校,如 CSC)
 export async function listPlatformScholarships() {
   return prisma.scholarship.findMany({

@@ -3,18 +3,39 @@ import { ArrowRight, GraduationCap } from "lucide-react";
 import {
   publicStats,
   listFeaturedUniversities,
+  listForMap,
 } from "@/modules/universities/service";
 import { UniversityLogo } from "@/modules/universities/logo";
-import { geoToRu } from "@/modules/universities/geo";
+import { geoToRu, provinceToRu, cityToRu } from "@/modules/universities/geo";
 import { getCnyToRubRate } from "@/shared/money";
+import { ChinaMap, type MapProvince } from "@/modules/universities/china-map";
 
 // 首页(docs/04):大标语逐词浮现 → 编辑感数据区 → 精选学校 → 奖学金入口
 export default async function Home() {
-  const [stats, featured, fx] = await Promise.all([
+  const [stats, featured, fx, mapUnis] = await Promise.all([
     publicStats(),
     listFeaturedUniversities(6),
     getCnyToRubRate(),
+    listForMap(),
   ]);
+
+  // 按省份分组(地图数据)
+  const provinceMap = new Map<string, MapProvince>();
+  for (const u of mapUnis) {
+    const g =
+      provinceMap.get(u.province) ??
+      { short: u.province, nameRu: provinceToRu(u.province), universities: [] };
+    g.universities.push({
+      slug: u.slug,
+      name: u.nameRu ?? u.nameEn ?? "",
+      logoUrl: u.logoUrl,
+      programs: u._count.programs,
+      cityRu: cityToRu(u.city),
+      descriptionRu: u.descriptionRu,
+    });
+    provinceMap.set(u.province, g);
+  }
+  const mapProvinces = [...provinceMap.values()];
 
   const headline = ["Найди", "свой", "университет", "в", "Китае"];
 
@@ -90,7 +111,18 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* 3. 精选学校 */}
+      {/* 3. 互动地图招牌 */}
+      {mapProvinces.length > 0 && (
+        <section className="mx-auto max-w-6xl px-6 py-20">
+          <h2 className="mb-2 font-serif text-4xl font-light">Где учиться?</h2>
+          <p className="mb-8 text-muted">
+            Нажмите на провинцию — покажем университеты
+          </p>
+          <ChinaMap provinces={mapProvinces} />
+        </section>
+      )}
+
+      {/* 4. 精选学校 */}
       {featured.length > 0 && (
         <section className="mx-auto max-w-6xl px-6 py-20">
           <div className="mb-10 flex items-end justify-between">

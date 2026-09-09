@@ -1,6 +1,12 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { headers } from "next/headers";
+import {
+  ArrowLeft,
+  ArrowUpRight,
+  GraduationCap,
+  Heart,
+} from "lucide-react";
 import { auth } from "@/modules/auth/auth";
 import { getProgramById } from "@/modules/programs/service";
 import { isFavoriteProgram } from "@/modules/users/service";
@@ -12,13 +18,14 @@ import {
 import { formatDual, getCnyToRubRate } from "@/shared/money";
 import { geoToRu } from "@/modules/universities/geo";
 
-function Row({ label, value }: { label: string; value: string | null }) {
+// 规格表一行:发丝线分隔
+function SpecRow({ label, value }: { label: string; value: string | null }) {
   if (!value) return null;
   return (
-    <tr className="border-b last:border-0">
-      <td className="py-2 pr-4 text-gray-500">{label}</td>
-      <td className="py-2 font-medium">{value}</td>
-    </tr>
+    <div className="flex items-baseline justify-between gap-6 border-b border-hairline py-3 last:border-0">
+      <span className="text-sm text-muted">{label}</span>
+      <span className="text-right font-medium">{value}</span>
+    </div>
   );
 }
 
@@ -42,144 +49,177 @@ export default async function ProgramDetailPage({
   const u = program.university;
 
   return (
-    <main className="mx-auto max-w-3xl px-4 py-10">
-      <header className="mb-8">
-        <h1 className="text-3xl font-bold">{program.nameRu ?? program.nameEn ?? ""}</h1>
-        <p className="mt-2">
-          <Link
-            href={`/universities/${u.slug}`}
-            className="text-blue-600 underline"
-          >
-            {u.nameRu ?? u.nameEn ?? ""}
-          </Link>
-          <span className="text-gray-500">
-            {" "}
-            · {geoToRu(u.province, u.city)}
-          </span>
+    <main className="mx-auto max-w-5xl px-6 pt-10 pb-24">
+      <Link
+        href={`/universities/${u.slug}`}
+        className="inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-ink"
+      >
+        <ArrowLeft className="size-4" /> {u.nameRu ?? u.nameEn ?? ""}
+      </Link>
+
+      {/* 头部 */}
+      <header className="mt-8">
+        <p className="text-sm text-muted">
+          {degreeLevelRu[program.degreeLevel] ?? program.degreeLevel} ·{" "}
+          {geoToRu(u.province, u.city)}
         </p>
-        {/* 收藏按钮:未登录点击 → 引导注册 */}
-        <form action={toggleFavoriteProgram.bind(null, program.id)} className="mt-4">
+        <h1 className="mt-2 font-serif text-4xl font-light tracking-tight sm:text-5xl">
+          {program.nameRu ?? program.nameEn ?? ""}
+        </h1>
+        <form
+          action={toggleFavoriteProgram.bind(null, program.id)}
+          className="mt-6"
+        >
           <button
             type="submit"
-            className={`rounded border px-4 py-1.5 text-sm ${
+            className={`inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm transition-colors ${
               favorited
-                ? "border-red-300 bg-red-50 text-red-600"
-                : "border-gray-300 text-gray-600 hover:border-red-300"
+                ? "bg-accent text-white"
+                : "border border-ink hover:border-accent hover:text-accent"
             }`}
           >
-            {favorited ? "♥ В избранном" : "♡ В избранное"}
+            <Heart className={`size-4 ${favorited ? "fill-current" : ""}`} />
+            {favorited ? "В избранном" : "В избранное"}
           </button>
         </form>
       </header>
 
-      {/* 1. 参数表 */}
-      <section className="mb-8 rounded-lg border p-5">
-        <h2 className="mb-3 text-xl font-semibold">Параметры программы</h2>
-        <table className="w-full text-left">
-          <tbody>
-            <Row
-              label="Уровень"
-              value={degreeLevelRu[program.degreeLevel] ?? program.degreeLevel}
-            />
-            <Row
-              label="Язык обучения"
-              value={program.teachingLanguages
-                .map((l) => teachingLanguageRu[l] ?? l)
-                .join(", ")}
-            />
-            <Row
-              label="Длительность"
-              value={program.durationYears ? `${program.durationYears} г.` : null}
-            />
-            <Row label="Набор" value={program.intake} />
-            <Row
-              label="Начало"
-              value={program.startDate?.toLocaleDateString("ru-RU") ?? null}
-            />
-            <Row
-              label="Дедлайн подачи"
-              value={program.applicationDeadline?.toLocaleDateString("ru-RU") ?? null}
-            />
-          </tbody>
-        </table>
-      </section>
+      <div className="mt-12 grid gap-12 lg:grid-cols-[1fr_320px]">
+        <div>
+          {/* 参数规格表 */}
+          <section>
+            <h2 className="text-sm tracking-wide text-muted uppercase">
+              Параметры программы
+            </h2>
+            <div className="mt-3 border-t border-hairline">
+              <SpecRow
+                label="Уровень"
+                value={degreeLevelRu[program.degreeLevel] ?? program.degreeLevel}
+              />
+              <SpecRow
+                label="Язык обучения"
+                value={
+                  program.teachingLanguages.length
+                    ? program.teachingLanguages
+                        .map((l) => teachingLanguageRu[l] ?? l)
+                        .join(", ")
+                    : null
+                }
+              />
+              <SpecRow
+                label="Длительность"
+                value={program.durationYears ? `${program.durationYears} г.` : null}
+              />
+              <SpecRow label="Набор" value={program.intake} />
+              <SpecRow
+                label="Начало"
+                value={program.startDate?.toLocaleDateString("ru-RU") ?? null}
+              />
+              <SpecRow
+                label="Дедлайн подачи"
+                value={program.applicationDeadline?.toLocaleDateString("ru-RU") ?? null}
+              />
+            </div>
+          </section>
 
-      {/* 2. 费用表 */}
-      <section className="mb-8 rounded-lg border border-blue-200 bg-blue-50 p-5">
-        <h2 className="mb-3 text-xl font-semibold">💰 Стоимость</h2>
-        <table className="w-full text-left">
-          <tbody>
-            <Row
-              label="Обучение"
-              value={program.tuitionPerYear ? `${formatDual(program.tuitionPerYear, rate)} / год` : null}
-            />
-            <Row
-              label="Общежитие"
-              value={program.hostelFeePerYear ? `${formatDual(program.hostelFeePerYear, rate)} / год` : null}
-            />
-            <Row
-              label="Страховка"
-              value={program.insuranceFeePerYear ? `${formatDual(program.insuranceFeePerYear, rate)} / год` : null}
-            />
-            <Row
-              label="Взнос за подачу"
-              value={program.applicationFee ? formatDual(program.applicationFee, rate) : null}
-            />
-          </tbody>
-        </table>
-        {fx && (
-          <p className="mt-3 text-xs text-gray-500">
-            Курс {fx.source}: 1 ¥ ≈ {fx.rate.toFixed(2)} ₽
-          </p>
-        )}
-      </section>
+          {/* 申请要求(仅俄文) */}
+          {program.requirementsRu && (
+            <section className="mt-10">
+              <h2 className="text-sm tracking-wide text-muted uppercase">
+                Требования
+              </h2>
+              <p className="mt-3 leading-relaxed whitespace-pre-line text-ink/80">
+                {program.requirementsRu}
+              </p>
+            </section>
+          )}
 
-      {/* 3. 奖学金说明(仅俄文) */}
-      {program.scholarshipNoteRu && (
-        <section className="mb-8 rounded-lg border border-green-200 bg-green-50 p-5">
-          <h2 className="mb-2 text-xl font-semibold">🎓 Стипендии</h2>
-          <p className="text-gray-800">{program.scholarshipNoteRu}</p>
-          <Link
-            href={`/universities/${u.slug}`}
-            className="mt-2 inline-block text-sm text-blue-600 underline"
-          >
-            Все стипендии университета →
-          </Link>
-        </section>
-      )}
+          {/* 奖学金说明(仅俄文) */}
+          {program.scholarshipNoteRu && (
+            <section className="mt-10">
+              <h2 className="flex items-center gap-2 text-sm tracking-wide text-muted uppercase">
+                <GraduationCap className="size-4 text-accent" />
+                Стипендии
+              </h2>
+              <p className="mt-3 leading-relaxed text-ink/80">
+                {program.scholarshipNoteRu}
+              </p>
+              <Link
+                href={`/universities/${u.slug}`}
+                className="mt-2 inline-flex items-center gap-1 text-sm text-accent underline-offset-4 hover:underline"
+              >
+                Все стипендии университета <ArrowUpRight className="size-3.5" />
+              </Link>
+            </section>
+          )}
+        </div>
 
-      {/* 4. 申请要求(仅俄文) */}
-      {program.requirementsRu && (
-        <section className="mb-8">
-          <h2 className="mb-2 text-xl font-semibold">Требования</h2>
-          <p className="whitespace-pre-line text-gray-700">{program.requirementsRu}</p>
-        </section>
-      )}
+        {/* 右栏:费用卡 + 申请 CTA(吸住) */}
+        <aside className="lg:sticky lg:top-24 lg:self-start">
+          <div className="border border-hairline bg-white p-6">
+            <h2 className="text-sm tracking-wide text-muted uppercase">
+              Стоимость
+            </h2>
+            <div className="mt-3">
+              <SpecRow
+                label="Обучение"
+                value={
+                  program.tuitionPerYear
+                    ? `${formatDual(program.tuitionPerYear, rate)} / год`
+                    : null
+                }
+              />
+              <SpecRow
+                label="Общежитие"
+                value={
+                  program.hostelFeePerYear
+                    ? `${formatDual(program.hostelFeePerYear, rate)} / год`
+                    : null
+                }
+              />
+              <SpecRow
+                label="Страховка"
+                value={
+                  program.insuranceFeePerYear
+                    ? `${formatDual(program.insuranceFeePerYear, rate)} / год`
+                    : null
+                }
+              />
+              <SpecRow
+                label="Взнос за подачу"
+                value={
+                  program.applicationFee
+                    ? formatDual(program.applicationFee, rate)
+                    : null
+                }
+              />
+            </div>
+            {fx && (
+              <p className="mt-4 text-xs text-muted">
+                Курс {fx.source}: 1 ¥ ≈ {fx.rate.toFixed(2)} ₽
+              </p>
+            )}
+            {program.lastVerifiedAt && (
+              <p className="mt-3 border-t border-hairline pt-3 text-xs text-muted">
+                Проверено: {program.lastVerifiedAt.toLocaleDateString("ru-RU")}
+              </p>
+            )}
+          </div>
 
-      {/* 5. 申请按钮:MVP 导流官方通道 */}
-      {program.sourceUrl && (
-        <section className="mb-8">
-          <a
-            href={program.sourceUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-block rounded bg-blue-600 px-6 py-3 text-white"
-          >
-            Подать заявку на официальном сайте ↗
-          </a>
-        </section>
-      )}
-
-      {/* 6. 核实标记 */}
-      {program.lastVerifiedAt && (
-        <p className="mb-8 text-xs text-gray-400">
-          Информация проверена: {program.lastVerifiedAt.toLocaleDateString("ru-RU")}
-        </p>
-      )}
-
-      <Link href={`/universities/${u.slug}`} className="text-blue-600 underline">
-        ← {u.nameRu ?? u.nameEn ?? ""}
-      </Link>
+          {/* 申请按钮:MVP 导流官方通道 */}
+          {program.sourceUrl && (
+            <a
+              href={program.sourceUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="group mt-4 flex items-center justify-center gap-2 rounded-full bg-ink px-6 py-3.5 text-cream transition-colors hover:bg-accent"
+            >
+              Подать заявку на официальном сайте
+              <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </a>
+          )}
+        </aside>
+      </div>
     </main>
   );
 }
