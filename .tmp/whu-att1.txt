@@ -1,0 +1,107 @@
+文科 Liberal Arts
+学院School || 专业 Programs || 学制Duration
+哲学学院 School of Philosophy || 哲学 Philosophy || 四年 4 years
+文学院 School of Chinese Language and Literature || 汉语言文学 Chinese Linguistics and Literature || 四年 4 years
+文学院 School of Chinese Language and Literature || 汉语国际教育 Teaching Chinese to Speakers of Other Languages || 四年 4 years
+外国语言文学学院 School of Foreign Languages and Literature || 英语 English Language || 四年 4 years
+外国语言文学学院 School of Foreign Languages and Literature || 俄语 Russian Language || 四年 4 years
+外国语言文学学院 School of Foreign Languages and Literature || 德语 German Language || 四年 4 years
+外国语言文学学院 School of Foreign Languages and Literature || 法语 French Language || 四年 4 years
+外国语言文学学院 School of Foreign Languages and Literature || 西班牙语 Spanish Language || 四年 4 years
+外国语言文学学院 School of Foreign Languages and Literature || 日语 Japanese Language || 四年 4 years
+外国语言文学学院 School of Foreign Languages and Literature || 翻译 Translation Studies || 四年 4 years
+新闻与传播学院 School of Journalism and Communication || 新闻学  Journalism || 四年 4 years
+新闻与传播学院 School of Journalism and Communication || 传播学 Communication || 四年 4 years
+新闻与传播学院 School of Journalism and Communication || 广播电视学  Radio and Television Science || 四年 4 years
+新闻与传播学院 School of Journalism and Communication || 广告学  Advertising || 四年 4 years
+新闻与传播学院 School of Journalism and Communication || 播音与主持艺术 Art of Broadcasting and Anchoring || 四年 4 years
+历史学院 School of History || 历史学 History || 四年 4 years
+历史学院 School of History || 世界史 World History || 四年 4 years
+历史学院 School of History || 考古学 Archaeology || 四年 4 years
+经济与管理学院 Economics and Management School || 国际经济与贸易   International Economics and Trade || 四年 4 years
+经济与管理学院 Economics and Management School || 金融学 Finance || 四年 4 years
+经济与管理学院 Economics and Management School || 工商管理  Business Administration || 四年 4 years
+经济与管理学院 Economics and Management School || 人力资源管理  Human Resource Management || 四年 4 years
+经济与管理学院 Economics and Management School || 市场营销 Marketing || 四年 4 years
+经济与管理学院 Economics and Management School || 物流管理 Logistics Management || 四年 4 years
+经济与管理学院 Economics and Management School || 经济学 Economics || 四年 4 years
+经济与管理学院 Economics and Management School || 财政学 Public Finance || 四年 4 years
+经济与管理学院 Economics and Management School || 保险学 Insurance || 四年 4 years
+经济与管理学院 Economics and Management School || 会计学 Accounting || 四年 4 years
+经济与管理学院 Economics and Management School || 财务管理 Financial Management || 四年 4 years
+经济与管理学院 Economics and Management School || 管理科学 Management Science || 四年 4 years
+法学院 School of Law || 法学 Law || 四年 4 years
+法学院 School of Law || 国际法 International Law || 四年 4 years
+政治与公共管理学院 School of Political Science and Public Administration || 政治学与行政学  Political Science and Public Administration || 四年 4 years
+政治与公共管理学院 School of Political Science and Public Administration || 外交学 Diplomacy || 四年 4 years
+政治与公共管理学院 School of Political Science and Public Administration || 行政管理 Public Administration || 四年 4 years
+政治与公共管理学院 School of Political Science and Public Administration || 公共事业管理 Public Affairs Management || 四年 4 years
+政治与公共管理学院 School of Political Science and Public Administration || 劳动与社会保障 Labor and Social Security || 四年 4 years
+信息管理学院 School of Information Management || 图书馆学 Library Science || 四年 4 years
+信息管理学院 School of Information Management || 信息管理与信息系统 Information Management and Information System || 四年 4 years
+信息管理学院 School of Information Management || 档案学  Archival Science || 四年 4 years
+信息管理学院 School of Information Management || 编辑出版学 Editing and Publishing Science || 四年 4 years
+信息管理学院 School of Information Management || 大数据管理与应用   Big Data Management and Application || 四年 4 years
+信息管理学院 School of Information Management || 电子商务  Electronic Commerce || 四年 4 years
+国际教育学院 School of International Education || 汉语言 Chinese Language || 四年 4 years
+艺术学院 School of Arts || 戏剧影视文学（门类：文字） Theatre, Film and Television Literature (discipline: text) || 四年 4 years
+社会学院 School of Sociology || 
+理工科 Science and Engineering
+数学与统计学院 School of Mathematics and Statistics || 数据科学与大数据技术 Data science and Big Data Technology || 四年 4 years
+数学与统计学院 School of Mathematics and Statistics || 数学与应用数学 Mathematics and Applied Mathematics || 四年 4 years
+数学与统计学院 School of Mathematics and Statistics || 信息与计算科学  Information and Computing Science || 四年 4 years
+数学与统计学院 School of Mathematics and Statistics || 统计学 Statistics || 四年 4 years
+物理科学与技术学院 School of Physics and Technology || 物理学 Physics || 四年 4 years
+物理科学与技术学院 School of Physics and Technology || 材料物理 Material Physics || 四年 4 years
+化学与分子科学学院 School of Chemistry and Molecular Sciences || 化学 Chemistry || 四年 4 years
+化学与分子科学学院 School of Chemistry and Molecular Sciences || 应用化学 Applied Chemistry || 四年 4 years
+生命科学学院 School of Life Sciences || 生物科学 Biological Science || 四年 4 years
+资源与环境科学学院 School of Resources and Environmental Science || 地理科学 Geographical Science || 四年 4 years
+资源与环境科学学院 School of Resources and Environmental Science || 地理信息科学 Geographical Information Science || 四年 4 years
+资源与环境科学学院 School of Resources and Environmental Science || 环境科学 Environmental Science || 四年 4 years
+资源与环境科学学院 School of Resources and Environmental Science || 环境工程 Environmental Engineering || 四年 4 years
+资源与环境科学学院 School of Resources and Environmental Science || 土地资源管理 Land Resources Management || 四年 4 years
+资源与环境科学学院 School of Resources and Environmental Science || 智慧城市与空间规划 Smart Cities and Spatial Planning || 四年 4 years
+动力与机械学院 School of Power and Mechanical Engineering || 核工程与核技术 Nuclear Engineering and Nuclear Technology || 四年 4 years
+动力与机械学院 School of Power and Mechanical Engineering || 机械设计制造及其自动化 Mechanical Design Manufacturing and Automation || 四年 4 years
+动力与机械学院 School of Power and Mechanical Engineering || 能源与动力工程 Energy and Power Engineering || 四年 4 years
+动力与机械学院 School of Power and Mechanical Engineering || 能源化学工程 Energy Chemical Engineering || 四年 4 years
+动力与机械学院 School of Power and Mechanical Engineering || 智能制造工程 Intelligent Manufacturing Engineering || 四年 4 years
+动力与机械学院 School of Power and Mechanical Engineering || 智慧能源工程 Intelligent Energy Engineering || 四年 4 years
+电气与自动化学院 School of Electrical Engineering and Automation || 电气工程及其自动化 Electrical Engineering and Automation || 四年 4 years
+土木建筑工程学院 School of Civil Engineering || 土木工程 Civil Engineering || 四年 4 years
+土木建筑工程学院 School of Civil Engineering || 工程力学  Engineering Mechanics || 四年 4 years
+土木建筑工程学院 School of Civil Engineering || 智能建造 Intelligent Construction || 四年 4 years
+土木建筑工程学院 School of Civil Engineering || 给排水科学与工程 Water Supply and Drainage Science and Engineering || 四年 4 years
+水利水电学院 School of Water Resources and Hydropower Engineering || 水利水电工程 Hydropower Engineering || 四年 4 years
+水利水电学院 School of Water Resources and Hydropower Engineering || 水文与水资源工程 Hydrology and Water Resources Engineering || 四年 4 years
+水利水电学院 School of Water Resources and Hydropower Engineering || 港口航道与海岸工程 Harbor, Waterway and Coastal Engineering || 四年 4 years
+水利水电学院 School of Water Resources and Hydropower Engineering || 农业水利工程 Agricultural Water and Environmental Engineering || 四年 4 years
+水利水电学院 School of Water Resources and Hydropower Engineering || 智慧水利 Intelligent Water Resources Engineering || 四年 4 years
+城市设计学院 School of Urban Design || 智慧建筑与建造 Smart Building and Construction || 四年 4 years
+城市设计学院 School of Urban Design || 城乡规划 Urban and Rural Planning || 四年 4 years
+城市设计学院 School of Urban Design || 环境设计 Environment Design || 四年 4 years
+城市设计学院 School of Urban Design || 产品设计 Product Design || 四年 4 years
+电子信息学院 School of Electronic Information || 通信工程 Communication Engineering || 四年 4 years
+电子信息学院 School of Electronic Information || 电子信息工程  Electronic and Information Engineering || 四年 4 years
+计算机学院 School of Computer Science || 软件工程 Software Engineering || 四年 4 years
+计算机学院 School of Computer Science || 计算机科学与技术 Computer Science and Technology || 四年 4 years
+国家网络安全学院 School of Cyber Science and Engineering || 网络空间安全  Cyberspace Security || 四年 4 years
+国家网络安全学院 School of Cyber Science and Engineering || 信息安全 Information Security || 四年 4 years
+国家网络安全学院 School of Cyber Science and Engineering || 密码科学与技术 Cryptographic Science and Technology || 四年 4 years
+遥感信息工程学院 School of Remote Sensing and Information Engineering || 遥感科学与技术 Remote Sensing Science and Technology || 四年 4 years
+遥感信息工程学院 School of Remote Sensing and Information Engineering || 空间信息与数字技术Spatial Information and Digital Technology || 四年 4 years
+测绘学院 School of Geodesy and Geomatics || 测绘工程  Surveying and Mapping Engineering || 四年 4 years
+测绘学院 School of Geodesy and Geomatics || 导航工程  Navigation Engineering || 四年 4 years
+地球与空间科学技术学院 School of Earth and Space Science and Technology || 地球物理学 Geophysics || 四年 4 years
+地球与空间科学技术学院 School of Earth and Space Science and Technology || 电波传播与天线  Radio Wave Propagation and Antenna || 四年 4 years
+机器人学院 School of Robotics || 
+集成电路学院 School of Integrated Circuits || 
+医学类 Medicine
+医学院（基础医学院，第一临床学院，第二临床学院） College of Medicine (School of Basic Medical Science, The First Affiliated Hospital, The Second Affiliated Hospital) || 临床医学 Clinical Medicine || 五年 5 years
+口腔医学院 School of Stomatology || 口腔医学 Stomatology || 五年 5 years
+药学院 School of Pharmaceutical Sciences || 药学 Pharmacy || 四年 4 years
+药学院 School of Pharmaceutical Sciences || 生物制药 Biopharmaceutics || 四年 4 years
+护理学院 School of Nursing || 护理学 Nursing || 四年 4 years
+公共卫生学院 School of Public Health || 预防医学 Preventive Medicine || 五年 5 years
+公共卫生学院 School of Public Health || 全球健康学 Global Health || 四年 4 years

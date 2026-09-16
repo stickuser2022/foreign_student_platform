@@ -1,0 +1,1042 @@
+{
+  "universitySlug": "whu",
+  "common": {
+    "degreeLevel": "BACHELOR",
+    "applicationFee": 800,
+    "insuranceFeePerYear": 800,
+    "hostelFeePerYear": 9600,
+    "applicationDeadline": "2026-06-15",
+    "intake": "2026 秋季",
+    "requirements": "非中国籍公民,符合教育部教外函〔2020〕12号文件要求(父母一方为中国公民或本人从中国大陆/港澳台移民取得外国国籍的,须入籍4年以上且近4年内在国外实际居住2年以上);身心健康;年龄原则上18至30岁(以2026年9月1日为准),未满18周岁须提交监护人保证书。语言要求:中文授课须新HSK4级180分(含)以上,母语为汉语或高中阶段使用汉语授课者经认定可免;英文授课须TOEFL 80+、TOEFL Essential 8+或IELTS 6.0+,母语为英语或上一学历英语授课者经认定可免。申请材料须含CSCA考试成绩;材料评审通过后须参加面试和笔试,CSCA成绩特别优秀者经评审可免面试。另须个人经济能力证明(5000美元或以上)、6个月内体检报告。汉语言专业插班:HSK4级180分以上且学习汉语言一年以上成绩优秀者可申请插入二年级,HSK5级180分以上者可申请插入三年级。学费:中文授课文科20000元/年、理工24000元/年、医学30000元/年;英文授课文科23000元/年、理工28000元/年、医学40000元/年。申请费800元(在线缴纳);医疗保险800-1500元/年(所有留学生必须在校购买);住宿9600-28000元/年;另体检约500元、居留许可400元/年、教材至少500元/年。本科学制四至六年(临床医学中文授课5年、英文授课MBBS6年,口腔医学、预防医学5年)。",
+    "scholarshipNote": "据简章附件三:中国政府奖学金-国别双边项目(2025年12月初至2026年5月,经本国留学生派遣部门/中国驻当地使领馆申请);国际中文教师奖学金(2026年3月初至5月初,chinese.cn与武大申请网站双通道);欧盟之窗奖学金(2025年12月至2026年2月,面向欧盟成员国学生);沙特阿拉伯国王奖学金(2025年11月1日至2026年5月30日,面向沙特籍本科申请者,优先预科生);留学武大——学历/进修生新生奖学金(面向自费优秀本科新生,随申请材料一并提交)。各奖学金具体名额与条件以当年通知为准。",
+    "sourceUrl": "https://sie.whu.edu.cn/info/1121/1061.htm"
+  },
+  "programs": [
+    {
+      "nameZh": "哲学",
+      "nameEn": "Philosophy",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "汉语言文学",
+      "nameEn": "Chinese Linguistics and Literature",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "汉语国际教育",
+      "nameEn": "Teaching Chinese to Speakers of Other Languages",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "英语",
+      "nameEn": "English Language",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "俄语",
+      "nameEn": "Russian Language",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "德语",
+      "nameEn": "German Language",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "法语",
+      "nameEn": "French Language",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "西班牙语",
+      "nameEn": "Spanish Language",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "日语",
+      "nameEn": "Japanese Language",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "翻译",
+      "nameEn": "Translation Studies",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "新闻学",
+      "nameEn": "Journalism",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "传播学",
+      "nameEn": "Communication",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "广播电视学",
+      "nameEn": "Radio and Television Science",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "广告学",
+      "nameEn": "Advertising",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "播音与主持艺术",
+      "nameEn": "Art of Broadcasting and Anchoring",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "历史学",
+      "nameEn": "History",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "世界史",
+      "nameEn": "World History",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "考古学",
+      "nameEn": "Archaeology",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "国际经济与贸易",
+      "nameEn": "International Economics and Trade",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "金融学",
+      "nameEn": "Finance",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "工商管理",
+      "nameEn": "Business Administration",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "人力资源管理",
+      "nameEn": "Human Resource Management",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "市场营销",
+      "nameEn": "Marketing",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "物流管理",
+      "nameEn": "Logistics Management",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "经济学",
+      "nameEn": "Economics",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "财政学",
+      "nameEn": "Public Finance",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "保险学",
+      "nameEn": "Insurance",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "会计学",
+      "nameEn": "Accounting",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "财务管理",
+      "nameEn": "Financial Management",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "管理科学",
+      "nameEn": "Management Science",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "法学",
+      "nameEn": "Law",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "国际法",
+      "nameEn": "International Law",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "政治学与行政学",
+      "nameEn": "Political Science and Public Administration",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "外交学",
+      "nameEn": "Diplomacy",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "行政管理",
+      "nameEn": "Public Administration",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "公共事业管理",
+      "nameEn": "Public Affairs Management",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "劳动与社会保障",
+      "nameEn": "Labor and Social Security",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "图书馆学",
+      "nameEn": "Library Science",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "信息管理与信息系统",
+      "nameEn": "Information Management and Information System",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "档案学",
+      "nameEn": "Archival Science",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "编辑出版学",
+      "nameEn": "Editing and Publishing Science",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "大数据管理与应用",
+      "nameEn": "Big Data Management and Application",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "电子商务",
+      "nameEn": "Electronic Commerce",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "汉语言",
+      "nameEn": "Chinese Language",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "戏剧影视文学（门类：文字）",
+      "nameEn": "Theatre, Film and Television Literature (discipline: text)",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 20000
+    },
+    {
+      "nameZh": "数据科学与大数据技术",
+      "nameEn": "Data science and Big Data Technology",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "数学与应用数学",
+      "nameEn": "Mathematics and Applied Mathematics",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "信息与计算科学",
+      "nameEn": "Information and Computing Science",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "统计学",
+      "nameEn": "Statistics",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "物理学",
+      "nameEn": "Physics",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "材料物理",
+      "nameEn": "Material Physics",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "化学",
+      "nameEn": "Chemistry",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "应用化学",
+      "nameEn": "Applied Chemistry",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "生物科学",
+      "nameEn": "Biological Science",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "地理科学",
+      "nameEn": "Geographical Science",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "地理信息科学",
+      "nameEn": "Geographical Information Science",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "环境科学",
+      "nameEn": "Environmental Science",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "环境工程",
+      "nameEn": "Environmental Engineering",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "土地资源管理",
+      "nameEn": "Land Resources Management",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "智慧城市与空间规划",
+      "nameEn": "Smart Cities and Spatial Planning",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "核工程与核技术",
+      "nameEn": "Nuclear Engineering and Nuclear Technology",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "机械设计制造及其自动化",
+      "nameEn": "Mechanical Design Manufacturing and Automation",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "能源与动力工程",
+      "nameEn": "Energy and Power Engineering",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "能源化学工程",
+      "nameEn": "Energy Chemical Engineering",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "智能制造工程",
+      "nameEn": "Intelligent Manufacturing Engineering",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "智慧能源工程",
+      "nameEn": "Intelligent Energy Engineering",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "电气工程及其自动化",
+      "nameEn": "Electrical Engineering and Automation",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "土木工程",
+      "nameEn": "Civil Engineering",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "工程力学",
+      "nameEn": "Engineering Mechanics",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "智能建造",
+      "nameEn": "Intelligent Construction",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "给排水科学与工程",
+      "nameEn": "Water Supply and Drainage Science and Engineering",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "水利水电工程",
+      "nameEn": "Hydropower Engineering",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "水文与水资源工程",
+      "nameEn": "Hydrology and Water Resources Engineering",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "港口航道与海岸工程",
+      "nameEn": "Harbor, Waterway and Coastal Engineering",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "农业水利工程",
+      "nameEn": "Agricultural Water and Environmental Engineering",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "智慧水利",
+      "nameEn": "Intelligent Water Resources Engineering",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "智慧建筑与建造",
+      "nameEn": "Smart Building and Construction",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "城乡规划",
+      "nameEn": "Urban and Rural Planning",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "环境设计",
+      "nameEn": "Environment Design",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "产品设计",
+      "nameEn": "Product Design",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "通信工程",
+      "nameEn": "Communication Engineering",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "电子信息工程",
+      "nameEn": "Electronic and Information Engineering",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "软件工程",
+      "nameEn": "Software Engineering",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "计算机科学与技术",
+      "nameEn": "Computer Science and Technology",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "网络空间安全",
+      "nameEn": "Cyberspace Security",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "信息安全",
+      "nameEn": "Information Security",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "密码科学与技术",
+      "nameEn": "Cryptographic Science and Technology",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "遥感科学与技术",
+      "nameEn": "Remote Sensing Science and Technology",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "空间信息与数字技术",
+      "nameEn": "Spatial Information and Digital Technology",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "测绘工程",
+      "nameEn": "Surveying and Mapping Engineering",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "导航工程",
+      "nameEn": "Navigation Engineering",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "地球物理学",
+      "nameEn": "Geophysics",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "电波传播与天线",
+      "nameEn": "Radio Wave Propagation and Antenna",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 24000
+    },
+    {
+      "nameZh": "临床医学",
+      "nameEn": "Clinical Medicine",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 5,
+      "tuitionPerYear": 30000
+    },
+    {
+      "nameZh": "口腔医学",
+      "nameEn": "Stomatology",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 5,
+      "tuitionPerYear": 30000
+    },
+    {
+      "nameZh": "药学",
+      "nameEn": "Pharmacy",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 30000
+    },
+    {
+      "nameZh": "生物制药",
+      "nameEn": "Biopharmaceutics",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 30000
+    },
+    {
+      "nameZh": "护理学",
+      "nameEn": "Nursing",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 30000
+    },
+    {
+      "nameZh": "预防医学",
+      "nameEn": "Preventive Medicine",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 5,
+      "tuitionPerYear": 30000
+    },
+    {
+      "nameZh": "全球健康学",
+      "nameEn": "Global Health",
+      "teachingLanguages": [
+        "chinese"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 30000
+    },
+    {
+      "nameZh": "工商管理(英文授课)",
+      "nameEn": "Business Administration",
+      "teachingLanguages": [
+        "english"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 23000
+    },
+    {
+      "nameZh": "人力资源管理(英文授课)",
+      "nameEn": "Human Resource Management",
+      "teachingLanguages": [
+        "english"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 23000
+    },
+    {
+      "nameZh": "市场营销(英文授课)",
+      "nameEn": "Marketing",
+      "teachingLanguages": [
+        "english"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 23000
+    },
+    {
+      "nameZh": "会计学(英文授课)",
+      "nameEn": "Accounting",
+      "teachingLanguages": [
+        "english"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 23000
+    },
+    {
+      "nameZh": "财务管理(英文授课)",
+      "nameEn": "Financial Management",
+      "teachingLanguages": [
+        "english"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 23000
+    },
+    {
+      "nameZh": "金融学(英文授课)",
+      "nameEn": "Finance",
+      "teachingLanguages": [
+        "english"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 23000
+    },
+    {
+      "nameZh": "保险学(英文授课)",
+      "nameEn": "Insurance",
+      "teachingLanguages": [
+        "english"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 23000
+    },
+    {
+      "nameZh": "国际经济与贸易(英文授课)",
+      "nameEn": "International Economics and Trade",
+      "teachingLanguages": [
+        "english"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 23000
+    },
+    {
+      "nameZh": "电子商务(英文授课)",
+      "nameEn": "Electronic Commerce",
+      "teachingLanguages": [
+        "english"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 23000
+    },
+    {
+      "nameZh": "软件工程(英文授课)",
+      "nameEn": "Software Engineering",
+      "teachingLanguages": [
+        "english"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 28000
+    },
+    {
+      "nameZh": "地理科学(英文授课)",
+      "nameEn": "Geographical Science",
+      "teachingLanguages": [
+        "english"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 28000
+    },
+    {
+      "nameZh": "地理信息科学(英文授课)",
+      "nameEn": "Geographic Information Science",
+      "teachingLanguages": [
+        "english"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 28000
+    },
+    {
+      "nameZh": "环境科学(英文授课)",
+      "nameEn": "Environmental Science",
+      "teachingLanguages": [
+        "english"
+      ],
+      "durationYears": 4,
+      "tuitionPerYear": 28000
+    },
+    {
+      "nameZh": "临床医学(英文授课)",
+      "nameEn": "Bachelor of Medicine, Bachelor of Surgery (MBBS)",
+      "teachingLanguages": [
+        "english"
+      ],
+      "durationYears": 6,
+      "tuitionPerYear": 40000
+    }
+  ]
+}

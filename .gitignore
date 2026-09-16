@@ -55,3 +55,6 @@ backups/
 *.tsbuildinfo
 next-env.d.ts
 src/generated/
+
+# 照片抓取工作区(本地)
+photos-review/

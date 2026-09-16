@@ -1,0 +1,41 @@
+{
+  "universitySlug": "pku",
+  "common": {
+    "degreeLevel": "BACHELOR",
+    "applicationFee": 800,
+    "applicationDeadline": "2026-02-28",
+    "intake": "2026 秋季",
+    "requirements": "非中国籍公民，持有效外国普通护照；原则上年龄18至25周岁（2001年9月1日至2008年9月1日出生）；身心健康、品行端正、无违法犯罪记录；具有全日制高中毕业及以上学历。本渠道为考试入学：网申（2026年1月1日12:00至2月28日23:59，www.studyatpku.com）后经初审、初试（科目：中文、英语、数学，2026年3月底）、复试（2026年4月中旬）选拔。简章未设HSK/雅思分数线（以入学考试代替语言成绩要求）。CSCA测试仅申请中国政府奖学金者需要：报考理学部、信息科学与技术学部、工学部须考理科中文+数学并在物理、化学中至少选考一门；报考其它学部须考文科中文+数学；均须选择中文试卷。出生即具外国国籍或原中国国籍移民者另须满足教外函〔2020〕12号文件的居住与国籍证明要求。",
+    "scholarshipNote": "被录取本科生可申请：1）中国政府奖学金（Type A国别项目，须经所在国派遣部门如中国驻外使领馆申请，在studyinchina.csc.edu.cn注册并将北大列为首选志愿，且须提交CSCA测试有效成绩；资助：免学费、提供住宿、提供医疗保险、按月发生活费）；2）北京来华留学生政府奖学金（A类：免学费+住宿+医疗保险+生活费；B类：免学费+住宿+医疗保险；C类：免学费+医疗保险）；3）北京大学外国留学生奖学金（免全额或部分学费+医疗保险+按月发生活费）。后两项无需另行申请，由学校根据综合评价择优授予。所有奖学金获得者须参加年度评审。",
+    "sourceUrl": "https://www.isd.pku.edu.cn/cn/news/detail.php?id=800"
+  },
+  "programs": [
+    { "nameZh": "数学类", "teachingLanguages": ["chinese"], "durationYears": 4 },
+    { "nameZh": "物理学类", "teachingLanguages": ["chinese"], "durationYears": 4 },
+    { "nameZh": "天文学", "teachingLanguages": ["chinese"], "durationYears": 4 },
+    { "nameZh": "化学类", "teachingLanguages": ["chinese"], "durationYears": 4 },
+    { "nameZh": "环境科学", "teachingLanguages": ["chinese"], "durationYears": 4 },
+    { "nameZh": "城乡规划", "teachingLanguages": ["chinese"] },
+    { "nameZh": "地质学类", "teachingLanguages": ["chinese"], "durationYears": 4 },
+    { "nameZh": "地球物理学类", "teachingLanguages": ["chinese"], "durationYears": 4 },
+    { "nameZh": "心理学类", "teachingLanguages": ["chinese"], "durationYears": 4 },
+    { "nameZh": "生物科学类", "teachingLanguages": ["chinese"], "durationYears": 4 },
+    { "nameZh": "计算机类（与计算机学院和智能学院共建）", "teachingLanguages": ["chinese"], "durationYears": 4 },
+    { "nameZh": "电子信息类（与电子学院和集成电路学院共建）", "teachingLanguages": ["chinese"], "durationYears": 4 },
+    { "nameZh": "工科试验班类", "teachingLanguages": ["chinese"], "durationYears": 4 },
+    { "nameZh": "经济学类/理科试验班类（经济）", "teachingLanguages": ["chinese"], "durationYears": 4 },
+    { "nameZh": "工商管理类/理科试验班类（光华）", "teachingLanguages": ["chinese"], "durationYears": 4 },
+    { "nameZh": "法学/理科试验班类（法学院）", "teachingLanguages": ["chinese"], "durationYears": 4 },
+    { "nameZh": "公共管理类", "teachingLanguages": ["chinese"], "durationYears": 4 },
+    { "nameZh": "新闻传播学类", "teachingLanguages": ["chinese"], "durationYears": 4 },
+    { "nameZh": "国际政治/文科试验班类（国关）", "teachingLanguages": ["chinese"], "durationYears": 4 },
+    { "nameZh": "社会学类", "teachingLanguages": ["chinese"], "durationYears": 4 },
+    { "nameZh": "信息管理与信息系统/图书馆学", "teachingLanguages": ["chinese"], "durationYears": 4 },
+    { "nameZh": "中国语言文学类", "teachingLanguages": ["chinese"], "durationYears": 4 },
+    { "nameZh": "历史学类", "teachingLanguages": ["chinese"], "durationYears": 4 },
+    { "nameZh": "考古学", "teachingLanguages": ["chinese"], "durationYears": 4 },
+    { "nameZh": "哲学类", "teachingLanguages": ["chinese"], "durationYears": 4 },
+    { "nameZh": "人文科学试验班", "teachingLanguages": ["chinese"], "durationYears": 4 },
+    { "nameZh": "理科试验班类（元培）/文科试验班类（元培）", "teachingLanguages": ["chinese"], "durationYears": 4 }
+  ]
+}

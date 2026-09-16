@@ -4,6 +4,7 @@
 //          ② prisma/data/attachments/<slug>*.txt 本地附件文本
 // 报告写入 prisma/data/verify-report.json,审核页读取展示徽章
 import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync } from "fs";
+import { execFileSync } from "child_process";
 import path from "path";
 import { prisma } from "@/shared/db";
 
@@ -12,7 +13,7 @@ const UA =
 
 // 归一化:去全部空白和标点差异,专治 PDF 提取的断行/全角半角
 const norm = (s: string) =>
-  s.replace(/[\s,,\u3000«()()/·-]/g, "").toLowerCase();
+  s.replace(/[\s,,\u3000«()()\uFF0C\uFF08\uFF09/·-]/g, "").toLowerCase();
 
 async function fetchPageText(url: string): Promise<string> {
   try {
@@ -32,7 +33,7 @@ type Check = { ok: boolean; note?: string };
 
 function checkName(nameZh: string, text: string): Check {
   // 去掉我们加的"(英文授课)"等后缀再比对
-  const core = nameZh.replace(/[((].*$/, "");
+  const core = nameZh.replace(/[(\uFF08].*$/, "");
   return norm(text).includes(norm(core))
     ? { ok: true }
     : { ok: false, note: `「${core}」未在来源文本中找到` };
@@ -40,8 +41,9 @@ function checkName(nameZh: string, text: string): Check {
 
 function checkTuition(tuition: number | null, text: string): Check {
   if (tuition == null) return { ok: true, note: "留空(未知)" };
+  const t = norm(text);
   const variants = [String(tuition), tuition.toLocaleString("en-US")];
-  return variants.some((v) => text.includes(v))
+  return variants.some((v) => t.includes(norm(v)))
     ? { ok: true }
     : { ok: false, note: `学费 ${tuition} 未在来源文本中找到` };
 }
@@ -52,11 +54,21 @@ function checkDeadline(deadline: Date | null, text: string): Check {
   const y = deadline.getUTCFullYear();
   const m = deadline.getUTCMonth() + 1;
   const d = deadline.getUTCDate();
+  const EN_MONTHS = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December",
+  ];
   const variants = [
     `${y}-${String(m).padStart(2, "0")}-${String(d).padStart(2, "0")}`,
     `${y}年${m}月${d}日`,
+    `${m}月${d}日`, // 简章常写"3月1日至5月15日",年份只出现一次
+    `${y}.${m}.${d}`,
+    `${y}/${m}/${d}`,
+    `${EN_MONTHS[m - 1]} ${d}, ${y}`, // 英文简章:March 6, 2026
+    `${d} ${EN_MONTHS[m - 1]} ${y}`, // 6 March 2026
   ];
-  return variants.some((v) => text.includes(v))
+  const t = norm(text);
+  return variants.some((v) => t.includes(norm(v)))
     ? { ok: true }
     : { ok: false, note: `截止日 ${y}-${m}-${d} 未在来源文本中找到` };
 }
@@ -102,6 +114,17 @@ export async function runVerifyDrafts(): Promise<VerifyReport> {
     return pageCache.get(url) ?? "";
   };
   const attachDir = path.join(process.cwd(), "prisma", "data", "attachments");
+  // 先把 pdf/xls/docx 附件转成 .txt(幂等),让附件内容纳入比对语料
+  if (existsSync(attachDir)) {
+    try {
+      execFileSync("python", ["-X", "utf8", "scripts/attachment-to-text.py"], {
+        cwd: process.cwd(),
+        stdio: "ignore",
+      });
+    } catch {
+      // 无 python 环境时跳过:退化为只比对网页文本
+    }
+  }
   const attachFiles = existsSync(attachDir) ? readdirSync(attachDir) : [];
 
   const report: VerifyReport = {
