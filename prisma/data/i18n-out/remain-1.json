@@ -1,0 +1,692 @@
+[
+ {
+  "id": "cmtuqgwb500br4gyx0ow4o6g4",
+  "field": "nameRu",
+  "text": "市场营销"
+ },
+ {
+  "id": "cmtuqgwb900bs4gyxep9h3z13",
+  "field": "nameRu",
+  "text": "物流管理"
+ },
+ {
+  "id": "cmtuqgwbd00bt4gyx14kjlwlb",
+  "field": "nameRu",
+  "text": "经济学"
+ },
+ {
+  "id": "cmtuqgwbg00bu4gyxm7bpar8p",
+  "field": "nameRu",
+  "text": "财政学"
+ },
+ {
+  "id": "cmtuqgwbj00bv4gyx5611urcw",
+  "field": "nameRu",
+  "text": "保险学"
+ },
+ {
+  "id": "cmtuqgwbn00bw4gyx5za72h2t",
+  "field": "nameRu",
+  "text": "会计学"
+ },
+ {
+  "id": "cmtuqgwbr00bx4gyxh1vysigq",
+  "field": "nameRu",
+  "text": "财务管理"
+ },
+ {
+  "id": "cmtuqgwbv00by4gyxe95wz2r8",
+  "field": "nameRu",
+  "text": "管理科学"
+ },
+ {
+  "id": "cmtuqgwbz00bz4gyxkgoefqd4",
+  "field": "nameRu",
+  "text": "法学"
+ },
+ {
+  "id": "cmtuqgwc300c04gyx4kwn1p0t",
+  "field": "nameRu",
+  "text": "国际法"
+ },
+ {
+  "id": "cmtuqgwc700c14gyxv724qd9m",
+  "field": "nameRu",
+  "text": "政治学与行政学"
+ },
+ {
+  "id": "cmtuqgwcb00c24gyxbvu86btl",
+  "field": "nameRu",
+  "text": "外交学"
+ },
+ {
+  "id": "cmtuqgwcf00c34gyxyo0ogajj",
+  "field": "nameRu",
+  "text": "行政管理"
+ },
+ {
+  "id": "cmtuqgwcj00c44gyxqbrou29s",
+  "field": "nameRu",
+  "text": "公共事业管理"
+ },
+ {
+  "id": "cmtuqgwcn00c54gyx3ogy4ur4",
+  "field": "nameRu",
+  "text": "劳动与社会保障"
+ },
+ {
+  "id": "cmtuqgwcq00c64gyxrpe2adb8",
+  "field": "nameRu",
+  "text": "图书馆学"
+ },
+ {
+  "id": "cmtuqgwcu00c74gyxai6w5usp",
+  "field": "nameRu",
+  "text": "信息管理与信息系统"
+ },
+ {
+  "id": "cmtuqgwcx00c84gyx5xzs8xpn",
+  "field": "nameRu",
+  "text": "档案学"
+ },
+ {
+  "id": "cmtuqgwd100c94gyxtds5i6in",
+  "field": "nameRu",
+  "text": "编辑出版学"
+ },
+ {
+  "id": "cmtuqgwd400ca4gyxp056y4tv",
+  "field": "nameRu",
+  "text": "大数据管理与应用"
+ },
+ {
+  "id": "cmtuqgwd800cb4gyx0b6eata6",
+  "field": "nameRu",
+  "text": "电子商务"
+ },
+ {
+  "id": "cmtuqgwdc00cc4gyxnyt2h40n",
+  "field": "nameRu",
+  "text": "汉语言"
+ },
+ {
+  "id": "cmtuqgwdg00cd4gyxb9o647zm",
+  "field": "nameRu",
+  "text": "戏剧影视文学（门类：文字）"
+ },
+ {
+  "id": "cmtuqgwdj00ce4gyxywo4rxz4",
+  "field": "nameRu",
+  "text": "数据科学与大数据技术"
+ },
+ {
+  "id": "cmtuqgwdn00cf4gyxoakr96ps",
+  "field": "nameRu",
+  "text": "数学与应用数学"
+ },
+ {
+  "id": "cmtuqgwdq00cg4gyxiwtpv6at",
+  "field": "nameRu",
+  "text": "信息与计算科学"
+ },
+ {
+  "id": "cmtuqgwdu00ch4gyxu1wot5zk",
+  "field": "nameRu",
+  "text": "统计学"
+ },
+ {
+  "id": "cmtuqgwdz00ci4gyxict74m0y",
+  "field": "nameRu",
+  "text": "物理学"
+ },
+ {
+  "id": "cmtuqgwe300cj4gyxkq5d6fhz",
+  "field": "nameRu",
+  "text": "材料物理"
+ },
+ {
+  "id": "cmtuqgwe700ck4gyxjnkm232v",
+  "field": "nameRu",
+  "text": "化学"
+ },
+ {
+  "id": "cmtuqgweb00cl4gyxzrdy49s1",
+  "field": "nameRu",
+  "text": "应用化学"
+ },
+ {
+  "id": "cmtuqgwef00cm4gyxul3ksl8j",
+  "field": "nameRu",
+  "text": "生物科学"
+ },
+ {
+  "id": "cmtuqgwei00cn4gyx64t0neol",
+  "field": "nameRu",
+  "text": "地理科学"
+ },
+ {
+  "id": "cmtuqgwem00co4gyxf2yvuzmb",
+  "field": "nameRu",
+  "text": "地理信息科学"
+ },
+ {
+  "id": "cmtuqgwep00cp4gyxf14564lz",
+  "field": "nameRu",
+  "text": "环境科学"
+ },
+ {
+  "id": "cmtuqgwet00cq4gyxa7dswvnv",
+  "field": "nameRu",
+  "text": "环境工程"
+ },
+ {
+  "id": "cmtuqgwex00cr4gyxgva9c8bf",
+  "field": "nameRu",
+  "text": "土地资源管理"
+ },
+ {
+  "id": "cmtuqgwf100cs4gyxekr0jaip",
+  "field": "nameRu",
+  "text": "智慧城市与空间规划"
+ },
+ {
+  "id": "cmtuqgwf500ct4gyxt2oqsc0t",
+  "field": "nameRu",
+  "text": "核工程与核技术"
+ },
+ {
+  "id": "cmtuqgwf900cu4gyx4lyjcuba",
+  "field": "nameRu",
+  "text": "机械设计制造及其自动化"
+ },
+ {
+  "id": "cmtuqgwfc00cv4gyxe8qiu6oh",
+  "field": "nameRu",
+  "text": "能源与动力工程"
+ },
+ {
+  "id": "cmtuqgwfg00cw4gyxo3o08sne",
+  "field": "nameRu",
+  "text": "能源化学工程"
+ },
+ {
+  "id": "cmtuqgwfk00cx4gyxu5bmuv99",
+  "field": "nameRu",
+  "text": "智能制造工程"
+ },
+ {
+  "id": "cmtuqgwfn00cy4gyxsr2qvtvm",
+  "field": "nameRu",
+  "text": "智慧能源工程"
+ },
+ {
+  "id": "cmtuqgwfr00cz4gyx1q4ozdd5",
+  "field": "nameRu",
+  "text": "电气工程及其自动化"
+ },
+ {
+  "id": "cmtuqgwfv00d04gyx0pzn0f0x",
+  "field": "nameRu",
+  "text": "土木工程"
+ },
+ {
+  "id": "cmtuqgwfy00d14gyxunk6ahti",
+  "field": "nameRu",
+  "text": "工程力学"
+ },
+ {
+  "id": "cmtuqgwg200d24gyxusjn8dik",
+  "field": "nameRu",
+  "text": "智能建造"
+ },
+ {
+  "id": "cmtuqgwg600d34gyxot2312s1",
+  "field": "nameRu",
+  "text": "给排水科学与工程"
+ },
+ {
+  "id": "cmtuqgwg900d44gyxciuiha1p",
+  "field": "nameRu",
+  "text": "水利水电工程"
+ },
+ {
+  "id": "cmtuqgwgd00d54gyx7rpa8c4s",
+  "field": "nameRu",
+  "text": "水文与水资源工程"
+ },
+ {
+  "id": "cmtuqgwgg00d64gyxvvm46lla",
+  "field": "nameRu",
+  "text": "港口航道与海岸工程"
+ },
+ {
+  "id": "cmtuqgwgk00d74gyxj6xgw31j",
+  "field": "nameRu",
+  "text": "农业水利工程"
+ },
+ {
+  "id": "cmtuqgwgo00d84gyxa8v3khz3",
+  "field": "nameRu",
+  "text": "智慧水利"
+ },
+ {
+  "id": "cmtuqgwgr00d94gyxwf7et96t",
+  "field": "nameRu",
+  "text": "智慧建筑与建造"
+ },
+ {
+  "id": "cmtuqgwgu00da4gyx5ghos1qv",
+  "field": "nameRu",
+  "text": "城乡规划"
+ },
+ {
+  "id": "cmtuqgwgy00db4gyxv1b85ele",
+  "field": "nameRu",
+  "text": "环境设计"
+ },
+ {
+  "id": "cmtuqgwh200dc4gyx4sbv8q2r",
+  "field": "nameRu",
+  "text": "产品设计"
+ },
+ {
+  "id": "cmtuqgwh600dd4gyxk65nwq0m",
+  "field": "nameRu",
+  "text": "通信工程"
+ },
+ {
+  "id": "cmtuqgwha00de4gyxgs6vgpke",
+  "field": "nameRu",
+  "text": "电子信息工程"
+ },
+ {
+  "id": "cmtuqgwhd00df4gyxvnzy90hn",
+  "field": "nameRu",
+  "text": "软件工程"
+ },
+ {
+  "id": "cmtuqgwhh00dg4gyxxff7qyzd",
+  "field": "nameRu",
+  "text": "计算机科学与技术"
+ },
+ {
+  "id": "cmtuqgwhl00dh4gyxmxesv0a8",
+  "field": "nameRu",
+  "text": "网络空间安全"
+ },
+ {
+  "id": "cmtuqgwhp00di4gyxy8yxws3v",
+  "field": "nameRu",
+  "text": "信息安全"
+ },
+ {
+  "id": "cmtuqgwhu00dj4gyxqh16wfm4",
+  "field": "nameRu",
+  "text": "密码科学与技术"
+ },
+ {
+  "id": "cmtuqgwhy00dk4gyxc9egetwx",
+  "field": "nameRu",
+  "text": "遥感科学与技术"
+ },
+ {
+  "id": "cmtuqgwi300dl4gyxlyafdwx3",
+  "field": "nameRu",
+  "text": "空间信息与数字技术"
+ },
+ {
+  "id": "cmtuqgwi600dm4gyx2oq1p3rq",
+  "field": "nameRu",
+  "text": "测绘工程"
+ },
+ {
+  "id": "cmtuqgwia00dn4gyxklnuyywr",
+  "field": "nameRu",
+  "text": "导航工程"
+ },
+ {
+  "id": "cmtuqgwid00do4gyxbfcqb4o9",
+  "field": "nameRu",
+  "text": "地球物理学"
+ },
+ {
+  "id": "cmtuqgwig00dp4gyxs7foxfin",
+  "field": "nameRu",
+  "text": "电波传播与天线"
+ },
+ {
+  "id": "cmtuqgwik00dq4gyx2yn5ng44",
+  "field": "nameRu",
+  "text": "临床医学"
+ },
+ {
+  "id": "cmtuqgwin00dr4gyx8whufxlr",
+  "field": "nameRu",
+  "text": "口腔医学"
+ },
+ {
+  "id": "cmtuqgwir00ds4gyx97ttn63w",
+  "field": "nameRu",
+  "text": "药学"
+ },
+ {
+  "id": "cmtuqgwiv00dt4gyxjej434dq",
+  "field": "nameRu",
+  "text": "生物制药"
+ },
+ {
+  "id": "cmtuqgwiy00du4gyx8rt9ilnq",
+  "field": "nameRu",
+  "text": "护理学"
+ },
+ {
+  "id": "cmtuqgwj200dv4gyxcun56865",
+  "field": "nameRu",
+  "text": "预防医学"
+ },
+ {
+  "id": "cmtuqgwj500dw4gyx9yuxpr83",
+  "field": "nameRu",
+  "text": "全球健康学"
+ },
+ {
+  "id": "cmtuqgwj900dx4gyxjbaht96v",
+  "field": "nameRu",
+  "text": "工商管理(英文授课)"
+ },
+ {
+  "id": "cmtuqgwjc00dy4gyxvbh2g3b3",
+  "field": "nameRu",
+  "text": "人力资源管理(英文授课)"
+ },
+ {
+  "id": "cmtuqgwjf00dz4gyx0iwx40cy",
+  "field": "nameRu",
+  "text": "市场营销(英文授课)"
+ },
+ {
+  "id": "cmtuqgwjj00e04gyxjkm41g2g",
+  "field": "nameRu",
+  "text": "会计学(英文授课)"
+ },
+ {
+  "id": "cmtuqgwjm00e14gyxff9mhgac",
+  "field": "nameRu",
+  "text": "财务管理(英文授课)"
+ },
+ {
+  "id": "cmtuqgwjq00e24gyxfy2rb4t3",
+  "field": "nameRu",
+  "text": "金融学(英文授课)"
+ },
+ {
+  "id": "cmtuqgwju00e34gyx7qgzr8dx",
+  "field": "nameRu",
+  "text": "保险学(英文授课)"
+ },
+ {
+  "id": "cmtuqgwjx00e44gyxt6s2g9n9",
+  "field": "nameRu",
+  "text": "国际经济与贸易(英文授课)"
+ },
+ {
+  "id": "cmtuqgwk000e54gyx957ujser",
+  "field": "nameRu",
+  "text": "电子商务(英文授课)"
+ },
+ {
+  "id": "cmtuqgwk400e64gyxngcee484",
+  "field": "nameRu",
+  "text": "软件工程(英文授课)"
+ },
+ {
+  "id": "cmtuqgwk700e74gyxiki3ec77",
+  "field": "nameRu",
+  "text": "地理科学(英文授课)"
+ },
+ {
+  "id": "cmtuqgwkb00e84gyxz8njn5u8",
+  "field": "nameRu",
+  "text": "地理信息科学(英文授课)"
+ },
+ {
+  "id": "cmtuqgwkf00e94gyxflt69myf",
+  "field": "nameRu",
+  "text": "环境科学(英文授课)"
+ },
+ {
+  "id": "cmtuqgwki00ea4gyxtc60fmqu",
+  "field": "nameRu",
+  "text": "临床医学(英文授课)"
+ },
+ {
+  "id": "cmtuqgwmk00eb4gyx5g68io64",
+  "field": "nameRu",
+  "text": "哲学"
+ },
+ {
+  "id": "cmtuqgwmp00ec4gyx00oqdgun",
+  "field": "nameRu",
+  "text": "汉语言文学"
+ },
+ {
+  "id": "cmtuqgwms00ed4gyxfebm4bad",
+  "field": "nameRu",
+  "text": "古典文献学"
+ },
+ {
+  "id": "cmtuqgwmw00ee4gyxy4s01mgq",
+  "field": "nameRu",
+  "text": "历史学"
+ },
+ {
+  "id": "cmtuqgwmz00ef4gyxqhml73fc",
+  "field": "nameRu",
+  "text": "文物与博物馆学"
+ },
+ {
+  "id": "cmtuqgwn300eg4gyxptxll8wq",
+  "field": "nameRu",
+  "text": "考古学"
+ },
+ {
+  "id": "cmtuqgwn600eh4gyx2xzkbopa",
+  "field": "nameRu",
+  "text": "艺术与科技"
+ },
+ {
+  "id": "cmtuqgwn900ei4gyx1asbxgke",
+  "field": "nameRu",
+  "text": "新闻学"
+ },
+ {
+  "id": "cmtuqgwnc00ej4gyxoho3brhp",
+  "field": "nameRu",
+  "text": "传播学"
+ },
+ {
+  "id": "cmtuqgwnf00ek4gyxtc8gavn0",
+  "field": "nameRu",
+  "text": "英语"
+ },
+ {
+  "id": "cmtuqgwnj00el4gyxan99akxf",
+  "field": "nameRu",
+  "text": "翻译"
+ },
+ {
+  "id": "cmtuqgwnn00em4gyxvqi7x26j",
+  "field": "nameRu",
+  "text": "俄语"
+ },
+ {
+  "id": "cmtuqgwnq00en4gyx7esp4b4g",
+  "field": "nameRu",
+  "text": "日语"
+ },
+ {
+  "id": "cmtuqgwnt00eo4gyx1dkqvz38",
+  "field": "nameRu",
+  "text": "德语"
+ },
+ {
+  "id": "cmtuqgwnx00ep4gyxn1ae1fdk",
+  "field": "nameRu",
+  "text": "法语"
+ },
+ {
+  "id": "cmtuqgwo100eq4gyxadmn1kzw",
+  "field": "nameRu",
+  "text": "西班牙语"
+ },
+ {
+  "id": "cmtuqgwo400er4gyxsgbs32f7",
+  "field": "nameRu",
+  "text": "经济学"
+ },
+ {
+  "id": "cmtuqgwo700es4gyxig9vrtbo",
+  "field": "nameRu",
+  "text": "金融学"
+ },
+ {
+  "id": "cmtuqgwob00et4gyxhy3r1af1",
+  "field": "nameRu",
+  "text": "财政学"
+ },
+ {
+  "id": "cmtuqgwof00eu4gyx14peyeqz",
+  "field": "nameRu",
+  "text": "国际经济与贸易"
+ },
+ {
+  "id": "cmtuqgwoi00ev4gyxt9t04nhy",
+  "field": "nameRu",
+  "text": "教育学"
+ },
+ {
+  "id": "cmtuqgwol00ew4gyxmlh4o8xa",
+  "field": "nameRu",
+  "text": "工商管理"
+ },
+ {
+  "id": "cmtuqgwop00ex4gyxxxesmlcx",
+  "field": "nameRu",
+  "text": "信息管理与信息系统"
+ },
+ {
+  "id": "cmtuqgwot00ey4gyxw8c0cnl0",
+  "field": "nameRu",
+  "text": "会计学"
+ },
+ {
+  "id": "cmtuqgwow00ez4gyxcuipof5i",
+  "field": "nameRu",
+  "text": "农林经济管理"
+ },
+ {
+  "id": "cmtuqgwp000f04gyxjj07yeqi",
+  "field": "nameRu",
+  "text": "行政管理"
+ },
+ {
+  "id": "cmtuqgwp400f14gyxhw5zo845",
+  "field": "nameRu",
+  "text": "土地资源管理"
+ },
+ {
+  "id": "cmtuqgwp800f24gyxpwf7zb7b",
+  "field": "nameRu",
+  "text": "劳动与社会保障"
+ },
+ {
+  "id": "cmtuqgwpb00f34gyxpy1lefvz",
+  "field": "nameRu",
+  "text": "政治学与行政学"
+ },
+ {
+  "id": "cmtuqgwpf00f44gyxf7n7wtn2",
+  "field": "nameRu",
+  "text": "社会学"
+ },
+ {
+  "id": "cmtuqgwpj00f54gyxvo5tfm6c",
+  "field": "nameRu",
+  "text": "法学"
+ },
+ {
+  "id": "cmtuqgwpm00f64gyxuzfnmzon",
+  "field": "nameRu",
+  "text": "数学与应用数学"
+ },
+ {
+  "id": "cmtuqgwpp00f74gyxnkg1x1cn",
+  "field": "nameRu",
+  "text": "信息与计算科学"
+ },
+ {
+  "id": "cmtuqgwpt00f84gyxmy954zoo",
+  "field": "nameRu",
+  "text": "统计学"
+ },
+ {
+  "id": "cmtuqgwpw00f94gyxy3v19t3q",
+  "field": "nameRu",
+  "text": "物理学"
+ },
+ {
+  "id": "cmtuqgwpz00fa4gyx8rnfpae1",
+  "field": "nameRu",
+  "text": "化学"
+ },
+ {
+  "id": "cmtuqgwq300fb4gyxuc0ho81i",
+  "field": "nameRu",
+  "text": "心理学"
+ },
+ {
+  "id": "cmtuqgwq600fc4gyxoy5wa3a8",
+  "field": "nameRu",
+  "text": "地理信息科学"
+ },
+ {
+  "id": "cmtuqgwq900fd4gyxg84xhlju",
+  "field": "nameRu",
+  "text": "大气科学"
+ },
+ {
+  "id": "cmtuqgwqc00fe4gyxbw5zm7ge",
+  "field": "nameRu",
+  "text": "地质学"
+ },
+ {
+  "id": "cmtuqgwqg00ff4gyxip8nf0yq",
+  "field": "nameRu",
+  "text": "机械工程"
+ },
+ {
+  "id": "cmtuqgwqk00fg4gyxq7o0dpvq",
+  "field": "nameRu",
+  "text": "能源与环境系统工程"
+ },
+ {
+  "id": "cmtuqgwqp00fh4gyxktwtfhxi",
+  "field": "nameRu",
+  "text": "车辆工程"
+ },
+ {
+  "id": "cmtuqgwqt00fi4gyxc5c25isj",
+  "field": "nameRu",
+  "text": "过程装备与控制工程"
+ },
+ {
+  "id": "cmtuqgwqx00fj4gyxbknq1cik",
+  "field": "nameRu",
+  "text": "化学工程与工艺"
+ },
+ {
+  "id": "cmtuqgwr000fk4gyx6hqz0dmn",
+  "field": "nameRu",
+  "text": "生物工程"
+ }
+]

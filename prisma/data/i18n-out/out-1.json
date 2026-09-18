@@ -1,0 +1,692 @@
+[
+ {
+  "id": "cmtuqgwb500br4gyx0ow4o6g4",
+  "field": "nameRu",
+  "ru": "Маркетинг"
+ },
+ {
+  "id": "cmtuqgwb900bs4gyxep9h3z13",
+  "field": "nameRu",
+  "ru": "Управление логистикой"
+ },
+ {
+  "id": "cmtuqgwbd00bt4gyx14kjlwlb",
+  "field": "nameRu",
+  "ru": "Экономика"
+ },
+ {
+  "id": "cmtuqgwbg00bu4gyxm7bpar8p",
+  "field": "nameRu",
+  "ru": "Государственные финансы"
+ },
+ {
+  "id": "cmtuqgwbj00bv4gyx5611urcw",
+  "field": "nameRu",
+  "ru": "Страхование"
+ },
+ {
+  "id": "cmtuqgwbn00bw4gyx5za72h2t",
+  "field": "nameRu",
+  "ru": "Бухгалтерский учёт"
+ },
+ {
+  "id": "cmtuqgwbr00bx4gyxh1vysigq",
+  "field": "nameRu",
+  "ru": "Финансовый менеджмент"
+ },
+ {
+  "id": "cmtuqgwbv00by4gyxe95wz2r8",
+  "field": "nameRu",
+  "ru": "Наука управления"
+ },
+ {
+  "id": "cmtuqgwbz00bz4gyxkgoefqd4",
+  "field": "nameRu",
+  "ru": "Юриспруденция"
+ },
+ {
+  "id": "cmtuqgwc300c04gyx4kwn1p0t",
+  "field": "nameRu",
+  "ru": "Международное право"
+ },
+ {
+  "id": "cmtuqgwc700c14gyxv724qd9m",
+  "field": "nameRu",
+  "ru": "Политология и государственное управление"
+ },
+ {
+  "id": "cmtuqgwcb00c24gyxbvu86btl",
+  "field": "nameRu",
+  "ru": "Дипломатия"
+ },
+ {
+  "id": "cmtuqgwcf00c34gyxyo0ogajj",
+  "field": "nameRu",
+  "ru": "Административное управление"
+ },
+ {
+  "id": "cmtuqgwcj00c44gyxqbrou29s",
+  "field": "nameRu",
+  "ru": "Управление общественным сектором"
+ },
+ {
+  "id": "cmtuqgwcn00c54gyx3ogy4ur4",
+  "field": "nameRu",
+  "ru": "Труд и социальное обеспечение"
+ },
+ {
+  "id": "cmtuqgwcq00c64gyxrpe2adb8",
+  "field": "nameRu",
+  "ru": "Библиотековедение"
+ },
+ {
+  "id": "cmtuqgwcu00c74gyxai6w5usp",
+  "field": "nameRu",
+  "ru": "Управление информацией и информационные системы"
+ },
+ {
+  "id": "cmtuqgwcx00c84gyx5xzs8xpn",
+  "field": "nameRu",
+  "ru": "Архивоведение"
+ },
+ {
+  "id": "cmtuqgwd100c94gyxtds5i6in",
+  "field": "nameRu",
+  "ru": "Редактирование и издательское дело"
+ },
+ {
+  "id": "cmtuqgwd400ca4gyxp056y4tv",
+  "field": "nameRu",
+  "ru": "Управление большими данными и их применение"
+ },
+ {
+  "id": "cmtuqgwd800cb4gyx0b6eata6",
+  "field": "nameRu",
+  "ru": "Электронная коммерция"
+ },
+ {
+  "id": "cmtuqgwdc00cc4gyxnyt2h40n",
+  "field": "nameRu",
+  "ru": "Китайский язык"
+ },
+ {
+  "id": "cmtuqgwdg00cd4gyxb9o647zm",
+  "field": "nameRu",
+  "ru": "Драматургия и кинематографическая литература（门类：文字）"
+ },
+ {
+  "id": "cmtuqgwdj00ce4gyxywo4rxz4",
+  "field": "nameRu",
+  "ru": "Наука о данных и технологии больших данных"
+ },
+ {
+  "id": "cmtuqgwdn00cf4gyxoakr96ps",
+  "field": "nameRu",
+  "ru": "Математика и прикладная математика"
+ },
+ {
+  "id": "cmtuqgwdq00cg4gyxiwtpv6at",
+  "field": "nameRu",
+  "ru": "Информатика и вычислительная математика"
+ },
+ {
+  "id": "cmtuqgwdu00ch4gyxu1wot5zk",
+  "field": "nameRu",
+  "ru": "Статистика"
+ },
+ {
+  "id": "cmtuqgwdz00ci4gyxict74m0y",
+  "field": "nameRu",
+  "ru": "Физика"
+ },
+ {
+  "id": "cmtuqgwe300cj4gyxkq5d6fhz",
+  "field": "nameRu",
+  "ru": "Физика материалов"
+ },
+ {
+  "id": "cmtuqgwe700ck4gyxjnkm232v",
+  "field": "nameRu",
+  "ru": "Химия"
+ },
+ {
+  "id": "cmtuqgweb00cl4gyxzrdy49s1",
+  "field": "nameRu",
+  "ru": "Прикладная химия"
+ },
+ {
+  "id": "cmtuqgwef00cm4gyxul3ksl8j",
+  "field": "nameRu",
+  "ru": "Биологические науки"
+ },
+ {
+  "id": "cmtuqgwei00cn4gyx64t0neol",
+  "field": "nameRu",
+  "ru": "Географические науки"
+ },
+ {
+  "id": "cmtuqgwem00co4gyxf2yvuzmb",
+  "field": "nameRu",
+  "ru": "Геоинформационные науки"
+ },
+ {
+  "id": "cmtuqgwep00cp4gyxf14564lz",
+  "field": "nameRu",
+  "ru": "Науки об окружающей среде"
+ },
+ {
+  "id": "cmtuqgwet00cq4gyxa7dswvnv",
+  "field": "nameRu",
+  "ru": "Инженерия окружающей среды"
+ },
+ {
+  "id": "cmtuqgwex00cr4gyxgva9c8bf",
+  "field": "nameRu",
+  "ru": "Управление земельными ресурсами"
+ },
+ {
+  "id": "cmtuqgwf100cs4gyxekr0jaip",
+  "field": "nameRu",
+  "ru": "Умный город и пространственное планирование"
+ },
+ {
+  "id": "cmtuqgwf500ct4gyxt2oqsc0t",
+  "field": "nameRu",
+  "ru": "Ядерная инженерия и ядерные технологии"
+ },
+ {
+  "id": "cmtuqgwf900cu4gyx4lyjcuba",
+  "field": "nameRu",
+  "ru": "Проектирование и производство машин и их автоматизация"
+ },
+ {
+  "id": "cmtuqgwfc00cv4gyxe8qiu6oh",
+  "field": "nameRu",
+  "ru": "Энергетика и энергомашиностроение"
+ },
+ {
+  "id": "cmtuqgwfg00cw4gyxo3o08sne",
+  "field": "nameRu",
+  "ru": "Энергетическая химическая инженерия"
+ },
+ {
+  "id": "cmtuqgwfk00cx4gyxu5bmuv99",
+  "field": "nameRu",
+  "ru": "Интеллектуальное производство"
+ },
+ {
+  "id": "cmtuqgwfn00cy4gyxsr2qvtvm",
+  "field": "nameRu",
+  "ru": "Интеллектуальная энергетика"
+ },
+ {
+  "id": "cmtuqgwfr00cz4gyx1q4ozdd5",
+  "field": "nameRu",
+  "ru": "Электротехника и автоматизация"
+ },
+ {
+  "id": "cmtuqgwfv00d04gyx0pzn0f0x",
+  "field": "nameRu",
+  "ru": "Гражданское строительство"
+ },
+ {
+  "id": "cmtuqgwfy00d14gyxunk6ahti",
+  "field": "nameRu",
+  "ru": "Инженерная механика"
+ },
+ {
+  "id": "cmtuqgwg200d24gyxusjn8dik",
+  "field": "nameRu",
+  "ru": "Интеллектуальное строительство"
+ },
+ {
+  "id": "cmtuqgwg600d34gyxot2312s1",
+  "field": "nameRu",
+  "ru": "Водоснабжение и водоотведение"
+ },
+ {
+  "id": "cmtuqgwg900d44gyxciuiha1p",
+  "field": "nameRu",
+  "ru": "Гидроэнергетика и гидротехническое строительство"
+ },
+ {
+  "id": "cmtuqgwgd00d54gyx7rpa8c4s",
+  "field": "nameRu",
+  "ru": "Гидрология и водные ресурсы"
+ },
+ {
+  "id": "cmtuqgwgg00d64gyxvvm46lla",
+  "field": "nameRu",
+  "ru": "Портовое, воднопутевое и прибрежное строительство"
+ },
+ {
+  "id": "cmtuqgwgk00d74gyxj6xgw31j",
+  "field": "nameRu",
+  "ru": "Сельскохозяйственная гидротехника"
+ },
+ {
+  "id": "cmtuqgwgo00d84gyxa8v3khz3",
+  "field": "nameRu",
+  "ru": "Интеллектуальное водное хозяйство"
+ },
+ {
+  "id": "cmtuqgwgr00d94gyxwf7et96t",
+  "field": "nameRu",
+  "ru": "Интеллектуальная архитектура и строительство"
+ },
+ {
+  "id": "cmtuqgwgu00da4gyx5ghos1qv",
+  "field": "nameRu",
+  "ru": "Городское и сельское планирование"
+ },
+ {
+  "id": "cmtuqgwgy00db4gyxv1b85ele",
+  "field": "nameRu",
+  "ru": "Дизайн окружающей среды"
+ },
+ {
+  "id": "cmtuqgwh200dc4gyx4sbv8q2r",
+  "field": "nameRu",
+  "ru": "Дизайн продукции"
+ },
+ {
+  "id": "cmtuqgwh600dd4gyxk65nwq0m",
+  "field": "nameRu",
+  "ru": "Инженерия связи"
+ },
+ {
+  "id": "cmtuqgwha00de4gyxgs6vgpke",
+  "field": "nameRu",
+  "ru": "Электронно-информационная инженерия"
+ },
+ {
+  "id": "cmtuqgwhd00df4gyxvnzy90hn",
+  "field": "nameRu",
+  "ru": "Программная инженерия"
+ },
+ {
+  "id": "cmtuqgwhh00dg4gyxxff7qyzd",
+  "field": "nameRu",
+  "ru": "Компьютерные науки и технологии"
+ },
+ {
+  "id": "cmtuqgwhl00dh4gyxmxesv0a8",
+  "field": "nameRu",
+  "ru": "Безопасность киберпространства"
+ },
+ {
+  "id": "cmtuqgwhp00di4gyxy8yxws3v",
+  "field": "nameRu",
+  "ru": "Информационная безопасность"
+ },
+ {
+  "id": "cmtuqgwhu00dj4gyxqh16wfm4",
+  "field": "nameRu",
+  "ru": "Криптография и криптотехнологии"
+ },
+ {
+  "id": "cmtuqgwhy00dk4gyxc9egetwx",
+  "field": "nameRu",
+  "ru": "Дистанционное зондирование Земли"
+ },
+ {
+  "id": "cmtuqgwi300dl4gyxlyafdwx3",
+  "field": "nameRu",
+  "ru": "Пространственная информатика и цифровые технологии"
+ },
+ {
+  "id": "cmtuqgwi600dm4gyx2oq1p3rq",
+  "field": "nameRu",
+  "ru": "Геодезия и картография"
+ },
+ {
+  "id": "cmtuqgwia00dn4gyxklnuyywr",
+  "field": "nameRu",
+  "ru": "Навигационная инженерия"
+ },
+ {
+  "id": "cmtuqgwid00do4gyxbfcqb4o9",
+  "field": "nameRu",
+  "ru": "Геофизика"
+ },
+ {
+  "id": "cmtuqgwig00dp4gyxs7foxfin",
+  "field": "nameRu",
+  "ru": "Распространение радиоволн и антенны"
+ },
+ {
+  "id": "cmtuqgwik00dq4gyx2yn5ng44",
+  "field": "nameRu",
+  "ru": "Клиническая медицина"
+ },
+ {
+  "id": "cmtuqgwin00dr4gyx8whufxlr",
+  "field": "nameRu",
+  "ru": "Стоматология"
+ },
+ {
+  "id": "cmtuqgwir00ds4gyx97ttn63w",
+  "field": "nameRu",
+  "ru": "Фармация"
+ },
+ {
+  "id": "cmtuqgwiv00dt4gyxjej434dq",
+  "field": "nameRu",
+  "ru": "Биофармацевтика"
+ },
+ {
+  "id": "cmtuqgwiy00du4gyx8rt9ilnq",
+  "field": "nameRu",
+  "ru": "Сестринское дело"
+ },
+ {
+  "id": "cmtuqgwj200dv4gyxcun56865",
+  "field": "nameRu",
+  "ru": "Профилактическая медицина"
+ },
+ {
+  "id": "cmtuqgwj500dw4gyx9yuxpr83",
+  "field": "nameRu",
+  "ru": "Глобальное здравоохранение"
+ },
+ {
+  "id": "cmtuqgwj900dx4gyxjbaht96v",
+  "field": "nameRu",
+  "ru": "Деловое администрирование (英文授课)"
+ },
+ {
+  "id": "cmtuqgwjc00dy4gyxvbh2g3b3",
+  "field": "nameRu",
+  "ru": "Управление персоналом (英文授课)"
+ },
+ {
+  "id": "cmtuqgwjf00dz4gyx0iwx40cy",
+  "field": "nameRu",
+  "ru": "Маркетинг (英文授课)"
+ },
+ {
+  "id": "cmtuqgwjj00e04gyxjkm41g2g",
+  "field": "nameRu",
+  "ru": "Бухгалтерский учёт (英文授课)"
+ },
+ {
+  "id": "cmtuqgwjm00e14gyxff9mhgac",
+  "field": "nameRu",
+  "ru": "Финансовый менеджмент (英文授课)"
+ },
+ {
+  "id": "cmtuqgwjq00e24gyxfy2rb4t3",
+  "field": "nameRu",
+  "ru": "Финансы (英文授课)"
+ },
+ {
+  "id": "cmtuqgwju00e34gyx7qgzr8dx",
+  "field": "nameRu",
+  "ru": "Страхование (英文授课)"
+ },
+ {
+  "id": "cmtuqgwjx00e44gyxt6s2g9n9",
+  "field": "nameRu",
+  "ru": "Международная экономика и торговля (英文授课)"
+ },
+ {
+  "id": "cmtuqgwk000e54gyx957ujser",
+  "field": "nameRu",
+  "ru": "Электронная коммерция (英文授课)"
+ },
+ {
+  "id": "cmtuqgwk400e64gyxngcee484",
+  "field": "nameRu",
+  "ru": "Программная инженерия (英文授课)"
+ },
+ {
+  "id": "cmtuqgwk700e74gyxiki3ec77",
+  "field": "nameRu",
+  "ru": "Географические науки (英文授课)"
+ },
+ {
+  "id": "cmtuqgwkb00e84gyxz8njn5u8",
+  "field": "nameRu",
+  "ru": "Геоинформационные науки (英文授课)"
+ },
+ {
+  "id": "cmtuqgwkf00e94gyxflt69myf",
+  "field": "nameRu",
+  "ru": "Науки об окружающей среде (英文授课)"
+ },
+ {
+  "id": "cmtuqgwki00ea4gyxtc60fmqu",
+  "field": "nameRu",
+  "ru": "Клиническая медицина (英文授课)"
+ },
+ {
+  "id": "cmtuqgwmk00eb4gyx5g68io64",
+  "field": "nameRu",
+  "ru": "Философия"
+ },
+ {
+  "id": "cmtuqgwmp00ec4gyx00oqdgun",
+  "field": "nameRu",
+  "ru": "Китайский язык и литература"
+ },
+ {
+  "id": "cmtuqgwms00ed4gyxfebm4bad",
+  "field": "nameRu",
+  "ru": "Классическая филология"
+ },
+ {
+  "id": "cmtuqgwmw00ee4gyxy4s01mgq",
+  "field": "nameRu",
+  "ru": "История"
+ },
+ {
+  "id": "cmtuqgwmz00ef4gyxqhml73fc",
+  "field": "nameRu",
+  "ru": "Памятниковедение и музееведение"
+ },
+ {
+  "id": "cmtuqgwn300eg4gyxptxll8wq",
+  "field": "nameRu",
+  "ru": "Археология"
+ },
+ {
+  "id": "cmtuqgwn600eh4gyx2xzkbopa",
+  "field": "nameRu",
+  "ru": "Искусство и технологии"
+ },
+ {
+  "id": "cmtuqgwn900ei4gyx1asbxgke",
+  "field": "nameRu",
+  "ru": "Журналистика"
+ },
+ {
+  "id": "cmtuqgwnc00ej4gyxoho3brhp",
+  "field": "nameRu",
+  "ru": "Теория коммуникации"
+ },
+ {
+  "id": "cmtuqgwnf00ek4gyxtc8gavn0",
+  "field": "nameRu",
+  "ru": "Английский язык"
+ },
+ {
+  "id": "cmtuqgwnj00el4gyxan99akxf",
+  "field": "nameRu",
+  "ru": "Перевод"
+ },
+ {
+  "id": "cmtuqgwnn00em4gyxvqi7x26j",
+  "field": "nameRu",
+  "ru": "Русский язык"
+ },
+ {
+  "id": "cmtuqgwnq00en4gyx7esp4b4g",
+  "field": "nameRu",
+  "ru": "Японский язык"
+ },
+ {
+  "id": "cmtuqgwnt00eo4gyx1dkqvz38",
+  "field": "nameRu",
+  "ru": "Немецкий язык"
+ },
+ {
+  "id": "cmtuqgwnx00ep4gyxn1ae1fdk",
+  "field": "nameRu",
+  "ru": "Французский язык"
+ },
+ {
+  "id": "cmtuqgwo100eq4gyxadmn1kzw",
+  "field": "nameRu",
+  "ru": "Испанский язык"
+ },
+ {
+  "id": "cmtuqgwo400er4gyxsgbs32f7",
+  "field": "nameRu",
+  "ru": "Экономика"
+ },
+ {
+  "id": "cmtuqgwo700es4gyxig9vrtbo",
+  "field": "nameRu",
+  "ru": "Финансы"
+ },
+ {
+  "id": "cmtuqgwob00et4gyxhy3r1af1",
+  "field": "nameRu",
+  "ru": "Государственные финансы"
+ },
+ {
+  "id": "cmtuqgwof00eu4gyx14peyeqz",
+  "field": "nameRu",
+  "ru": "Международная экономика и торговля"
+ },
+ {
+  "id": "cmtuqgwoi00ev4gyxt9t04nhy",
+  "field": "nameRu",
+  "ru": "Педагогика"
+ },
+ {
+  "id": "cmtuqgwol00ew4gyxmlh4o8xa",
+  "field": "nameRu",
+  "ru": "Деловое администрирование"
+ },
+ {
+  "id": "cmtuqgwop00ex4gyxxxesmlcx",
+  "field": "nameRu",
+  "ru": "Управление информацией и информационные системы"
+ },
+ {
+  "id": "cmtuqgwot00ey4gyxw8c0cnl0",
+  "field": "nameRu",
+  "ru": "Бухгалтерский учёт"
+ },
+ {
+  "id": "cmtuqgwow00ez4gyxcuipof5i",
+  "field": "nameRu",
+  "ru": "Экономика и управление сельским и лесным хозяйством"
+ },
+ {
+  "id": "cmtuqgwp000f04gyxjj07yeqi",
+  "field": "nameRu",
+  "ru": "Административное управление"
+ },
+ {
+  "id": "cmtuqgwp400f14gyxhw5zo845",
+  "field": "nameRu",
+  "ru": "Управление земельными ресурсами"
+ },
+ {
+  "id": "cmtuqgwp800f24gyxpwf7zb7b",
+  "field": "nameRu",
+  "ru": "Труд и социальное обеспечение"
+ },
+ {
+  "id": "cmtuqgwpb00f34gyxpy1lefvz",
+  "field": "nameRu",
+  "ru": "Политология и государственное управление"
+ },
+ {
+  "id": "cmtuqgwpf00f44gyxf7n7wtn2",
+  "field": "nameRu",
+  "ru": "Социология"
+ },
+ {
+  "id": "cmtuqgwpj00f54gyxvo5tfm6c",
+  "field": "nameRu",
+  "ru": "Юриспруденция"
+ },
+ {
+  "id": "cmtuqgwpm00f64gyxuzfnmzon",
+  "field": "nameRu",
+  "ru": "Математика и прикладная математика"
+ },
+ {
+  "id": "cmtuqgwpp00f74gyxnkg1x1cn",
+  "field": "nameRu",
+  "ru": "Информатика и вычислительная математика"
+ },
+ {
+  "id": "cmtuqgwpt00f84gyxmy954zoo",
+  "field": "nameRu",
+  "ru": "Статистика"
+ },
+ {
+  "id": "cmtuqgwpw00f94gyxy3v19t3q",
+  "field": "nameRu",
+  "ru": "Физика"
+ },
+ {
+  "id": "cmtuqgwpz00fa4gyx8rnfpae1",
+  "field": "nameRu",
+  "ru": "Химия"
+ },
+ {
+  "id": "cmtuqgwq300fb4gyxuc0ho81i",
+  "field": "nameRu",
+  "ru": "Психология"
+ },
+ {
+  "id": "cmtuqgwq600fc4gyxoy5wa3a8",
+  "field": "nameRu",
+  "ru": "Геоинформационные науки"
+ },
+ {
+  "id": "cmtuqgwq900fd4gyxg84xhlju",
+  "field": "nameRu",
+  "ru": "Атмосферные науки"
+ },
+ {
+  "id": "cmtuqgwqc00fe4gyxbw5zm7ge",
+  "field": "nameRu",
+  "ru": "Геология"
+ },
+ {
+  "id": "cmtuqgwqg00ff4gyxip8nf0yq",
+  "field": "nameRu",
+  "ru": "Машиностроение"
+ },
+ {
+  "id": "cmtuqgwqk00fg4gyxq7o0dpvq",
+  "field": "nameRu",
+  "ru": "Энергетика и экологическая системная инженерия"
+ },
+ {
+  "id": "cmtuqgwqp00fh4gyxktwtfhxi",
+  "field": "nameRu",
+  "ru": "Автомобилестроение"
+ },
+ {
+  "id": "cmtuqgwqt00fi4gyxc5c25isj",
+  "field": "nameRu",
+  "ru": "Технологическое оборудование и управление процессами"
+ },
+ {
+  "id": "cmtuqgwqx00fj4gyxbknq1cik",
+  "field": "nameRu",
+  "ru": "Химическая технология и инженерия"
+ },
+ {
+  "id": "cmtuqgwr000fk4gyx6hqz0dmn",
+  "field": "nameRu",
+  "ru": "Биоинженерия"
+ }
+]
