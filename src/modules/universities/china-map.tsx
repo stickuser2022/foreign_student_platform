@@ -18,6 +18,7 @@ export type MapUniversity = {
   programs: number;
   cityRu: string;
   descriptionRu: string | null;
+  photos: string[];
 };
 
 export type MapProvince = {
@@ -49,6 +50,7 @@ export function ChinaMap({ provinces }: { provinces: MapProvince[] }) {
   const [hovered, setHovered] = useState<string | null>(null);
   const [selected, setSelected] = useState<MapProvince | null>(null);
   const [preview, setPreview] = useState<MapUniversity | null>(null);
+  const [previewPhoto, setPreviewPhoto] = useState(0);
   const [pill, setPill] = useState<{ x: number; y: number; text: string } | null>(null);
   const wrapRef = useRef<HTMLDivElement>(null);
 
@@ -58,6 +60,12 @@ export function ChinaMap({ provinces }: { provinces: MapProvince[] }) {
     if (selected?.short === short) return COLORS.selected;
     if (hovered === short) return byShort.has(short) ? COLORS.hover : COLORS.base;
     return byShort.has(short) ? COLORS.active : COLORS.base;
+  };
+
+  // 选中某省时其他省变淡聚焦(不放大——放大没有新信息可展示)
+  const opacityFor = (short: string): number => {
+    if (!selected) return 1;
+    return selected.short === short ? 1 : 0.35;
   };
 
   const onMove = (e: React.MouseEvent) => {
@@ -86,14 +94,16 @@ export function ChinaMap({ provinces }: { provinces: MapProvince[] }) {
           setPill(null);
         }}
       >
-        {/* 周边国家衬底(世界视野) */}
+        {/* 周边国家衬底(世界视野);选中省份时同样变淡 */}
         {CONTEXT_COUNTRIES.map((c) => (
           <path
             key={c.name}
             d={c.d}
             fill={COLORS.context}
+            fillOpacity={selected ? 0.3 : 1}
             stroke={COLORS.border}
             strokeWidth={1}
+            className="transition-opacity duration-300"
           />
         ))}
         {CHINA_PROVINCES.map((f) => {
@@ -103,15 +113,18 @@ export function ChinaMap({ provinces }: { provinces: MapProvince[] }) {
             <path
               key={f.name}
               d={f.d}
+              data-short={short}
               fill={fillFor(short)}
+              fillOpacity={opacityFor(short)}
               stroke={COLORS.border}
               strokeWidth={1.2}
-              className="transition-colors duration-200"
+              className="transition-all duration-300"
               style={{ cursor: clickable ? "pointer" : "default" }}
               onMouseEnter={() => setHovered(short)}
               onClick={() => {
                 if (!clickable) return;
                 setPreview(null);
+                setPreviewPhoto(0);
                 const p = byShort.get(short)!;
                 setSelected((cur) => (cur?.short === short ? null : p));
               }}
@@ -154,7 +167,10 @@ export function ChinaMap({ provinces }: { provinces: MapProvince[] }) {
               <button
                 key={u.slug}
                 type="button"
-                onClick={() => setPreview(u)}
+                onClick={() => {
+                  setPreview(u);
+                  setPreviewPhoto(0);
+                }}
                 className="group flex shrink-0 cursor-pointer items-center gap-2 border border-hairline bg-white px-3 py-2 text-left transition-colors hover:border-accent"
               >
                 {u.logoUrl && (
@@ -194,17 +210,49 @@ export function ChinaMap({ provinces }: { provinces: MapProvince[] }) {
             </button>
           </div>
           <div className="flex-1 overflow-y-auto p-5">
-            <div className="flex h-16 items-center">
+            {/* 校园照片:主图 + 悬停缩略图切换 */}
+            {preview.photos.length > 0 && (
+              <div>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={preview.photos[previewPhoto]}
+                  alt={preview.name}
+                  className="aspect-[16/10] w-full border border-hairline object-cover"
+                />
+                {preview.photos.length > 1 && (
+                  <div className="mt-2 flex gap-2 overflow-x-auto pb-1">
+                    {preview.photos.map((src, i) => (
+                      <button
+                        key={src}
+                        type="button"
+                        onMouseEnter={() => setPreviewPhoto(i)}
+                        onClick={() => setPreviewPhoto(i)}
+                        aria-label={`Фото ${i + 1}`}
+                        className={`shrink-0 cursor-pointer border transition-all ${
+                          i === previewPhoto
+                            ? "border-accent opacity-100"
+                            : "border-hairline opacity-60 hover:opacity-100"
+                        }`}
+                      >
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={src} alt="" className="h-10 w-16 object-cover" />
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
+            <div className="mt-4 flex h-14 items-center">
               {preview.logoUrl && (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
                   src={preview.logoUrl}
                   alt=""
-                  className="max-h-14 max-w-20 object-contain"
+                  className="max-h-12 max-w-20 object-contain"
                 />
               )}
             </div>
-            <h3 className="mt-3 font-serif text-2xl leading-tight font-light">
+            <h3 className="mt-2 font-serif text-2xl leading-tight font-light">
               {preview.name}
             </h3>
             <p className="mt-2 text-sm text-muted">

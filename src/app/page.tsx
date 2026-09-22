@@ -32,6 +32,7 @@ export default async function Home() {
       programs: u._count.programs,
       cityRu: cityToRu(u.city),
       descriptionRu: u.descriptionRu,
+      photos: u.photos,
     });
     provinceMap.set(u.province, g);
   }
